@@ -9,16 +9,16 @@ int main_tp02(int argc, const char* argv[]){
     int n = 0;
     char c = '\0';
 
-    //is_vowel(c);
+    //is_vowel('a');
     //is_consonant(c);
     //is_whitechar(' ');
     //read_keyspressed_printdigits();
     //prints_keytype(c);
     //read_keyspressed_print_keytype();
-    count_words_stdin();
+    //count_words_stdin();
     //number_digits_iterative(n);
     //highest_even_or_odd_digits_frequency(n);
-    //highest_frequency_digit(n);
+    highest_frequency_digit(n);
 
     return 0;
 }

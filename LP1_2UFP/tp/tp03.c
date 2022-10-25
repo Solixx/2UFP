@@ -23,7 +23,7 @@ int main_tp03(int argc, const char * argv[]){
     //printf("%d", ex1);
     //printf("%f", ex2);
     //printf("%0.0f", ex3);
-    //print_multable_recursive(2,0);
+    //print_multable_recursive(2,2);
     //printf("%d", ex5);
     //print_vowels(t,4);
     //printf("%d", ex7);

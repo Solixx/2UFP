@@ -20,10 +20,10 @@ int main_tp04(int argc, const char * argv[]){
     //printf("%s", remove_sub(str, sub));
     //print_matrixNx100_ints(matrix, 2, 3);
     //read_matrixNx100_ints(matrix2, 2, 3);
-    read_matrixNx100_strings(matrixChar, 2, 3);
+    //read_matrixNx100_strings(matrixChar, 2, 3);
     //multiply_matrixNx100_line_by_scalar(matrix, 2, 3, 1, 10);
     //sum_lines_matrixesNx100(matrix, 0, 1, 2, 3);
-    //transposed_matrixNx100(matrix, 2);
+    transposed_matrixNx100(matrix, 2);
 
     return 0;
 }
@@ -205,13 +205,13 @@ void multiply_matrixNx100_line_by_scalar(int mNx100[][MAXCOLS100], int lines, in
         mNx100[line][i] *= scalar;
     }
 
-    /*
+
     for (int i = 0; i < lines; ++i) {
         for (int j = 0; j < columns; ++j) {
             printf("%d\n", mNx100[i][j]);
         }
     }
-     */
+
 }
 
 void sum_lines_matrixesNx100(int mNx100[][MAXCOLS100], int lin1, int lin2, int lin3, int columns){
@@ -220,11 +220,11 @@ void sum_lines_matrixesNx100(int mNx100[][MAXCOLS100], int lin1, int lin2, int l
         mNx100[lin3][i] = mNx100[lin1][i] + mNx100[lin2][i];
     }
 
-    /*
+
     for (int j = 0; j < columns; ++j) {
         printf("%d\n", mNx100[lin3][j]);
     }
-     */
+
 }
 
 void transposed_matrixNx100(int mNx100[][MAXCOLS100], int size){

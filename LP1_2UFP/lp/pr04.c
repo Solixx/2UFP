@@ -17,12 +17,12 @@ int main_pr04(int argc, const char * argv[]){
 
     //printf("%s", capitalize_string(str));
     //printf("%s", delete_repeated_chars(str));
-    printf("%s", shift_n(str, 2));
+    //printf("%s", shift_n(str, 2));
     //printf("%s", replace_sub2rep(str, sub, rep));
     //multiply_matrix_by_scalar(m, 3, 2, 3);
     //printf("%d", sum_diagonal_mNx100(m, 3, 3));
     //printf("%d", multiply_line_column_NxMAXCOLS100(m,mB,mC,3,1,3));
-    //multiply_matrixesNxMAXCOLS100(m, mB, mC, 2, 2);
+    multiply_matrixesNxMAXCOLS100(m, mB, mC, 2, 2);
 
     return 0;
 }

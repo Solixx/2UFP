@@ -10,9 +10,9 @@ int main_tp01(int argc, const char* argv[]) {
     short n = 0;
 
     //printPrimitiveDataTypesSizeLimits();
-    factorial_iterative_overflow(n);
+    //factorial_iterative_overflow(n);
     //checkIfLetter(c);
-    //guessSecreteChar();
+    guessSecreteChar();
 
     return 0;
 }

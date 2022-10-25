@@ -18,11 +18,11 @@ int main(int argc, const char* argv[]) {
     //main_tp03(argc, argv);
     //main_tp04(argc, argv);
     //main_tp05(argc, argv);
-    main_tp06(argc, argv);
+    //main_tp06(argc, argv);
     //main_pr01(argc, argv);
     //main_pr02(argc, argv);
     //main_pr03(argc, argv);
     //main_pr04(argc, argv);
-    //main_pr05(argc, argv);
+    main_pr05(argc, argv);
     return 0;
 }

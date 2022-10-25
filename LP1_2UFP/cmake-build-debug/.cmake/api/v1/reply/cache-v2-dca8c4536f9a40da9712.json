@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/manue/Desktop/Licenciatura/2ano/LP1_2UFP/cmake-build-debug"
+			"value" : "c:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/manue/Desktop/Licenciatura/2ano/LP1_2UFP"
+			"value" : "C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1095,7 +1095,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/manue/Desktop/Licenciatura/2ano/LP1_2UFP/cmake-build-debug"
+			"value" : "C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/cmake-build-debug"
 		},
 		{
 			"name" : "LP1_2UFP_IS_TOP_LEVEL",
@@ -1119,7 +1119,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/manue/Desktop/Licenciatura/2ano/LP1_2UFP"
+			"value" : "C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP"
 		}
 	],
 	"kind" : "cache",

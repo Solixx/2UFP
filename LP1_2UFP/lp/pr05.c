@@ -31,7 +31,8 @@ int main_pr05(int argc, const char * argv[]){
     return 0;
 }
 
-/*void calc_roots(int a, int b, int c, double* r1, double* r2){
+
+void calc_roots(int a, int b, int c, double* r1, double* r2){
 
     double sqare;
     sqare = b * b - 4 * a * c;
@@ -46,7 +47,7 @@ int main_pr05(int argc, const char * argv[]){
         printf("root1 = root2 = %.2lf;", *r1);
     }
 }
-*/
+
 
 double* swap_double_array_ptr(double* pi, int pos1, int pos2){
 
@@ -72,8 +73,8 @@ int* search_minmax(int *pi, int size, int *maxmin){
             *(maxmin+1) = *(pi+i);
         }
     }
-    //printf("Max = %d\n", *(maxmin+0));
-    //printf("Min = %d\n", *(maxmin+1));
+    printf("Max = %d\n", *(maxmin+0));
+    printf("Min = %d\n", *(maxmin+1));
     return maxmin;
 }
 
@@ -154,11 +155,11 @@ double median (int * a, int n){
     int i = 0;
     double mediana = 0, soma = 0;
 
-        if(n%2 == 0){
-            mediana = (*(a+((n/2)-1)) + *(a+(n/2)))/2;
-        } else{
-            mediana = *(a+((n/2)-1));
-        }
+    if(n%2 == 0){
+        mediana = (*(a+((n/2)-1)) + *(a+(n/2)))/2;
+    } else{
+        mediana = *(a+((n/2)-1));
+    }
 
     return mediana;
 }

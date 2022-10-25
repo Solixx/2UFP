@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/manue/Desktop/Licenciatura/2ano/LP1_2UFP
+# Install script for directory: C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/manue/Desktop/Licenciatura/2ano/LP1_2UFP/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
