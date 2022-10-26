@@ -1,0 +1,37 @@
+V/F - Coment - Add Code
+
+#V/F
+1-F			void main(int ac, char *av[]){
+2-F			int j=0, vi[2]={1, 0};
+3-F			char mx[4][5] = { “11”, “22”, “323”, “44” };
+4-F			char lin2[] = “929\n”, lin3[] = “141”;
+5-V			printf("main(): %s\n", ++vi);
+
+#Coment
+6-main(): 11		printf("main(): %s\n", mx[0]);
+7-main(): 2		printf("main(): %c\n", mx[1][1]);
+
+#Add Code
+8-((int)lin1[1])-'0'	printf("main(): %d\n", ______________);
+9-lin1[1]		printf("main(): %c\n", ______________);
+10-atoi(lin1)		printf("main(): %d\n", ______________);
+11-lin1+1		printf("main(): %s\n", ______________);
+12-0			printf("main(): %d\n", sizeof(int)-sizeof(j));
+13-lin3+1		printf("main(): %d\n", foo(vi, ___________));
+
+#Coment
+14-4			printf("main(): %d\n", strlen(lin2));
+
+# V/F
+15-F 			mx[vi[j]][1]='0'+vi[j];
+
+#Coment
+16-main(): 		printf(“main(): %c\n”, m[0]);
+17-main():  1		printf("main(): %c\n", mx[1][1]);
+18-main():  4		printf(“main(): %c\n”, lin3[1]);
+19-main(): 		printf("main(): %s\n", vi[0]);
+20-foo(): 1		printf("foo(): %i\n", ai[0]++);
+21-foo(): 43		printf("foo(): %s\n", ac);
+
+#V/F
+22-F			return ++ai[0];

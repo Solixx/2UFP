@@ -12,6 +12,8 @@
 #include "lp/pr05.h"
 #include "tp/tp06.h"
 
+#include "testes/testes.h"
+
 int main(int argc, const char* argv[]) {
     //main_tp01(argc, argv);
     //main_tp02(argc, argv);
@@ -23,6 +25,9 @@ int main(int argc, const char* argv[]) {
     //main_pr02(argc, argv);
     //main_pr03(argc, argv);
     //main_pr04(argc, argv);
-    main_pr05(argc, argv);
+    //main_pr05(argc, argv);
+
+    main_testes(argc, argv);
+
     return 0;
 }
