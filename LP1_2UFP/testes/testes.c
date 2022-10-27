@@ -5,20 +5,24 @@
 #include "testes.h"
 
 void ex1();
-int ex2();
+int ex2(char msg[], char format[]);
 
 int main_testes(int argc, const char * argv[]){
 
     int a1[] = {1,2,3}, a3[4] = {1,2,3,5};
     int *p1 = &a1[0], *p2;
+    char s[] = "helloy";
+    char form[] = "a3h1o6y12";
 
+    /*
     char string[] = "string";
     char lin3[] = "141\n";
     int vi[] = {1,0};
     int mx[4][5];
+     */
 
     //ex1();
-    printf("%d\n", ex2(vi, lin3+1));
+    ex2(s,form);
 
     /*
     p2=p1;
@@ -35,6 +39,7 @@ int main_testes(int argc, const char * argv[]){
 
     return 0;
 }
+
 
 void ex1(){
 
@@ -90,11 +95,43 @@ void ex1(){
     }
 }
 
-int ex2(int vi[], char lin3[]){
-    lin3[1] += 2;
+int ex2(char msg[], char format[]){
 
-    printf("foo(): %i\n", vi[0]++);
-    //printf("%s\n", lin3);
+    char letter[100] = "\0";
+    int nums[100] = {};
+    int size = strlen(format), letterCount = 0, numCount = 0;
 
-    return ++vi[0];
+    for (int i = 0; i < size; ++i) {
+        if(isalpha(format[i])){
+            letter[letterCount] = format[i];
+            letterCount++;
+        } else if(isdigit(format[i])){
+            if(isdigit(format[i-1])){
+                nums[numCount-1] *= 10;
+                nums[numCount-1] += (format[i]-'0');
+            } else{
+                nums[numCount] = format[i]-'0';
+                numCount++;
+            }
+        }
+    }
+
+    for (int i = 0; i < strlen(msg); ++i) {
+        for (int j = 0; j < letterCount+1; ++j) {
+            if(msg[i] == letter[j]){
+                if((msg[i]+nums[j]) > 122){
+                    int res = (122-msg[i])+1;
+                    msg[i] = 'a' + (nums[j]-res);
+                } else{
+                    msg[i] += nums[j];
+                }
+            }
+        }
+    }
+
+    for (int i = 0; i < strlen(msg); ++i) {
+        printf("%c", msg[i]);
+    }
+
+    return 0;
 }
