@@ -113,6 +113,33 @@ CMakeFiles/LP1_2UFP.dir/lp/pr05.c.obj: ../lp/pr05.c \
   C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/string.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h
 
+CMakeFiles/LP1_2UFP.dir/lp/pr06.c.obj: ../lp/pr06.c \
+  ../lp/pr06.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/limits.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mm_malloc.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/errno.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/string.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/ctype.h
+
 CMakeFiles/LP1_2UFP.dir/main.c.obj: ../main.c \
   C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
@@ -154,6 +181,7 @@ CMakeFiles/LP1_2UFP.dir/main.c.obj: ../main.c \
   ../tp/tp05.h \
   ../lp/pr05.h \
   ../tp/tp06.h \
+  ../lp/pr06.h \
   ../testes/testes.h
 
 CMakeFiles/LP1_2UFP.dir/testes/testes.c.obj: ../testes/testes.c \
@@ -350,6 +378,8 @@ C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include
 
 C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl:
 
+../lp/pr06.c:
+
 C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
 
 ../lp/pr03.c:
@@ -403,6 +433,8 @@ C:/Program\ Files/JetBrains/CLion\ 2022.2.4/bin/mingw/x86_64-w64-mingw32/include
 ../lp/pr05.c:
 
 ../lp/pr05.h:
+
+../lp/pr06.h:
 
 ../tp/tp03.h:
 

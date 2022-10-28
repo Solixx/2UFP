@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/GitHub/2UFP/LP1_2UFP/lp/pr03.c" "CMakeFiles/LP1_2UFP.dir/lp/pr03.c.obj" "gcc" "CMakeFiles/LP1_2UFP.dir/lp/pr03.c.obj.d"
   "E:/GitHub/2UFP/LP1_2UFP/lp/pr04.c" "CMakeFiles/LP1_2UFP.dir/lp/pr04.c.obj" "gcc" "CMakeFiles/LP1_2UFP.dir/lp/pr04.c.obj.d"
   "E:/GitHub/2UFP/LP1_2UFP/lp/pr05.c" "CMakeFiles/LP1_2UFP.dir/lp/pr05.c.obj" "gcc" "CMakeFiles/LP1_2UFP.dir/lp/pr05.c.obj.d"
+  "E:/GitHub/2UFP/LP1_2UFP/lp/pr06.c" "CMakeFiles/LP1_2UFP.dir/lp/pr06.c.obj" "gcc" "CMakeFiles/LP1_2UFP.dir/lp/pr06.c.obj.d"
   "E:/GitHub/2UFP/LP1_2UFP/main.c" "CMakeFiles/LP1_2UFP.dir/main.c.obj" "gcc" "CMakeFiles/LP1_2UFP.dir/main.c.obj.d"
   "E:/GitHub/2UFP/LP1_2UFP/testes/testes.c" "CMakeFiles/LP1_2UFP.dir/testes/testes.c.obj" "gcc" "CMakeFiles/LP1_2UFP.dir/testes/testes.c.obj.d"
   "E:/GitHub/2UFP/LP1_2UFP/tp/tp01.c" "CMakeFiles/LP1_2UFP.dir/tp/tp01.c.obj" "gcc" "CMakeFiles/LP1_2UFP.dir/tp/tp01.c.obj.d"

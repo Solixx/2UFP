@@ -80,12 +80,12 @@ clean: CMakeFiles/LP1_2UFP.dir/clean
 CMakeFiles/LP1_2UFP.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LP1_2UFP.dir\build.make CMakeFiles/LP1_2UFP.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LP1_2UFP.dir\build.make CMakeFiles/LP1_2UFP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=E:\GitHub\2UFP\LP1_2UFP\cmake-build-debug-mingw\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target LP1_2UFP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=E:\GitHub\2UFP\LP1_2UFP\cmake-build-debug-mingw\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 "Built target LP1_2UFP"
 .PHONY : CMakeFiles/LP1_2UFP.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/LP1_2UFP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\GitHub\2UFP\LP1_2UFP\cmake-build-debug-mingw\CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\GitHub\2UFP\LP1_2UFP\cmake-build-debug-mingw\CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/LP1_2UFP.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start E:\GitHub\2UFP\LP1_2UFP\cmake-build-debug-mingw\CMakeFiles 0
 .PHONY : CMakeFiles/LP1_2UFP.dir/rule

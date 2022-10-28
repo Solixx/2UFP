@@ -67,7 +67,8 @@
 				12,
 				13,
 				14,
-				15
+				15,
+				16
 			]
 		}
 	],
@@ -116,7 +117,8 @@
 				12,
 				13,
 				14,
-				15
+				15,
+				16
 			]
 		},
 		{
@@ -125,7 +127,8 @@
 			[
 				2,
 				5,
-				7
+				7,
+				17
 			]
 		}
 	],
@@ -223,6 +226,17 @@
 			"compileGroupIndex" : 0,
 			"path" : "testes/testes.c",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lp/pr06.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lp/pr06.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

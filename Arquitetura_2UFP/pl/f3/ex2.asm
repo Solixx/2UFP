@@ -50,6 +50,7 @@ jal square
 mul $t4, $a1, $v0
 sub $v0, $t4, $t3
 lw $ra, 0($sp)
+add $sp, $sp, 8
 jr $ra
 
 square:

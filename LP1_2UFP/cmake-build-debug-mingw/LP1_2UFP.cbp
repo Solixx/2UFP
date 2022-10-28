@@ -106,6 +106,12 @@
 		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/lp/pr05.h">
 			<Option target="LP1_2UFP"/>
 		</Unit>
+		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/lp/pr06.c">
+			<Option target="LP1_2UFP"/>
+		</Unit>
+		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/lp/pr06.h">
+			<Option target="LP1_2UFP"/>
+		</Unit>
 		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/main.c">
 			<Option target="LP1_2UFP"/>
 		</Unit>
