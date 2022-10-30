@@ -31,5 +31,37 @@ int main(int argc, const char* argv[]) {
 
     //main_testes(argc, argv);
 
+    /*
+    for (int i = 0; i < size2; ++i) { //h
+        for (int j = 0; j < size; ++j) { //y / 2 / a / 4 / h / 1 / 2 / 3 / b
+            if(format[j-1] == msg[i]){
+                if(isalpha(format[j-1])){
+                    pos = formar[j]; // 1
+                }
+                exit = 1;
+            }
+            else{
+                if(isdigit(atoi(format[j]) && isdigit(atoi(format[j])){
+                    pow = pos * 10; // 0 / 1 * 10 = 10 / 12 * 10 = 120
+                    pos = pow + atoi(format[j]); // 0 / 10 + 2 = 12 / 120 + 3 = 123
+                    if(!isdigit(format[i+1])){
+                        break;
+                    }
+                }
+                else {
+                    exit = 0;
+                }
+            }
+        }
+
+        // 1
+        if(exit == 0){
+            printf("%c", msg[i]);
+        } else{
+            printf("%c", msg[i]+pos);
+        }
+    }
+     */
+
     return 0;
 }

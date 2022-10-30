@@ -8,15 +8,17 @@ int main_pr06(int argc, const char * argv[]){
 
     const char *frases[MAX100] = {"ola", " mundo", "!"};
     const char *strings[] = {"aa", "bbb", "ccc", "aa", "ccc", "aa"};
+    const char *word[] = {"ola", "mundo", "mundo", "!"};
     const char strV[] = "aa";
-    char str[MAX100];
+    char str[MAX100] = "\0";
     int freq[MAX100];
 
-    printf("%d\n", calculator_command_line(argc, argv));
+    //printf("%d\n", calculator_command_line(argc, argv));
     //printf("%s\n", cat_strings(3, frases, str));
     //printf("%d\n", frequencies_strings(6, strings, freq));
     //printf("%d\n", sum_all_astr(argc, argv));
     //printf("%d\n", str_exists_before(strV, argv, 3));
+    printf("%s\n", cat_distinct_strings(4, word, str));
 
     return 0;
 }
@@ -93,3 +95,19 @@ int str_exists_before(const char str[], const char *astr[], int line){
     }
     return 0;
 }
+
+char* cat_distinct_strings(int argc, const char *pstrs[], char str[]){
+
+    for (int i = 0; i < argc; ++i) {
+        if(str_exists_before(pstrs[i], pstrs, i) == 0){
+            strcat(str, pstrs[i]);
+        }
+    }
+
+    return str;
+}
+
+void explode_string (char * string, char matStrs[][MAX100], char * delimiter){
+
+
+} //TODO n sei oq é pra fazer
