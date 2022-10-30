@@ -6,6 +6,7 @@
 
 void ex1();
 int ex2(char msg[], char format[]);
+int ex2_2(char msg[], char format[]);
 
 int main_testes(int argc, const char * argv[]){
 
@@ -13,6 +14,8 @@ int main_testes(int argc, const char * argv[]){
     int *p1 = &a1[0], *p2;
     char s[] = "helloy";
     char form[] = "a3h1o6y12";
+    char msg[100];
+    char format[100];
 
     /*
     char string[] = "string";
@@ -22,7 +25,11 @@ int main_testes(int argc, const char * argv[]){
      */
 
     //ex1();
-    ex2(s,form);
+    //ex2(s,form);
+    scanf("%s", msg);
+    scanf("%s", format);
+
+    ex2_2(msg, format);
 
     /*
     p2=p1;
@@ -114,6 +121,55 @@ int ex2(char msg[], char format[]){
                 numCount++;
             }
         }
+    }
+
+    for (int i = 0; i < strlen(msg); ++i) {
+        for (int j = 0; j < letterCount+1; ++j) {
+            if(msg[i] == letter[j]){
+                if((msg[i]+nums[j]) > 122){
+                    int res = (122-msg[i])+1;
+                    msg[i] = 'a' + (nums[j]-res);
+                } else{
+                    msg[i] += nums[j];
+                }
+            }
+        }
+    }
+
+    for (int i = 0; i < strlen(msg); ++i) {
+        printf("%c", msg[i]);
+    }
+
+    return 0;
+}
+
+int ex2_2(char msg[], char format[]){
+
+    char letter[100] = "\0";
+    int nums[100] = {};
+    int size = strlen(format), letterCount = 0, numCount = 0;
+
+    for (int i = 0; i < size; ++i) {
+        if(isalpha(format[i])){
+            letter[letterCount] = format[i];
+            letterCount++;
+        } else if(isdigit(format[i])){
+            if(isdigit(format[i-1])){
+                nums[numCount-1] *= 10;
+                nums[numCount-1] += (format[i]-'0');
+            } else{
+                nums[numCount] = format[i]-'0';
+                numCount++;
+            }
+        }
+    }
+
+    printf("%d\n", letterCount);
+    printf("%d\n", numCount);
+
+    if(letterCount != numCount){
+        printf("Insira um formato com uma letra seguida de um numero em pares ex: o2p34y6\n");
+        return 0;
     }
 
     for (int i = 0; i < strlen(msg); ++i) {
