@@ -26,10 +26,12 @@ int main_testes(int argc, const char * argv[]){
 
     //ex1();
     //ex2(s,form);
-    scanf("%s", msg);
-    scanf("%s", format);
 
-    ex2_2(msg, format);
+    //scanf("%s", msg);
+    //scanf("%s", format);
+
+    //ex2_2(msg, format);
+
 
     /*
     p2=p1;
@@ -128,6 +130,11 @@ int ex2(char msg[], char format[]){
             if(msg[i] == letter[j]){
                 if((msg[i]+nums[j]) > 122){
                     int res = (122-msg[i])+1;
+                    if('a' + (nums[j]-res) < 'a' || 'a' + (nums[j]-res) > 'z'){
+                        while ('a' + (nums[j]-res) > 122){
+                            nums[j] -= 26;
+                        }
+                    }
                     msg[i] = 'a' + (nums[j]-res);
                 } else{
                     msg[i] += nums[j];
@@ -177,6 +184,11 @@ int ex2_2(char msg[], char format[]){
             if(msg[i] == letter[j]){
                 if((msg[i]+nums[j]) > 122){
                     int res = (122-msg[i])+1;
+                    if('a' + (nums[j]-res) < 'a' || 'a' + (nums[j]-res) > 'z'){
+                        while ('a' + (nums[j]-res) > 122){
+                            nums[j] -= 26;
+                        }
+                    }
                     msg[i] = 'a' + (nums[j]-res);
                 } else{
                     msg[i] += nums[j];
