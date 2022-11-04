@@ -4,13 +4,15 @@
 #include "aed1_03.h"
 #include "aed1_04.h"
 #include "aed1_05.h"
+#include "aed1_06.h"
 
 int main() {
     //main_pr_aed1_00();
     //main_pr_aed1_02();
     //main_pr_aed1_03();
     //main_pr_aed1_04();
-    main_pr_aed1_05();
+    //main_pr_aed1_05();
+    main_pr_aed1_06();
 
     return 0;
 }
