@@ -46,7 +46,7 @@ int bipolar_number(char *text){
 
 void print_bipolar_numbers(int k){
 
-    int n[100] = {};
+    int n[4] = {};
     int num = 1, rightNum = 0, leftNum = 1;
     int j = 0, changePos = k-1;
 
@@ -57,17 +57,24 @@ void print_bipolar_numbers(int k){
     }
     */
 
-    while (n[0] != 9){
-        if(changePos == 0){
-            changePos = k-1;
-            rightNum++;
-        }
-        if(leftNum == rightNum){
-            rightNum++;
+    while (1){
+        if(leftNum == 9 && changePos == 0 && rightNum == 8){
+            break;
         }
         if(rightNum == 9 && changePos == 0){
             rightNum = 0;
             leftNum++;
+        }
+        if(changePos == 0){
+            changePos = k-1;
+            if(rightNum != 9){
+                rightNum++;
+            } else{
+                rightNum = 0;
+            }
+        }
+        if(leftNum == rightNum){
+            rightNum++;
         }
         if(j >= changePos){
             n[j] = rightNum;
