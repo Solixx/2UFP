@@ -6,7 +6,7 @@
 
 
 void main_pr_aed1_06(){
-    char t[] = {'2','2','2'};
+    char t[] = {'2','a','2','1'};
     int k = 4;
 
     //printf("%d\n", bipolar_number(t));
@@ -20,6 +20,10 @@ int bipolar_number(char *text){
     char *str = &text[0];
 
     for (int i = 0; i < 3; ++i) {
+        if(isalpha(text[i])){
+            printf("Nao pode ter letras\n");
+            return -1;
+        }
         if(text[i] != text[i+1]){
             changes++;
         }
@@ -42,19 +46,41 @@ int bipolar_number(char *text){
 
 void print_bipolar_numbers(int k){
 
-    char n[] = {};
-    char num = '1', changeNum = '0';
-    int changePos = 3, j = 0;
+    int n[100] = {};
+    int num = 1, rightNum = 0, leftNum = 1;
+    int j = 0, changePos = k-1;
 
+    /*
     for (int i = 0; i < k; ++i) {
-        n[i] = num;
-        printf("%c", n[i]);
+        n[i] = leftNum;
+        printf("%d", n[i]);
     }
+    */
 
-    printf("\nt - %c \n", changePos);
-    while (j != k){
-        n[3] = '0';
-        printf("%c", n[j]);
-        j++;
+    while (n[0] != 9){
+        if(changePos == 0){
+            changePos = k-1;
+            rightNum++;
+        }
+        if(leftNum == rightNum){
+            rightNum++;
+        }
+        if(rightNum == 9 && changePos == 0){
+            rightNum = 0;
+            leftNum++;
+        }
+        if(j >= changePos){
+            n[j] = rightNum;
+        } else{
+            n[j] = leftNum;
+        }
+        if(j == k){
+            printf("\t");
+            changePos--;
+            j = 0;
+        } else{
+            printf("%d", n[j]);
+            j++;
+        }
     }
 }
