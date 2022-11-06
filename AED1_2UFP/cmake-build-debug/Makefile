@@ -344,6 +344,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED1_2UFP.dir\build.make CMakeFiles/AED1_2UFP.dir/main.c.s
 .PHONY : main.c.s
 
+teste_estudo/teste_estudo.obj: teste_estudo/teste_estudo.c.obj
+.PHONY : teste_estudo/teste_estudo.obj
+
+# target to build an object file
+teste_estudo/teste_estudo.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED1_2UFP.dir\build.make CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj
+.PHONY : teste_estudo/teste_estudo.c.obj
+
+teste_estudo/teste_estudo.i: teste_estudo/teste_estudo.c.i
+.PHONY : teste_estudo/teste_estudo.i
+
+# target to preprocess a source file
+teste_estudo/teste_estudo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED1_2UFP.dir\build.make CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.i
+.PHONY : teste_estudo/teste_estudo.c.i
+
+teste_estudo/teste_estudo.s: teste_estudo/teste_estudo.c.s
+.PHONY : teste_estudo/teste_estudo.s
+
+# target to generate assembly for a file
+teste_estudo/teste_estudo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED1_2UFP.dir\build.make CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.s
+.PHONY : teste_estudo/teste_estudo.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -380,6 +404,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... teste_estudo/teste_estudo.obj
+	@echo ... teste_estudo/teste_estudo.i
+	@echo ... teste_estudo/teste_estudo.s
 .PHONY : help
 
 

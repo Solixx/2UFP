@@ -104,8 +104,8 @@ void union_WQU(int p, int q, int id[], int sz[], int n){
     int i = find_WQU(p, id, sz, n);
     int j = find_WQU(q, id, sz, n);
     if (i == j) return;
-    if (sz[i] < sz[j]) { id[i] = j; sz[j] += sz[i]; }
-    else { id[j] = i; sz[i] += sz[j]; }
+    if (sz[i] < sz[j])  { id[i] = j; sz[j] += sz[i]; }
+    else                { id[j] = i; sz[i] += sz[j]; }
 }
 
 int connected_WQU(int p, int q, int id[], int sz[], int n){

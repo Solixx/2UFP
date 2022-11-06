@@ -12,13 +12,13 @@ txt = "A A A A A B B A A B C [A A A B C  C]  C"
 						    0
 
 Copiar -> Ver o valor da coluna de X para copiar para a proxima ex:(
-		  2  3
-		  A  B
-		->3  3<-
-		  0  4
-		->0  0<-	
+		  2  3          		0  4
+ 		  A  B          		A  C
+		->3  3<-        		1  1
+		  0  4          		0  0
+		->0  0<-			0  5
 
-		 X = 0, 1,-> 2 <-
+		 X = 0, 1,-> 2 <- ,0  	X = (...), 2, -> 0 <-  / J = (...) 3, -> 4 <-
 	)
 
 Mudar X -> Ver a letra da coluna de J e ver o valor da coluna de X ex:(

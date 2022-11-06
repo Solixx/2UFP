@@ -1,0 +1,33 @@
+Teste - 171116
+
+1- F (É em N)
+2- F (Acredito que seja Bif Oh)
+3- V
+4- F
+5- F
+6- V
+7- V
+8- V
+9- F
+10- F
+
+1)
+a) Quick-Union em comparação com o weighted-quick-union é mais lento pois é em ordem em N enquanto o
+weighted-quick-union tem como velocidade de processamento logN pois verificamos sempre o melhor caso
+para o Union pois verificamos sempre qual é a menor árvore para ser mais rápido e menos pesado sz[i] < sz[j].
+Em termos de dados o weighted-quick-union tambem é melhor pois ligamos sempre a menor informação enquanto
+no quick-union podemos mexer na árvore com maior informação o que faz ser mais pesado.
+
+b) (Paint)
+
+2) (logN)^3 ou (logN^2)/2
+
+3) 
+a) CLion
+b) N*W N é o tamanho do array vezes o número de carateres que vamos ordenar
+
+4) 
+a) logN pois para cada operação do while divide o array pesquisando pelo valor do meio e verificando
+se este é menor ou maior quer o valor procurado se for maior então podemos eliminar a srgunda metade do array
+se for menor podemos eliminar a primeira metade do array até chegarmos ao valor pretendido.
+b)
