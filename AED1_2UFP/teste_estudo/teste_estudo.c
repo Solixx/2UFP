@@ -158,8 +158,8 @@ int findPC(int id[], int p){
 }
 
 void unionPC(int id[], int p, int q, int N, int sz[]){
-    int i = findWQU(id, p);
-    int j = findWQU(id, q);
+    int i = findPC(id, p);
+    int j = findPC(id, q);
     if(i == j) return;
     if(sz[i] < sz[j]){
         id[i] = j;
@@ -169,8 +169,7 @@ void unionPC(int id[], int p, int q, int N, int sz[]){
         sz[i] += sz[j];
     }
 }
-
- */
+*/
 
 // Funcoes Strings
 /*
@@ -260,7 +259,7 @@ void MSD(char *a[], int lo, int hi, int d){
         MSD(a, lo + count[r], lo + count[r+1] - 1, d+1);
     }
 }
- */
+*/
 
 // Funcoes StringSearch
 

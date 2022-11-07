@@ -17,25 +17,21 @@ void main_pr_aed1_teste2(){
 
     /*
     QuickFind(id, N);
-    unionQF(id, 3, 1, N);
     unionQF(id, 2, 3, N);
     printArrayUnion(id, N);
     */
 
     /*
     QuickUnion(id, N);
-    unionQU(id, 2, 9, N);
-    unionQU(id, 3, 4, N);
-    unionQU(id, 4, 9, N);
+    unionQU(id, 2, 3, N);
     printArrayUnion(id, N);
     */
 
     /*
     WeightedQuickUnion(id, N, sz);
-    unionWQU(id, 2, 1, N, sz);
     unionWQU(id, 2, 3, N, sz);
     printArrayUnion(id, N);
-     */
+    */
 
     /*
     PathCompression(id, N, sz);
@@ -49,15 +45,17 @@ void main_pr_aed1_teste2(){
     /*
     keyIndexed(a, aN);
     printArrayStringChar(a, aN);
-     */
+    */
 
     /*
     LSD(str, W, strN);
     printArrayStringArray(str, strN);
-     */
+    */
 
+    /*
     MSD(str, 0, strN-1, 0);
     printArrayStringArray(str, strN);
+    */
 
 }
 
@@ -79,8 +77,8 @@ void unionQF(int id[], int p, int q, int N){
     int pid = findQF(id, p);
     int qid = findQF(id, q);
     for (int i = 0; i < N; ++i) {
-        if(id[i] == pid){
-            id[i] = qid;
+        if(id[p] == pid){
+            id[p] = qid;
         }
     }
 }
@@ -91,7 +89,7 @@ void QuickUnion(int id[], int N){
     }
 }
 int findQU(int id[], int p){
-    while (p != id[p]){
+    while (id[p] != p){
         p = id[p];
     }
     return p;
@@ -109,13 +107,15 @@ void WeightedQuickUnion(int id[], int N, int sz[]){
     }
 }
 int findWQU(int id[], int p){
-    while (p != id[p]){
+    while (id[p] != p){
         p = id[p];
     }
+    return p;
 }
 void unionWQU(int id[], int p, int q, int N, int sz[]){
     int pid = findWQU(id, p);
     int qid = findWQU(id, q);
+    if(p == q) return;
     if(sz[p] < sz[q]){
         id[p] = qid;
         sz[q] += sz[p];
@@ -139,8 +139,9 @@ int findPC(int id[], int p){
     return p;
 }
 void unionPC(int id[], int p, int q, int N, int sz[]){
-    int pid = findPC(id, N);
-    int qid = findPC(id, N);
+    int pid = findPC(id, p);
+    int qid = findPC(id, q);
+    if(p == q) return;
     if(sz[p] < sz[q]){
         id[p] = qid;
         sz[q] += sz[p];
@@ -168,7 +169,7 @@ void keyIndexed(char a[], int N){
     int count[R+1];
     char aux[N];
 
-    for (int i = 0; i < R; ++i) {
+    for (int i = 0; i < R+1; ++i) {
         count[i] = 0;
     }
     for (int i = 0; i < N; ++i) {
@@ -183,6 +184,7 @@ void keyIndexed(char a[], int N){
     for (int i = 0; i < N; ++i) {
         a[i] = aux[i];
     }
+
 }
 
 void LSD(char *a[], int W, int N){
@@ -192,20 +194,20 @@ void LSD(char *a[], int W, int N){
     char *aux[N];
 
     for (int d = W-1; d >= 0; d--) {
-        for (int j = 0; j < R; ++j) {
-            count[j] = 0;
+        for (int i = 0; i < R+1; ++i) {
+            count[i] = 0;
         }
-        for (int j = 0; j < N; ++j) {
-            count[a[j][d]+1]++;
+        for (int i = 0; i < N; ++i) {
+            count[a[i][d]+1]++;
         }
         for (int r = 0; r < R; ++r) {
             count[r+1] += count[r];
         }
-        for (int j = 0; j < N; ++j) {
-            aux[count[a[j][d]]++] = a[j];
+        for (int i = 0; i < N; ++i) {
+            aux[count[a[i][d]]++] = a[i];
         }
-        for (int j = 0; j < N; ++j) {
-            a[j] = aux[j];
+        for (int i = 0; i < N; ++i) {
+            a[i] = aux[i];
         }
     }
 }
@@ -216,7 +218,7 @@ void MSD(char *a[], int lo, int hi, int d){
     int count[R+2];
     char *aux[hi+1];
 
-    if(hi <= lo) return;
+    if(hi<=lo) return;
     for (int i = 0; i < R+2; ++i) {
         count[i] = 0;
     }

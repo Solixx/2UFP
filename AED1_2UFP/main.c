@@ -19,7 +19,8 @@ int main() {
     //main_pr_aed1_05();
     //main_pr_aed1_06();
     //main_pr_aed1_teste1();
-    main_pr_aed1_teste2();
+    //main_pr_aed1_teste2();
+
 
     // Teste 171116 - Ex 3.a
     /*
