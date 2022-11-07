@@ -8,4 +8,4 @@ include_directories(lp)
 include_directories(tp)
 
 add_executable(AED1_2UFP main.c lp/aed1_00.c lp/aed1_00.h libs_src/lib_util.h libs_src/lib_util.c libs_src/lib_stats.c libs_src/lib_stats.h lp/aed1_02.c
-        lp/aed1_02.h lp/aed1_03.c lp/aed1_04.c lp/aed1_05.c lp/aed1_06.c teste_estudo/teste_estudo.c teste_estudo/teste_estudo.h)
+        lp/aed1_02.h lp/aed1_03.c lp/aed1_04.c lp/aed1_05.c lp/aed1_06.c teste_estudo/teste_estudo.c teste_estudo/teste_estudo.h teste_estudo/teste_estudo2.c)

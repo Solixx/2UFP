@@ -12,6 +12,7 @@
 #include <ctype.h>
 
 void main_pr_aed1_teste1();
+void main_pr_aed1_teste2();
 
 void printArrayUnion(int id[], int N);
 

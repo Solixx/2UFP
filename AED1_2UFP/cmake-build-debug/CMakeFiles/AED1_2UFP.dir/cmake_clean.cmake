@@ -22,6 +22,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/AED1_2UFP.dir/main.c.obj.d"
   "CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj"
   "CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj.d"
+  "CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj"
+  "CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj.d"
   "libAED1_2UFP.dll.a"
 )
 

@@ -139,6 +139,9 @@
 		<Unit filename="E:/GitHub/2UFP/AED1_2UFP/teste_estudo/teste_estudo.h">
 			<Option target="AED1_2UFP"/>
 		</Unit>
+		<Unit filename="E:/GitHub/2UFP/AED1_2UFP/teste_estudo/teste_estudo2.c">
+			<Option target="AED1_2UFP"/>
+		</Unit>
 		<Unit filename="E:/GitHub/2UFP/AED1_2UFP/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

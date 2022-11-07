@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/GitHub/2UFP/AED1_2UFP/lp/aed1_06.c" "CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj" "gcc" "CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj.d"
   "E:/GitHub/2UFP/AED1_2UFP/main.c" "CMakeFiles/AED1_2UFP.dir/main.c.obj" "gcc" "CMakeFiles/AED1_2UFP.dir/main.c.obj.d"
   "E:/GitHub/2UFP/AED1_2UFP/teste_estudo/teste_estudo.c" "CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj" "gcc" "CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj.d"
+  "E:/GitHub/2UFP/AED1_2UFP/teste_estudo/teste_estudo2.c" "CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj" "gcc" "CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj.d"
   )
 
 # Targets to which this target links.
