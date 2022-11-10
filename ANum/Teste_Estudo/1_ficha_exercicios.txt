@@ -1,0 +1,10 @@
+1) Um erro de arredondamento é a diferença entre a aproximação calculada de um número e o seu valor matemático 
+exato.
+A maioria dos números têm representações decimais infinitas, que eventualmente devem ser arredondadas. 
+Quando utilizamos um equipamento eletrônico para processar uma determinada operação aritmética, 
+se o número obtido não é representável exatamente, o mesmo será representado do forma aproximada.
+
+EX: 1/7
+Valor Exato - 0,1428571429
+Aproximação - 0,142857
+Erro	    - 1,429−7

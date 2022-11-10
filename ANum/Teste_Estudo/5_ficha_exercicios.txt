@@ -1,0 +1,7 @@
+5)
+UnderFlow
+Denomina-se região de underflow a região entre o menor número de vírgula flutuante positivo e o zero e, 
+simetricamente, entre o maior número negativo e o zero.
+OverFlow
+As regiões situadas além do maior e aquém do menor dos números de vírgula flutuante constituem a região
+de overflow.

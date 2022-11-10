@@ -4,7 +4,7 @@ void teste_2021_ex1();
 
 int main() {
 
-    teste_2021_ex1();
+    //teste_2021_ex1();
 
     return 0;
 }
