@@ -188,26 +188,11 @@ CMakeFiles/AED1_2UFP.dir/lp/aed1_05.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AED1_2UFP.dir/lp/aed1_05.c.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\manue\Desktop\GitHub\2UFP\AED1_2UFP\lp\aed1_05.c -o CMakeFiles\AED1_2UFP.dir\lp\aed1_05.c.s
 
-CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj: CMakeFiles/AED1_2UFP.dir/flags.make
-CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj: CMakeFiles/AED1_2UFP.dir/includes_C.rsp
-CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj: ../lp/aed1_06.c
-CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj: CMakeFiles/AED1_2UFP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\manue\Desktop\GitHub\2UFP\AED1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj -MF CMakeFiles\AED1_2UFP.dir\lp\aed1_06.c.obj.d -o CMakeFiles\AED1_2UFP.dir\lp\aed1_06.c.obj -c C:\Users\manue\Desktop\GitHub\2UFP\AED1_2UFP\lp\aed1_06.c
-
-CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\manue\Desktop\GitHub\2UFP\AED1_2UFP\lp\aed1_06.c > CMakeFiles\AED1_2UFP.dir\lp\aed1_06.c.i
-
-CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\manue\Desktop\GitHub\2UFP\AED1_2UFP\lp\aed1_06.c -o CMakeFiles\AED1_2UFP.dir\lp\aed1_06.c.s
-
 CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj: CMakeFiles/AED1_2UFP.dir/flags.make
 CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj: CMakeFiles/AED1_2UFP.dir/includes_C.rsp
 CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj: ../teste_estudo/teste_estudo.c
 CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj: CMakeFiles/AED1_2UFP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\manue\Desktop\GitHub\2UFP\AED1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\manue\Desktop\GitHub\2UFP\AED1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj -MF CMakeFiles\AED1_2UFP.dir\teste_estudo\teste_estudo.c.obj.d -o CMakeFiles\AED1_2UFP.dir\teste_estudo\teste_estudo.c.obj -c C:\Users\manue\Desktop\GitHub\2UFP\AED1_2UFP\teste_estudo\teste_estudo.c
 
 CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.i: cmake_force
@@ -222,7 +207,7 @@ CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj: CMakeFiles/AED1_2UFP.
 CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj: CMakeFiles/AED1_2UFP.dir/includes_C.rsp
 CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj: ../teste_estudo/teste_estudo2.c
 CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj: CMakeFiles/AED1_2UFP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\manue\Desktop\GitHub\2UFP\AED1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\manue\Desktop\GitHub\2UFP\AED1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj -MF CMakeFiles\AED1_2UFP.dir\teste_estudo\teste_estudo2.c.obj.d -o CMakeFiles\AED1_2UFP.dir\teste_estudo\teste_estudo2.c.obj -c C:\Users\manue\Desktop\GitHub\2UFP\AED1_2UFP\teste_estudo\teste_estudo2.c
 
 CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.i: cmake_force
@@ -243,7 +228,6 @@ AED1_2UFP_OBJECTS = \
 "CMakeFiles/AED1_2UFP.dir/lp/aed1_03.c.obj" \
 "CMakeFiles/AED1_2UFP.dir/lp/aed1_04.c.obj" \
 "CMakeFiles/AED1_2UFP.dir/lp/aed1_05.c.obj" \
-"CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj" \
 "CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj" \
 "CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj"
 
@@ -258,14 +242,13 @@ AED1_2UFP.exe: CMakeFiles/AED1_2UFP.dir/lp/aed1_02.c.obj
 AED1_2UFP.exe: CMakeFiles/AED1_2UFP.dir/lp/aed1_03.c.obj
 AED1_2UFP.exe: CMakeFiles/AED1_2UFP.dir/lp/aed1_04.c.obj
 AED1_2UFP.exe: CMakeFiles/AED1_2UFP.dir/lp/aed1_05.c.obj
-AED1_2UFP.exe: CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj
 AED1_2UFP.exe: CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj
 AED1_2UFP.exe: CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj
 AED1_2UFP.exe: CMakeFiles/AED1_2UFP.dir/build.make
 AED1_2UFP.exe: CMakeFiles/AED1_2UFP.dir/linklibs.rsp
 AED1_2UFP.exe: CMakeFiles/AED1_2UFP.dir/objects1.rsp
 AED1_2UFP.exe: CMakeFiles/AED1_2UFP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\manue\Desktop\GitHub\2UFP\AED1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable AED1_2UFP.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\manue\Desktop\GitHub\2UFP\AED1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable AED1_2UFP.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\AED1_2UFP.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

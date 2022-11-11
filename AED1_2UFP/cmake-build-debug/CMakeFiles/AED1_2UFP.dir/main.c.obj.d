@@ -240,5 +240,4 @@ CMakeFiles/AED1_2UFP.dir/main.c.obj: \
  C:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/lp/aed1_03.h \
  C:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/lp/aed1_04.h \
  C:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/lp/aed1_05.h \
- C:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/lp/aed1_06.h \
  C:\Users\manue\Desktop\GitHub\2UFP\AED1_2UFP\teste_estudo/teste_estudo.h
