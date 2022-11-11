@@ -8,9 +8,9 @@
 void main_pr_aed1_06(){
 
     //cliente0();
-    cliente1();
+    //cliente1();
     //cliente2();
-    //cliente3();
+    cliente3();
 }
 
 void cliente0(){
