@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "AED1_2UFP::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-AED1_2UFP-Debug-dc8e63613058b1c3f30a.json",
+					"jsonFile" : "target-AED1_2UFP-Debug-3d4c724a0d0bd8268003.json",
 					"name" : "AED1_2UFP",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/cmake-build-debug",
-		"source" : "C:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP"
+		"build" : "E:/GitHub/2UFP/AED1_2UFP/cmake-build-debug",
+		"source" : "E:/GitHub/2UFP/AED1_2UFP"
 	},
 	"version" : 
 	{
