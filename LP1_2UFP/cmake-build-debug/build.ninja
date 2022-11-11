@@ -133,6 +133,12 @@ build CMakeFiles/LP1_2UFP.dir/lp/pr06.c.obj: C_COMPILER__LP1_2UFP_Debug C$:/User
   OBJECT_DIR = CMakeFiles\LP1_2UFP.dir
   OBJECT_FILE_DIR = CMakeFiles\LP1_2UFP.dir\lp
 
+build CMakeFiles/LP1_2UFP.dir/lp/pr07.c.obj: C_COMPILER__LP1_2UFP_Debug C$:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/lp/pr07.c || cmake_object_order_depends_target_LP1_2UFP
+  DEP_FILE = CMakeFiles\LP1_2UFP.dir\lp\pr07.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\LP1_2UFP.dir
+  OBJECT_FILE_DIR = CMakeFiles\LP1_2UFP.dir\lp
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target LP1_2UFP
@@ -141,7 +147,7 @@ build CMakeFiles/LP1_2UFP.dir/lp/pr06.c.obj: C_COMPILER__LP1_2UFP_Debug C$:/User
 #############################################
 # Link the executable LP1_2UFP.exe
 
-build LP1_2UFP.exe: C_EXECUTABLE_LINKER__LP1_2UFP_Debug CMakeFiles/LP1_2UFP.dir/main.c.obj CMakeFiles/LP1_2UFP.dir/tp/tp01.c.obj CMakeFiles/LP1_2UFP.dir/lp/pr01.c.obj CMakeFiles/LP1_2UFP.dir/tp/tp02.c.obj CMakeFiles/LP1_2UFP.dir/lp/pr02.c.obj CMakeFiles/LP1_2UFP.dir/tp/tp03.c.obj CMakeFiles/LP1_2UFP.dir/lp/pr03.c.obj CMakeFiles/LP1_2UFP.dir/tp/tp04.c.obj CMakeFiles/LP1_2UFP.dir/lp/pr04.c.obj CMakeFiles/LP1_2UFP.dir/tp/tp05.c.obj CMakeFiles/LP1_2UFP.dir/lp/pr05.c.obj CMakeFiles/LP1_2UFP.dir/tp/tp06.c.obj CMakeFiles/LP1_2UFP.dir/testes/testes.c.obj CMakeFiles/LP1_2UFP.dir/lp/pr06.c.obj
+build LP1_2UFP.exe: C_EXECUTABLE_LINKER__LP1_2UFP_Debug CMakeFiles/LP1_2UFP.dir/main.c.obj CMakeFiles/LP1_2UFP.dir/tp/tp01.c.obj CMakeFiles/LP1_2UFP.dir/lp/pr01.c.obj CMakeFiles/LP1_2UFP.dir/tp/tp02.c.obj CMakeFiles/LP1_2UFP.dir/lp/pr02.c.obj CMakeFiles/LP1_2UFP.dir/tp/tp03.c.obj CMakeFiles/LP1_2UFP.dir/lp/pr03.c.obj CMakeFiles/LP1_2UFP.dir/tp/tp04.c.obj CMakeFiles/LP1_2UFP.dir/lp/pr04.c.obj CMakeFiles/LP1_2UFP.dir/tp/tp05.c.obj CMakeFiles/LP1_2UFP.dir/lp/pr05.c.obj CMakeFiles/LP1_2UFP.dir/tp/tp06.c.obj CMakeFiles/LP1_2UFP.dir/testes/testes.c.obj CMakeFiles/LP1_2UFP.dir/lp/pr06.c.obj CMakeFiles/LP1_2UFP.dir/lp/pr07.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\LP1_2UFP.dir

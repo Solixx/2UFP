@@ -12,6 +12,7 @@
 #include "lp/pr05.h"
 #include "tp/tp06.h"
 #include "lp/pr06.h"
+#include "lp/pr07.h"
 
 #include "testes/testes.h"
 
@@ -30,8 +31,9 @@ int main(int argc, const char* argv[]) {
     //main_pr04(argc, argv);
     //main_pr05(argc, argv);
     //main_pr06(argc, argv);
+    main_pr07(argc, argv);
 
-    main_testes(argc, argv);
+    //main_testes(argc, argv);
 
     /*
     for (int i = 0; i < size2; ++i) { //h
