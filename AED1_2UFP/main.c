@@ -16,8 +16,8 @@ int main() {
     //main_pr_aed1_02();
     //main_pr_aed1_03();
     //main_pr_aed1_04();
-    main_pr_aed1_05();
-    //main_pr_aed1_06();
+    //main_pr_aed1_05();
+    main_pr_aed1_06();
 
     //main_pr_aed1_teste1();
     //main_pr_aed1_teste2();
