@@ -6,11 +6,52 @@
 
 
 void main_pr_aed1_06(){
-    char t[] = {'2','a','2','1'};
+
+    //cliente0();
+    //cliente1();
+    //cliente2();
+    cliente3();
+
+}
+
+void cliente0(){
+    char t[] = "2211";
+
+    printf("%d\n", bipolar_number(t));
+}
+
+void cliente1(){
     int k = 4;
 
-    //printf("%d\n", bipolar_number(t));
     print_bipolar_numbers(k);
+}
+
+void cliente2(){
+    char t[] = "77555";
+    int histo[10];
+
+    if(bipolar_number(t) == 0){
+        hist(t, histo);
+        for (int i = 0; i < 10; ++i) {
+            printf("histo de %d = %d\n", i, histo[i]);
+        }
+    }
+}
+
+void cliente3(){
+    char t[] = "77555";
+    int runLess[4];
+
+    if(bipolar_number(t) == 0){
+        for (int i = 0; i < 4; ++i) {
+            runLess[i] = 0;
+        }
+        RL(t, runLess);
+        printf("RL\n");
+        for (int i = 0; i < 4; ++i) {
+            printf("%d ", runLess[i]);
+        }
+    }
 }
 
 int bipolar_number(char *text){
@@ -19,7 +60,7 @@ int bipolar_number(char *text){
     int number, pow, digits = 0;
     char *str = &text[0];
 
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < strlen(text); ++i) {
         if(isalpha(text[i])){
             printf("Nao pode ter letras\n");
             return -1;
@@ -37,7 +78,7 @@ int bipolar_number(char *text){
             }
         }
         number = atoi(str);
-        return number;
+        return 0;
     }
     else{
         return -1;
@@ -90,4 +131,36 @@ void print_bipolar_numbers(int k){
             j++;
         }
     }
+}
+
+int hist(char* num, int histo[]){
+        for (int i = 0; i < 10; ++i) {
+            histo[i] = 0;
+        }
+        for (int i = 0; i < strlen(num); ++i) {
+            histo[*(num+i)-'0']++;
+        }
+        return 0;
+}
+
+int RL(char* num, int runLess[]){
+    int runLessPos = 0;
+    char temp;
+    for (int i = 0; i < strlen(num); ++i) {
+        if(i == 0){
+            runLess[runLessPos]++;
+        } else{
+            if(*(num+i) == temp){
+                runLess[runLessPos]++;
+            } else{
+                runLessPos++;
+                runLess[runLessPos] = temp-'0';
+                runLessPos++;
+                runLess[runLessPos]++;
+            }
+        }
+        temp = *(num+i);
+    }
+    runLessPos++;
+    runLess[runLessPos] = temp-'0';
 }
