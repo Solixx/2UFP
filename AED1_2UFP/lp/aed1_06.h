@@ -17,7 +17,9 @@ void print_bipolar_numbers(int k);
 
 int hist(char* num, int histo[]);
 
-int RL(char* num, int runLess[]);
+int RL_V1(char* num, int runLess[]);
+
+int RL_V2(char* num, int runLess[]);
 
 void cliente0();
 void cliente1();

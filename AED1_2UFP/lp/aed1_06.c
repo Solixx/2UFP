@@ -8,10 +8,9 @@
 void main_pr_aed1_06(){
 
     //cliente0();
-    //cliente1();
+    cliente1();
     //cliente2();
-    cliente3();
-
+    //cliente3();
 }
 
 void cliente0(){
@@ -46,7 +45,8 @@ void cliente3(){
         for (int i = 0; i < 4; ++i) {
             runLess[i] = 0;
         }
-        RL(t, runLess);
+        //RL_V1(t, runLess);
+        RL_V2(t, runLess);
         printf("RL\n");
         for (int i = 0; i < 4; ++i) {
             printf("%d ", runLess[i]);
@@ -143,7 +143,7 @@ int hist(char* num, int histo[]){
         return 0;
 }
 
-int RL(char* num, int runLess[]){
+int RL_V1(char* num, int runLess[]){
     int runLessPos = 0;
     char temp;
     for (int i = 0; i < strlen(num); ++i) {
@@ -163,4 +163,17 @@ int RL(char* num, int runLess[]){
     }
     runLessPos++;
     runLess[runLessPos] = temp-'0';
+}
+
+int RL_V2(char* num, int runLess[]){
+    int runLessPos = 0;
+    runLess[runLessPos] = 1;
+    runLess[runLessPos+1] = *(num)-'0';
+    for (int i = 1; i < strlen(num); ++i) {
+        if(*(num+i) != *(num+(i-1))){
+            runLessPos += 2;
+            runLess[runLessPos+1] = *(num+i)-'0';
+        }
+        runLess[runLessPos]++;
+    }
 }
