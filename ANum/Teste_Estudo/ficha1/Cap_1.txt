@@ -1,0 +1,24 @@
+1.	Erros de Arredondamento são aqueles relacionados com as limitações existentes na forma de representar números provocando assim um possível erro, porque não estaríamos a utilizar o número original mas sim uma aproximação, algo  que é muito comum a nível dos computadores devido à sua precisão finita, ou seja, procede-se sempre ao arredondamento dos números utilizados, por exemplo, o número 3,645 se arredondado a apenas 2 casas decimais este número iria passar a ser 3,65 admitindo assim um erro de 0,004.
+
+
+
+
+4- A série harmónica é divergente, porque nós enquanto humanos, temos a capacidade de agrupar os argumentos e utilizar sempre os valores exatos fazendo assim com que essa mesma série seja então divergente. Por enquanto, a máquina procede a arredondamentos pois possui uma precisao finita, ou seja, irá proceder a arredondamentos dificultando assim os processos, fazendo com que hajam erros maiores sendo o computador incapaz de agrupar os termos como nós. Fazendo com que entao esta série se torne convergente em vez de divergente, como era suposto.~
+
+
+5- Overflow é  quando o valor absoluto é superior ao maior valor absoluto representável e underflow é quando o valor absoluto é nao nulo mas inferior ao menor valor absoluto representavel.
+
+6-soma-se uma unidade a casa decimal n (e alteram-se se necessarias casas a esquerda desta), ou seja, arredonda-se para cima. Mantem-se a casa decimal n, ou seja, arredonda-se para baixo. Arredonda-se para cima ou para baixo de forma a que o algarismo da casa decimal n seja par (neste caso e tambem possıvel utilizar o arredondamento para cima).
+
+
+7- Formula resolvente 
+
+x1 - parte esquerda da virgula
+x2 - parte direita da virgula 
+
+x1 * x2 = c / a
+
+
+
+
+
