@@ -23,6 +23,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/tp/tp04.c" "CMakeFiles/LP1_2UFP.dir/tp/tp04.c.obj" "gcc" "CMakeFiles/LP1_2UFP.dir/tp/tp04.c.obj.d"
   "C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/tp/tp05.c" "CMakeFiles/LP1_2UFP.dir/tp/tp05.c.obj" "gcc" "CMakeFiles/LP1_2UFP.dir/tp/tp05.c.obj.d"
   "C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/tp/tp06.c" "CMakeFiles/LP1_2UFP.dir/tp/tp06.c.obj" "gcc" "CMakeFiles/LP1_2UFP.dir/tp/tp06.c.obj.d"
+  "C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/tp/tp08.c" "CMakeFiles/LP1_2UFP.dir/tp/tp08.c.obj" "gcc" "CMakeFiles/LP1_2UFP.dir/tp/tp08.c.obj.d"
   )
 
 # Targets to which this target links.

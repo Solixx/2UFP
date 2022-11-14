@@ -69,7 +69,8 @@
 				14,
 				15,
 				16,
-				18
+				18,
+				19
 			]
 		}
 	],
@@ -120,7 +121,8 @@
 				14,
 				15,
 				16,
-				18
+				18,
+				19
 			]
 		},
 		{
@@ -244,6 +246,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "lp/pr07.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "tp/tp08.c",
 			"sourceGroupIndex" : 0
 		}
 	],
