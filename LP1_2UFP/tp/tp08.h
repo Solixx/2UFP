@@ -31,7 +31,7 @@
  * NB 2: instead of defining a structure it also possible to declare a new type PT with:
  *  typedef struct { int x, y; } PT;
  */
-struct pt { float x, y; };
+struct pt { float x, y;};
 //typedef struct { float x, y; } PT;
 
 
@@ -39,7 +39,7 @@ struct pt { float x, y; };
  * Declare a new data type to represent rectangles (contains two fields: down and up points).
  *  e.g. RECT r1 = { {0.0f, 0.0f}, {1.0f, 1.0f} }
  */
-typedef struct rect { struct pt downpt, uppt; } RECT;
+typedef struct rect { struct pt downpt, uppt;} RECT;
 
 /**
  * Compare to points in space (equal if both have the same coordinates).

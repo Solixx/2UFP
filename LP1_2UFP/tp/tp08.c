@@ -10,12 +10,20 @@ int main_tp08(int argc, const char * argv[]){
     struct pt pt2 = {1.0f, 3.0f};
     struct pt p1;
     RECT r1;
+    RECT *rec1;
+    RECT r2;
 
     //printf("%d\n",  compare_pts(pt1, pt2));
+    //printf("%d\n", compare_rects(r1, r2));
     //read_pt(&pt1);
-    p1 = read_pt_v2();
-    r1 = read_rect_v2();
-    //print_pt("Ponto P1", pt1);
+    //create_pt(pt1);
+    //create_rect(r1);
+    //read_pt(p2);
+    //p1 = read_pt_v2();
+    //print_pt("Pontos", p1);
+    //read_rect(rec1);
+    //r1 = read_rect_v2();
+    //print_rect_v1("Rec", r1);
 
     return 0;
 }
@@ -74,10 +82,10 @@ struct rect* create_rect(RECT r){
 void read_pt(struct pt* pp){
     printf("Insira um ponto\n");
     // 1º forma
-    scanf("%f%f", &pp->x, &pp->y);
+    //scanf("%f%f", &pp->x, &pp->y);
 
     //2º forma
-    //scanf("%f%f", &(*pp).x, &(*pp).y);
+    scanf("%f%f", &(*pp).x, &(*pp).y);
 
     /*
     printf("%f\n", pp->x);
@@ -110,7 +118,7 @@ RECT read_rect_v2(void){
 }
 
 void print_pt(char pt_label[], struct pt p){
-    printf("%s: (%0.0f, %0.0f)\n", pt_label, p.x, p.y);
+    printf("%s: (%f, %f)\n", pt_label, p.x, p.y);
 }
 
 void print_rect_v1(char rect_label[], RECT r){
