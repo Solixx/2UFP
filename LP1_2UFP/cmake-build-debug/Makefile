@@ -296,6 +296,30 @@ lp/pr07.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LP1_2UFP.dir\build.make CMakeFiles/LP1_2UFP.dir/lp/pr07.c.s
 .PHONY : lp/pr07.c.s
 
+lp/pr08.obj: lp/pr08.c.obj
+.PHONY : lp/pr08.obj
+
+# target to build an object file
+lp/pr08.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LP1_2UFP.dir\build.make CMakeFiles/LP1_2UFP.dir/lp/pr08.c.obj
+.PHONY : lp/pr08.c.obj
+
+lp/pr08.i: lp/pr08.c.i
+.PHONY : lp/pr08.i
+
+# target to preprocess a source file
+lp/pr08.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LP1_2UFP.dir\build.make CMakeFiles/LP1_2UFP.dir/lp/pr08.c.i
+.PHONY : lp/pr08.c.i
+
+lp/pr08.s: lp/pr08.c.s
+.PHONY : lp/pr08.s
+
+# target to generate assembly for a file
+lp/pr08.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LP1_2UFP.dir\build.make CMakeFiles/LP1_2UFP.dir/lp/pr08.c.s
+.PHONY : lp/pr08.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -542,6 +566,9 @@ help:
 	@echo ... lp/pr07.obj
 	@echo ... lp/pr07.i
 	@echo ... lp/pr07.s
+	@echo ... lp/pr08.obj
+	@echo ... lp/pr08.i
+	@echo ... lp/pr08.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/LP1_2UFP.dir/lp/pr06.c.obj.d"
   "CMakeFiles/LP1_2UFP.dir/lp/pr07.c.obj"
   "CMakeFiles/LP1_2UFP.dir/lp/pr07.c.obj.d"
+  "CMakeFiles/LP1_2UFP.dir/lp/pr08.c.obj"
+  "CMakeFiles/LP1_2UFP.dir/lp/pr08.c.obj.d"
   "CMakeFiles/LP1_2UFP.dir/main.c.obj"
   "CMakeFiles/LP1_2UFP.dir/main.c.obj.d"
   "CMakeFiles/LP1_2UFP.dir/testes/testes.c.obj"
