@@ -43,7 +43,7 @@ void calc_roots(int a, int b, int c, double* r1, double* r2){
     }
 
     else if (sqare == 0) {
-        r1 =r2 = -b / (2 * a);
+        //r1 =r2 = -b / (2 * a);
         printf("root1 = root2 = %.2lf;", *r1);
     }
 }

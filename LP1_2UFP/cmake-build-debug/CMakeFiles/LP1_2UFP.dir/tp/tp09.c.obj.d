@@ -1,6 +1,6 @@
-CMakeFiles/LP1_2UFP.dir/lp/pr03.c.obj: \
- C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\lp\pr03.c \
- C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\lp\pr03.h \
+CMakeFiles/LP1_2UFP.dir/tp/tp09.c.obj: \
+ C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\tp\tp09.c \
+ C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\tp\tp09.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/x86_64-w64-mingw32/include/stdio.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/x86_64-w64-mingw32/include/_mingw.h \
@@ -14,4 +14,10 @@ CMakeFiles/LP1_2UFP.dir/lp/pr03.c.obj: \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/x86_64-w64-mingw32/include/_mingw_print_pop.h \
- C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/x86_64-w64-mingw32/include/math.h
+ C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\tp\tp08.h \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/x86_64-w64-mingw32/include/limits.h \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/x86_64-w64-mingw32/include/malloc.h
