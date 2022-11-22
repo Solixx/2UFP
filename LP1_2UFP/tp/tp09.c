@@ -4,6 +4,7 @@
 
 #include "tp09.h"
 
+
 int main_tp09(int argc, const char * argv[]){
 
     STACK_NODE_POINTS snp1 = {0, NULL};
