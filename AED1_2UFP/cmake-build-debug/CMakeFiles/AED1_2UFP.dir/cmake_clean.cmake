@@ -18,6 +18,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/AED1_2UFP.dir/lp/aed1_05.c.obj.d"
   "CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj"
   "CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj.d"
+  "CMakeFiles/AED1_2UFP.dir/lp/aed1_07.c.obj"
+  "CMakeFiles/AED1_2UFP.dir/lp/aed1_07.c.obj.d"
   "CMakeFiles/AED1_2UFP.dir/main.c.obj"
   "CMakeFiles/AED1_2UFP.dir/main.c.obj.d"
   "CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj"

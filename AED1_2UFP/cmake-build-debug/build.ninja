@@ -121,15 +121,6 @@ build CMakeFiles/AED1_2UFP.dir/lp/aed1_05.c.obj: C_COMPILER__AED1_2UFP_Debug C$:
   TARGET_COMPILE_PDB = CMakeFiles\AED1_2UFP.dir\
   TARGET_PDB = AED1_2UFP.pdb
 
-build CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj: C_COMPILER__AED1_2UFP_Debug C$:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/lp/aed1_06.c || cmake_object_order_depends_target_AED1_2UFP
-  DEP_FILE = CMakeFiles\AED1_2UFP.dir\lp\aed1_06.c.obj.d
-  FLAGS = -g -std=gnu99
-  INCLUDES = -IC:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/libs_src -IC:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/lp -IC:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/tp
-  OBJECT_DIR = CMakeFiles\AED1_2UFP.dir
-  OBJECT_FILE_DIR = CMakeFiles\AED1_2UFP.dir\lp
-  TARGET_COMPILE_PDB = CMakeFiles\AED1_2UFP.dir\
-  TARGET_PDB = AED1_2UFP.pdb
-
 build CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj: C_COMPILER__AED1_2UFP_Debug C$:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/teste_estudo/teste_estudo.c || cmake_object_order_depends_target_AED1_2UFP
   DEP_FILE = CMakeFiles\AED1_2UFP.dir\teste_estudo\teste_estudo.c.obj.d
   FLAGS = -g -std=gnu99
@@ -148,6 +139,15 @@ build CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj: C_COMPILER__AED
   TARGET_COMPILE_PDB = CMakeFiles\AED1_2UFP.dir\
   TARGET_PDB = AED1_2UFP.pdb
 
+build CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj: C_COMPILER__AED1_2UFP_Debug C$:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/lp/aed1_06.c || cmake_object_order_depends_target_AED1_2UFP
+  DEP_FILE = CMakeFiles\AED1_2UFP.dir\lp\aed1_06.c.obj.d
+  FLAGS = -g -std=gnu99
+  INCLUDES = -IC:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/libs_src -IC:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/lp -IC:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/tp
+  OBJECT_DIR = CMakeFiles\AED1_2UFP.dir
+  OBJECT_FILE_DIR = CMakeFiles\AED1_2UFP.dir\lp
+  TARGET_COMPILE_PDB = CMakeFiles\AED1_2UFP.dir\
+  TARGET_PDB = AED1_2UFP.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target AED1_2UFP
@@ -156,7 +156,7 @@ build CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj: C_COMPILER__AED
 #############################################
 # Link the executable AED1_2UFP.exe
 
-build AED1_2UFP.exe: C_EXECUTABLE_LINKER__AED1_2UFP_Debug CMakeFiles/AED1_2UFP.dir/main.c.obj CMakeFiles/AED1_2UFP.dir/lp/aed1_00.c.obj CMakeFiles/AED1_2UFP.dir/libs_src/lib_util.c.obj CMakeFiles/AED1_2UFP.dir/libs_src/lib_stats.c.obj CMakeFiles/AED1_2UFP.dir/lp/aed1_02.c.obj CMakeFiles/AED1_2UFP.dir/lp/aed1_03.c.obj CMakeFiles/AED1_2UFP.dir/lp/aed1_04.c.obj CMakeFiles/AED1_2UFP.dir/lp/aed1_05.c.obj CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj
+build AED1_2UFP.exe: C_EXECUTABLE_LINKER__AED1_2UFP_Debug CMakeFiles/AED1_2UFP.dir/main.c.obj CMakeFiles/AED1_2UFP.dir/lp/aed1_00.c.obj CMakeFiles/AED1_2UFP.dir/libs_src/lib_util.c.obj CMakeFiles/AED1_2UFP.dir/libs_src/lib_stats.c.obj CMakeFiles/AED1_2UFP.dir/lp/aed1_02.c.obj CMakeFiles/AED1_2UFP.dir/lp/aed1_03.c.obj CMakeFiles/AED1_2UFP.dir/lp/aed1_04.c.obj CMakeFiles/AED1_2UFP.dir/lp/aed1_05.c.obj CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo.c.obj CMakeFiles/AED1_2UFP.dir/teste_estudo/teste_estudo2.c.obj CMakeFiles/AED1_2UFP.dir/lp/aed1_06.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\AED1_2UFP.dir
