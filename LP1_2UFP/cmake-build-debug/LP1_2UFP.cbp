@@ -179,6 +179,12 @@
 		<Unit filename="C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/tp/tp09.h">
 			<Option target="LP1_2UFP"/>
 		</Unit>
+		<Unit filename="C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/tp/tp10.c">
+			<Option target="LP1_2UFP"/>
+		</Unit>
+		<Unit filename="C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/tp/tp10.h">
+			<Option target="LP1_2UFP"/>
+		</Unit>
 		<Unit filename="C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -35,6 +35,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/LP1_2UFP.dir/tp/tp08.c.obj.d"
   "CMakeFiles/LP1_2UFP.dir/tp/tp09.c.obj"
   "CMakeFiles/LP1_2UFP.dir/tp/tp09.c.obj.d"
+  "CMakeFiles/LP1_2UFP.dir/tp/tp10.c.obj"
+  "CMakeFiles/LP1_2UFP.dir/tp/tp10.c.obj.d"
   "LP1_2UFP.exe"
   "LP1_2UFP.exe.manifest"
   "LP1_2UFP.pdb"
