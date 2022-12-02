@@ -344,6 +344,30 @@ lp/aed1_07.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED1_2UFP.dir\build.make CMakeFiles/AED1_2UFP.dir/lp/aed1_07.c.s
 .PHONY : lp/aed1_07.c.s
 
+lp/aed1_08.obj: lp/aed1_08.c.obj
+.PHONY : lp/aed1_08.obj
+
+# target to build an object file
+lp/aed1_08.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED1_2UFP.dir\build.make CMakeFiles/AED1_2UFP.dir/lp/aed1_08.c.obj
+.PHONY : lp/aed1_08.c.obj
+
+lp/aed1_08.i: lp/aed1_08.c.i
+.PHONY : lp/aed1_08.i
+
+# target to preprocess a source file
+lp/aed1_08.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED1_2UFP.dir\build.make CMakeFiles/AED1_2UFP.dir/lp/aed1_08.c.i
+.PHONY : lp/aed1_08.c.i
+
+lp/aed1_08.s: lp/aed1_08.c.s
+.PHONY : lp/aed1_08.s
+
+# target to generate assembly for a file
+lp/aed1_08.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AED1_2UFP.dir\build.make CMakeFiles/AED1_2UFP.dir/lp/aed1_08.c.s
+.PHONY : lp/aed1_08.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -452,6 +476,9 @@ help:
 	@echo ... lp/aed1_07.obj
 	@echo ... lp/aed1_07.i
 	@echo ... lp/aed1_07.s
+	@echo ... lp/aed1_08.obj
+	@echo ... lp/aed1_08.i
+	@echo ... lp/aed1_08.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

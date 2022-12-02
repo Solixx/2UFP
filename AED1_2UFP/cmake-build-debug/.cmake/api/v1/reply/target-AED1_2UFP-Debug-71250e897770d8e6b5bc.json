@@ -100,7 +100,8 @@
 				12,
 				14,
 				15,
-				16
+				16,
+				17
 			]
 		}
 	],
@@ -148,7 +149,8 @@
 				12,
 				14,
 				15,
-				16
+				16,
+				17
 			]
 		},
 		{
@@ -260,6 +262,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "lp/aed1_07.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lp/aed1_08.c",
 			"sourceGroupIndex" : 0
 		}
 	],

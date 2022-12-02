@@ -134,6 +134,12 @@
 		<Unit filename="C:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/lp/aed1_07.h">
 			<Option target="AED1_2UFP"/>
 		</Unit>
+		<Unit filename="C:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/lp/aed1_08.c">
+			<Option target="AED1_2UFP"/>
+		</Unit>
+		<Unit filename="C:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/lp/aed1_08.h">
+			<Option target="AED1_2UFP"/>
+		</Unit>
 		<Unit filename="C:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/main.c">
 			<Option target="AED1_2UFP"/>
 		</Unit>
