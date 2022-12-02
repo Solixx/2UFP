@@ -8,7 +8,8 @@ void main_pr_aed1_08(){
 
     //client0_aed08();
     //client1_aed08();
-    client2_aed08();
+    //client2_aed08();
+    client3_aed08();
 }
 
 void client0_aed08(){
@@ -32,13 +33,27 @@ void client1_aed08(){
 }
 
 void client2_aed08(){
-    int a1[] = {2,6,3,9,1,8};
-    int N1 = 6;
+    int a1[] = {7,3,8,1,4,6, 9, 10};
+    int N1 = 8;
     printf("Antes de Ordenar: ");
     printArray(a1, N1);
     quickSort_base_media(a1, N1);
     printf("Depois de Ordenar: ");
     printArray(a1, N1);
+}
+
+void client3_aed08(){
+    int a1[] = {7,3,8,1,4,6, 9, 10};
+    int N1 = 8;
+    int k = 4;
+    int val = 0;
+    printf("Antes de Ordenar: ");
+    printArray(a1, N1);
+    quickSort_base_CUTOFF(a1, N1);
+    val = quickSelection(a1, k, N1);
+    printf("Depois de Ordenar: ");
+    printArray(a1, N1);
+    printf("O val e: %d\n", val);
 }
 
 int quickSort_partition(int a[], int lo, int hi){
@@ -107,4 +122,18 @@ int media(int a[], int lo, int mid, int hi){
         mediaVal = a[mid+1];
     }
     return mediaVal;
+}
+
+int quickSelection(int a[], int k, int N){
+
+    knuth_shuffle(a, N);
+    int lo = 0, hi = N-1;
+
+    while (hi > lo){
+        int j = quickSort_partition(a, lo, hi);
+        if (j < k) lo = j+1;
+        else if(j > k) hi = j-1;
+        else return a[k];
+    }
+    return a[k];
 }

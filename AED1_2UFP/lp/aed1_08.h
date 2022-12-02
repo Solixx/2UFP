@@ -21,6 +21,8 @@ void client1_aed08();
 
 void client2_aed08();
 
+void client3_aed08();
+
 int quickSort_partition(int a[], int lo, int hi);
 
 void quickSort_base(int a[], int N);
@@ -36,5 +38,7 @@ void quickSort_base_media(int a[], int N);
 void quickSort_sort_media(int a[], int lo, int hi);
 
 int media(int a[], int lo, int mid, int hi);
+
+int quickSelection(int a[], int k, int N);
 
 #endif //AED1_06_C_AED1_08_H
