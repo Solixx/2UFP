@@ -320,6 +320,54 @@ lp/pr08.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LP1_2UFP.dir\build.make CMakeFiles/LP1_2UFP.dir/lp/pr08.c.s
 .PHONY : lp/pr08.c.s
 
+lp/pr09.obj: lp/pr09.c.obj
+.PHONY : lp/pr09.obj
+
+# target to build an object file
+lp/pr09.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LP1_2UFP.dir\build.make CMakeFiles/LP1_2UFP.dir/lp/pr09.c.obj
+.PHONY : lp/pr09.c.obj
+
+lp/pr09.i: lp/pr09.c.i
+.PHONY : lp/pr09.i
+
+# target to preprocess a source file
+lp/pr09.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LP1_2UFP.dir\build.make CMakeFiles/LP1_2UFP.dir/lp/pr09.c.i
+.PHONY : lp/pr09.c.i
+
+lp/pr09.s: lp/pr09.c.s
+.PHONY : lp/pr09.s
+
+# target to generate assembly for a file
+lp/pr09.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LP1_2UFP.dir\build.make CMakeFiles/LP1_2UFP.dir/lp/pr09.c.s
+.PHONY : lp/pr09.c.s
+
+lp/pr10.obj: lp/pr10.c.obj
+.PHONY : lp/pr10.obj
+
+# target to build an object file
+lp/pr10.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LP1_2UFP.dir\build.make CMakeFiles/LP1_2UFP.dir/lp/pr10.c.obj
+.PHONY : lp/pr10.c.obj
+
+lp/pr10.i: lp/pr10.c.i
+.PHONY : lp/pr10.i
+
+# target to preprocess a source file
+lp/pr10.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LP1_2UFP.dir\build.make CMakeFiles/LP1_2UFP.dir/lp/pr10.c.i
+.PHONY : lp/pr10.c.i
+
+lp/pr10.s: lp/pr10.c.s
+.PHONY : lp/pr10.s
+
+# target to generate assembly for a file
+lp/pr10.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LP1_2UFP.dir\build.make CMakeFiles/LP1_2UFP.dir/lp/pr10.c.s
+.PHONY : lp/pr10.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -617,6 +665,12 @@ help:
 	@echo ... lp/pr08.obj
 	@echo ... lp/pr08.i
 	@echo ... lp/pr08.s
+	@echo ... lp/pr09.obj
+	@echo ... lp/pr09.i
+	@echo ... lp/pr09.s
+	@echo ... lp/pr10.obj
+	@echo ... lp/pr10.i
+	@echo ... lp/pr10.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -334,6 +334,34 @@ CMakeFiles/LP1_2UFP.dir/tp/tp10.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LP1_2UFP.dir/tp/tp10.c.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\tp\tp10.c -o CMakeFiles\LP1_2UFP.dir\tp\tp10.c.s
 
+CMakeFiles/LP1_2UFP.dir/lp/pr09.c.obj: CMakeFiles/LP1_2UFP.dir/flags.make
+CMakeFiles/LP1_2UFP.dir/lp/pr09.c.obj: ../lp/pr09.c
+CMakeFiles/LP1_2UFP.dir/lp/pr09.c.obj: CMakeFiles/LP1_2UFP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/LP1_2UFP.dir/lp/pr09.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/LP1_2UFP.dir/lp/pr09.c.obj -MF CMakeFiles\LP1_2UFP.dir\lp\pr09.c.obj.d -o CMakeFiles\LP1_2UFP.dir\lp\pr09.c.obj -c C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\lp\pr09.c
+
+CMakeFiles/LP1_2UFP.dir/lp/pr09.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LP1_2UFP.dir/lp/pr09.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\lp\pr09.c > CMakeFiles\LP1_2UFP.dir\lp\pr09.c.i
+
+CMakeFiles/LP1_2UFP.dir/lp/pr09.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LP1_2UFP.dir/lp/pr09.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\lp\pr09.c -o CMakeFiles\LP1_2UFP.dir\lp\pr09.c.s
+
+CMakeFiles/LP1_2UFP.dir/lp/pr10.c.obj: CMakeFiles/LP1_2UFP.dir/flags.make
+CMakeFiles/LP1_2UFP.dir/lp/pr10.c.obj: ../lp/pr10.c
+CMakeFiles/LP1_2UFP.dir/lp/pr10.c.obj: CMakeFiles/LP1_2UFP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/LP1_2UFP.dir/lp/pr10.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/LP1_2UFP.dir/lp/pr10.c.obj -MF CMakeFiles\LP1_2UFP.dir\lp\pr10.c.obj.d -o CMakeFiles\LP1_2UFP.dir\lp\pr10.c.obj -c C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\lp\pr10.c
+
+CMakeFiles/LP1_2UFP.dir/lp/pr10.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LP1_2UFP.dir/lp/pr10.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\lp\pr10.c > CMakeFiles\LP1_2UFP.dir\lp\pr10.c.i
+
+CMakeFiles/LP1_2UFP.dir/lp/pr10.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LP1_2UFP.dir/lp/pr10.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\lp\pr10.c -o CMakeFiles\LP1_2UFP.dir\lp\pr10.c.s
+
 # Object files for target LP1_2UFP
 LP1_2UFP_OBJECTS = \
 "CMakeFiles/LP1_2UFP.dir/main.c.obj" \
@@ -354,7 +382,9 @@ LP1_2UFP_OBJECTS = \
 "CMakeFiles/LP1_2UFP.dir/tp/tp08.c.obj" \
 "CMakeFiles/LP1_2UFP.dir/lp/pr08.c.obj" \
 "CMakeFiles/LP1_2UFP.dir/tp/tp09.c.obj" \
-"CMakeFiles/LP1_2UFP.dir/tp/tp10.c.obj"
+"CMakeFiles/LP1_2UFP.dir/tp/tp10.c.obj" \
+"CMakeFiles/LP1_2UFP.dir/lp/pr09.c.obj" \
+"CMakeFiles/LP1_2UFP.dir/lp/pr10.c.obj"
 
 # External object files for target LP1_2UFP
 LP1_2UFP_EXTERNAL_OBJECTS =
@@ -378,11 +408,13 @@ LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/tp/tp08.c.obj
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/lp/pr08.c.obj
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/tp/tp09.c.obj
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/tp/tp10.c.obj
+LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/lp/pr09.c.obj
+LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/lp/pr10.c.obj
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/build.make
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/linklibs.rsp
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/objects1.rsp
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking C executable LP1_2UFP.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking C executable LP1_2UFP.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\LP1_2UFP.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
