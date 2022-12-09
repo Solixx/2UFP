@@ -136,17 +136,13 @@
 		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/lp/pr10.h">
 			<Option target="LP1_2UFP"/>
 		</Unit>
-<<<<<<< Updated upstream
-		<Unit filename="C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/lp/pr11.c">
+		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/lp/pr11.c">
 			<Option target="LP1_2UFP"/>
 		</Unit>
-		<Unit filename="C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/lp/pr11.h">
+		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/lp/pr11.h">
 			<Option target="LP1_2UFP"/>
 		</Unit>
-		<Unit filename="C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/main.c">
-=======
 		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/main.c">
->>>>>>> Stashed changes
 			<Option target="LP1_2UFP"/>
 		</Unit>
 		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/testes/teste2.c">
@@ -209,23 +205,19 @@
 		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/tp/tp09.h">
 			<Option target="LP1_2UFP"/>
 		</Unit>
-<<<<<<< Updated upstream
-		<Unit filename="C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/tp/tp11.c">
-			<Option target="LP1_2UFP"/>
-		</Unit>
-		<Unit filename="C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/tp/tp11.h">
-			<Option target="LP1_2UFP"/>
-		</Unit>
-		<Unit filename="C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/CMakeLists.txt">
-=======
 		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/tp/tp10.c">
 			<Option target="LP1_2UFP"/>
 		</Unit>
 		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/tp/tp10.h">
 			<Option target="LP1_2UFP"/>
 		</Unit>
+		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/tp/tp11.c">
+			<Option target="LP1_2UFP"/>
+		</Unit>
+		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/tp/tp11.h">
+			<Option target="LP1_2UFP"/>
+		</Unit>
 		<Unit filename="E:/GitHub/2UFP/LP1_2UFP/CMakeLists.txt">
->>>>>>> Stashed changes
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

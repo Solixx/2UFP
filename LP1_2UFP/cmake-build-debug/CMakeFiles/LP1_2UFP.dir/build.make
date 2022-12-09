@@ -362,10 +362,38 @@ CMakeFiles/LP1_2UFP.dir/lp/pr10.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LP1_2UFP.dir/lp/pr10.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\GitHub\2UFP\LP1_2UFP\lp\pr10.c -o CMakeFiles\LP1_2UFP.dir\lp\pr10.c.s
 
+CMakeFiles/LP1_2UFP.dir/tp/tp11.c.obj: CMakeFiles/LP1_2UFP.dir/flags.make
+CMakeFiles/LP1_2UFP.dir/tp/tp11.c.obj: ../tp/tp11.c
+CMakeFiles/LP1_2UFP.dir/tp/tp11.c.obj: CMakeFiles/LP1_2UFP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\GitHub\2UFP\LP1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/LP1_2UFP.dir/tp/tp11.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/LP1_2UFP.dir/tp/tp11.c.obj -MF CMakeFiles\LP1_2UFP.dir\tp\tp11.c.obj.d -o CMakeFiles\LP1_2UFP.dir\tp\tp11.c.obj -c E:\GitHub\2UFP\LP1_2UFP\tp\tp11.c
+
+CMakeFiles/LP1_2UFP.dir/tp/tp11.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LP1_2UFP.dir/tp/tp11.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\GitHub\2UFP\LP1_2UFP\tp\tp11.c > CMakeFiles\LP1_2UFP.dir\tp\tp11.c.i
+
+CMakeFiles/LP1_2UFP.dir/tp/tp11.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LP1_2UFP.dir/tp/tp11.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\GitHub\2UFP\LP1_2UFP\tp\tp11.c -o CMakeFiles\LP1_2UFP.dir\tp\tp11.c.s
+
+CMakeFiles/LP1_2UFP.dir/lp/pr11.c.obj: CMakeFiles/LP1_2UFP.dir/flags.make
+CMakeFiles/LP1_2UFP.dir/lp/pr11.c.obj: ../lp/pr11.c
+CMakeFiles/LP1_2UFP.dir/lp/pr11.c.obj: CMakeFiles/LP1_2UFP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\GitHub\2UFP\LP1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/LP1_2UFP.dir/lp/pr11.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/LP1_2UFP.dir/lp/pr11.c.obj -MF CMakeFiles\LP1_2UFP.dir\lp\pr11.c.obj.d -o CMakeFiles\LP1_2UFP.dir\lp\pr11.c.obj -c E:\GitHub\2UFP\LP1_2UFP\lp\pr11.c
+
+CMakeFiles/LP1_2UFP.dir/lp/pr11.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LP1_2UFP.dir/lp/pr11.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\GitHub\2UFP\LP1_2UFP\lp\pr11.c > CMakeFiles\LP1_2UFP.dir\lp\pr11.c.i
+
+CMakeFiles/LP1_2UFP.dir/lp/pr11.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LP1_2UFP.dir/lp/pr11.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\GitHub\2UFP\LP1_2UFP\lp\pr11.c -o CMakeFiles\LP1_2UFP.dir\lp\pr11.c.s
+
 CMakeFiles/LP1_2UFP.dir/testes/teste2.c.obj: CMakeFiles/LP1_2UFP.dir/flags.make
 CMakeFiles/LP1_2UFP.dir/testes/teste2.c.obj: ../testes/teste2.c
 CMakeFiles/LP1_2UFP.dir/testes/teste2.c.obj: CMakeFiles/LP1_2UFP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\GitHub\2UFP\LP1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/LP1_2UFP.dir/testes/teste2.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\GitHub\2UFP\LP1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/LP1_2UFP.dir/testes/teste2.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/LP1_2UFP.dir/testes/teste2.c.obj -MF CMakeFiles\LP1_2UFP.dir\testes\teste2.c.obj.d -o CMakeFiles\LP1_2UFP.dir\testes\teste2.c.obj -c E:\GitHub\2UFP\LP1_2UFP\testes\teste2.c
 
 CMakeFiles/LP1_2UFP.dir/testes/teste2.c.i: cmake_force
@@ -375,34 +403,6 @@ CMakeFiles/LP1_2UFP.dir/testes/teste2.c.i: cmake_force
 CMakeFiles/LP1_2UFP.dir/testes/teste2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LP1_2UFP.dir/testes/teste2.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\GitHub\2UFP\LP1_2UFP\testes\teste2.c -o CMakeFiles\LP1_2UFP.dir\testes\teste2.c.s
-
-CMakeFiles/LP1_2UFP.dir/tp/tp11.c.obj: CMakeFiles/LP1_2UFP.dir/flags.make
-CMakeFiles/LP1_2UFP.dir/tp/tp11.c.obj: ../tp/tp11.c
-CMakeFiles/LP1_2UFP.dir/tp/tp11.c.obj: CMakeFiles/LP1_2UFP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/LP1_2UFP.dir/tp/tp11.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/LP1_2UFP.dir/tp/tp11.c.obj -MF CMakeFiles\LP1_2UFP.dir\tp\tp11.c.obj.d -o CMakeFiles\LP1_2UFP.dir\tp\tp11.c.obj -c C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\tp\tp11.c
-
-CMakeFiles/LP1_2UFP.dir/tp/tp11.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LP1_2UFP.dir/tp/tp11.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\tp\tp11.c > CMakeFiles\LP1_2UFP.dir\tp\tp11.c.i
-
-CMakeFiles/LP1_2UFP.dir/tp/tp11.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LP1_2UFP.dir/tp/tp11.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\tp\tp11.c -o CMakeFiles\LP1_2UFP.dir\tp\tp11.c.s
-
-CMakeFiles/LP1_2UFP.dir/lp/pr11.c.obj: CMakeFiles/LP1_2UFP.dir/flags.make
-CMakeFiles/LP1_2UFP.dir/lp/pr11.c.obj: ../lp/pr11.c
-CMakeFiles/LP1_2UFP.dir/lp/pr11.c.obj: CMakeFiles/LP1_2UFP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/LP1_2UFP.dir/lp/pr11.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/LP1_2UFP.dir/lp/pr11.c.obj -MF CMakeFiles\LP1_2UFP.dir\lp\pr11.c.obj.d -o CMakeFiles\LP1_2UFP.dir\lp\pr11.c.obj -c C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\lp\pr11.c
-
-CMakeFiles/LP1_2UFP.dir/lp/pr11.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LP1_2UFP.dir/lp/pr11.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\lp\pr11.c > CMakeFiles\LP1_2UFP.dir\lp\pr11.c.i
-
-CMakeFiles/LP1_2UFP.dir/lp/pr11.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LP1_2UFP.dir/lp/pr11.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\lp\pr11.c -o CMakeFiles\LP1_2UFP.dir\lp\pr11.c.s
 
 # Object files for target LP1_2UFP
 LP1_2UFP_OBJECTS = \
@@ -427,12 +427,9 @@ LP1_2UFP_OBJECTS = \
 "CMakeFiles/LP1_2UFP.dir/tp/tp10.c.obj" \
 "CMakeFiles/LP1_2UFP.dir/lp/pr09.c.obj" \
 "CMakeFiles/LP1_2UFP.dir/lp/pr10.c.obj" \
-<<<<<<< Updated upstream
 "CMakeFiles/LP1_2UFP.dir/tp/tp11.c.obj" \
-"CMakeFiles/LP1_2UFP.dir/lp/pr11.c.obj"
-=======
+"CMakeFiles/LP1_2UFP.dir/lp/pr11.c.obj" \
 "CMakeFiles/LP1_2UFP.dir/testes/teste2.c.obj"
->>>>>>> Stashed changes
 
 # External object files for target LP1_2UFP
 LP1_2UFP_EXTERNAL_OBJECTS =
@@ -458,21 +455,14 @@ LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/tp/tp09.c.obj
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/tp/tp10.c.obj
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/lp/pr09.c.obj
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/lp/pr10.c.obj
-<<<<<<< Updated upstream
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/tp/tp11.c.obj
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/lp/pr11.c.obj
-=======
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/testes/teste2.c.obj
->>>>>>> Stashed changes
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/build.make
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/linklibs.rsp
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/objects1.rsp
 LP1_2UFP.exe: CMakeFiles/LP1_2UFP.dir/link.txt
-<<<<<<< Updated upstream
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking C executable LP1_2UFP.exe"
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\GitHub\2UFP\LP1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking C executable LP1_2UFP.exe"
->>>>>>> Stashed changes
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\GitHub\2UFP\LP1_2UFP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking C executable LP1_2UFP.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\LP1_2UFP.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

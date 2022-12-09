@@ -76,12 +76,9 @@
 				22,
 				23,
 				24,
-<<<<<<< Updated upstream:LP1_2UFP/cmake-build-debug/.cmake/api/v1/reply/target-LP1_2UFP-Debug-853688f33bf779a13d6c.json
 				25,
-				26
-=======
-				25
->>>>>>> Stashed changes:LP1_2UFP/cmake-build-debug/.cmake/api/v1/reply/target-LP1_2UFP-Debug-02c6429319e8c398041b.json
+				26,
+				27
 			]
 		}
 	],
@@ -139,12 +136,9 @@
 				22,
 				23,
 				24,
-<<<<<<< Updated upstream:LP1_2UFP/cmake-build-debug/.cmake/api/v1/reply/target-LP1_2UFP-Debug-853688f33bf779a13d6c.json
 				25,
-				26
-=======
-				25
->>>>>>> Stashed changes:LP1_2UFP/cmake-build-debug/.cmake/api/v1/reply/target-LP1_2UFP-Debug-02c6429319e8c398041b.json
+				26,
+				27
 			]
 		},
 		{
@@ -155,7 +149,7 @@
 				5,
 				7,
 				17,
-				26
+				28
 			]
 		}
 	],
@@ -310,23 +304,25 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-<<<<<<< Updated upstream:LP1_2UFP/cmake-build-debug/.cmake/api/v1/reply/target-LP1_2UFP-Debug-853688f33bf779a13d6c.json
 			"path" : "tp/tp11.c",
-=======
-			"path" : "testes/teste2.c",
->>>>>>> Stashed changes:LP1_2UFP/cmake-build-debug/.cmake/api/v1/reply/target-LP1_2UFP-Debug-02c6429319e8c398041b.json
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-<<<<<<< Updated upstream:LP1_2UFP/cmake-build-debug/.cmake/api/v1/reply/target-LP1_2UFP-Debug-853688f33bf779a13d6c.json
 			"compileGroupIndex" : 0,
 			"path" : "lp/pr11.c",
 			"sourceGroupIndex" : 0
-=======
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "testes/teste2.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "testes/teste2.h",
 			"sourceGroupIndex" : 1
->>>>>>> Stashed changes:LP1_2UFP/cmake-build-debug/.cmake/api/v1/reply/target-LP1_2UFP-Debug-02c6429319e8c398041b.json
 		}
 	],
 	"type" : "EXECUTABLE"
