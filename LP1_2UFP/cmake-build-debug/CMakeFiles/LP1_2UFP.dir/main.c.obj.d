@@ -49,4 +49,5 @@ CMakeFiles/LP1_2UFP.dir/main.c.obj: \
  C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\lp/pr08.h \
  C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\lp/pr10.h \
  C:/Users/manue/Desktop/GitHub/2UFP/LP1_2UFP/tp/tp10.h \
+ C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\tp/tp11.h \
  C:\Users\manue\Desktop\GitHub\2UFP\LP1_2UFP\testes/testes.h

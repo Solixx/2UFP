@@ -19,6 +19,7 @@
 #include "tp/tp10.h"
 #include "lp/pr09.h"
 #include "lp/pr10.h"
+#include "tp/tp11.h"
 
 #include "testes/testes.h"
 
@@ -43,7 +44,8 @@ int main(int argc, const char* argv[]) {
     //main_tp09(argc, argv);
     //main_tp10(argc, argv);
     //main_pr09(argc, argv);
-    main_pr10(argc, argv);
+    //main_pr10(argc, argv);
+    main_tp11(argc, argv);
 
     //main_testes(argc, argv);
 
