@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+/*
 #include "tp/tp01.h"
 #include "tp/tp02.h"
 #include "lp/pr01.h"
@@ -19,10 +20,15 @@
 #include "tp/tp10.h"
 #include "lp/pr09.h"
 #include "lp/pr10.h"
+<<<<<<< Updated upstream
 #include "tp/tp11.h"
 #include "lp/pr11.h"
 
+=======
+*/
+>>>>>>> Stashed changes
 #include "testes/testes.h"
+#include "testes/teste2.h"
 
 int func();
 
@@ -46,10 +52,14 @@ int main(int argc, const char* argv[]) {
     //main_tp10(argc, argv);
     //main_pr09(argc, argv);
     //main_pr10(argc, argv);
+<<<<<<< Updated upstream
     //main_tp11(argc, argv);
     main_pr11(argc, argv);
+=======
+>>>>>>> Stashed changes
 
     //main_testes(argc, argv);
+    main_teste2(argc, argv);
 
     /*
     for (int i = 0; i < size2; ++i) { //h

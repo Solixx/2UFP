@@ -1,0 +1,25 @@
+Teste 2018 - LP
+
+6- V
+7- V
+8- F
+9- F
+11- V
+14- "%d, %c\n" Imprime: 5, p
+15- "%p\n" Imprime: endereço do 'p'
+16- "%s\n", v[4]
+17- "%d\n", v[4][1]-'0'
+18- "%c\n", mt[0][0]
+19- "%d\n", mt[1][2]-'0'
+20- "%c\n", pc[4]
+21- "%c\n", ppc[0][5]
+22- pcel = (CEL*) malloc(1 * sizeof(CEL))
+25- pcel->info = atoi(mt[1])
+28- printf("%d\n", **ppi);
+30- &c1.info;
+35- CEL *pcels = (CEL*) malloc (**ppi * sizeof(CEL));
+38- for(int i = (**ppi)-1; i >= 0; i--){
+	pcels[i].info = 0;
+	pcels[i].pn = pcels[i-1]
+	if(i == 0) pcels[i].pn = pcels[**pi];
+    }
