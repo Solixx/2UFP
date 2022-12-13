@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+/*
 #include "tp/tp01.h"
 #include "tp/tp02.h"
 #include "lp/pr01.h"
@@ -21,9 +22,10 @@
 #include "lp/pr10.h"
 #include "tp/tp11.h"
 #include "lp/pr11.h"
+ */
 
-//#include "testes/testes.h"
-//#include "testes/teste2.h"
+#include "testes/testes.h"
+#include "testes/teste2.h"
 
 int func();
 
@@ -48,10 +50,10 @@ int main(int argc, const char* argv[]) {
     //main_pr09(argc, argv);
     //main_pr10(argc, argv);
     //main_tp11(argc, argv);
-    main_pr11(argc, argv);
+    //main_pr11(argc, argv);
 
     //main_testes(argc, argv);
-    //main_teste2(argc, argv);
+    main_teste2(argc, argv);
 
     /*
     for (int i = 0; i < size2; ++i) { //h
