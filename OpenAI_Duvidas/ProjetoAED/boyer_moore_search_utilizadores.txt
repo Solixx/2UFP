@@ -1,0 +1,42 @@
+#include <string.h>
+
+#define MAX_NAME_LEN 256
+
+void search_utilizador_by_name(UTILIZADORES_QUEUE* queue, char* name) {
+    UTILIZADORES* curr = queue->head;
+    int m = strlen(name);
+    int skip[MAX_NAME_LEN];
+
+    // Pre-processing step for Boyer-Moore algorithm
+    for (int i = 0; i < MAX_NAME_LEN; i++) {
+        skip[i] = m;
+    }
+    for (int i = 0; i < m - 1; i++) {
+        skip[name[i]] = m - i - 1;
+    }
+
+    // Searching step for Boyer-Moore algorithm
+    while (curr != NULL) {
+        char* s = curr->name;
+        int n = strlen(s);
+        int i = m - 1;
+        while (i < n) {
+            int j = m - 1;
+            while (j >= 0 && s[i] == name[j]) {
+                i--;
+                j--;
+            }
+            if (j == -1) {
+                // Partial string found
+                printf("Name: %s\n", curr->name);
+                printf("Email: %s\n", curr->email);
+                print_keyHolders(&curr->key_holder_list);
+                break;
+            }
+            i += skip[s[i]];
+        }
+        curr = curr->next;
+    }
+
+    printf("Utilizador Nao Econtrado\n");
+}
