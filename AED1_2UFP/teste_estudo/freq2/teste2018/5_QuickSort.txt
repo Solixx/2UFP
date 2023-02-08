@@ -1,0 +1,27 @@
+void quicksortbase(int arr[],int N){
+    quicksort_recu(arr,0,N-1);
+}
+
+void quicksort_recu(int arr[],int low,int high){
+    if(low<high){
+        int pivot_index = partition(arr,low,high);
+        quicksort_recu(arr,low,pivot_index-1);
+        quicksort_recu(arr,pivot_index+1,high);
+    }
+}
+
+int partition(int arr[],int low,int high){
+    int pivot_value=arr[high],i=low,k=high;
+    for (int j = low; j <high ; ++j) {
+        if(arr[i]<=pivot_value){
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            i++;
+        }
+    }
+    int temp=arr[i];
+    arr[i]=arr[k];
+    arr[k]=temp;
+    return i;
+}

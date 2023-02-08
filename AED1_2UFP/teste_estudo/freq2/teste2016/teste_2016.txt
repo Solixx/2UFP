@@ -1,0 +1,22 @@
+Teste2 AED - 2016
+
+1.F, porque as recusrivas sao para ordenar cada metade do array logo nao o processou por inteiro apenas por partes.
+2.V, porque o mergesort chama as recursivas antes de processar todo o array
+3.V, processa o proprio array não precisa de criar sub arrays para os ordenar
+4.V Ao verificar se a gama de elementos a serem classificados já está ordenada, podemos evitar a sobrecarga da etapa de fusão nos casos em que esta não é necessária. Isto pode melhorar a eficiência do algoritmo, especialmente quando a matriz de entrada já está quase ordenada.
+5.F, porque num hospital se alguem entrar com um problema mais grave será o primeiro a ser tratado e o primeiro a sair, mas isto nao significa que essa pessoa que entrou tenha sido a primeiro logo nao é a primeira a entrar mas é a 1º a sair.
+6.V porque compara com todos os caracteres da substring, se nao existir é N*M
+7.V porque o maior valor está sempre na root
+8.F
+9.F, é do tipo quadratico
+10.F
+
+Grupo 2
+2)a) o quicksort tem por base o divide-and-coquer e faz o processamento do array in-place e 
+vai selecionar um elemento pivo do array, que tanto pode ser o primeiro, o ultimo ou um 
+elemento aleatorio. o numero do pivo é o indice do numero do array que vai ser feita a 
+comparaçao. O quicksort funciona com chamadas recursivas que inicialmente ordena a metade 
+esquerda do array tendo no meio o numero pivo e , todos os numeros para tras do pivo sao 
+menores ou iguais a ele e , todos os numeros para a sua frente sao maiores ou iguais a ele.
+ este algoritmo depois de fazer as chamadas recursivas e processar o array todo ele ja esta
+ ordenado.

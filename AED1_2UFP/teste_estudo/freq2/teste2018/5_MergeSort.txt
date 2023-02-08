@@ -1,0 +1,42 @@
+ int arr[]={2,3,5,5,5,7,8,5},N=8;
+   mergesortbase(arr,N);
+   for (int i = 0; i <N ; ++i) {
+       printf("%d\t",arr[i]);
+   }
+
+void mergesortbase(int arr[],int N){
+    int arr2[N];
+    mergesort_recursive(arr,arr2,0,N-1);
+}
+
+void mergesort_recursive(int arr[],int arr2[],int low,int high){
+    if(high <= low){
+        return;
+    }
+    int mid = low+((high-low)/2);
+    mergesort_recursive(arr,arr2,low,mid);
+    mergesort_recursive(arr,arr2,mid+1,high);
+    merge(arr,arr2,low,mid,high);
+}
+
+void merge(int arr[],int arr2[],int low,int mid,int high){
+    for (int i = low; i <=high ; ++i) {
+        arr2[i]=arr[i];
+    }
+    int i=low,j=mid+1;
+    for (int k = low; k <=high ; ++k) {
+        if(i > mid){
+            arr[k] = arr2[j++];
+        } else if(j > high){
+            arr[k] = arr2[i++];
+        } else if(arr2[j] < arr2[i]){
+            arr[k] = arr2[j++];
+        } else{
+            arr[k] = arr2[i++];
+        }
+    }
+}
+
+void mergesortbase(int arr[],int N);
+void mergesort_recursive(int arr[],int arr2[],int low,int high);
+void merge(int arr[],int arr2[],int low,int mid,int high);

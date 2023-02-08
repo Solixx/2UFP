@@ -1,0 +1,107 @@
+int teste2018_aed(int argc, const char *argv[]){
+    NODE node3={
+            8,
+            NULL
+    };
+    NODE node2={
+            9,
+            &node3
+    };
+    NODE node1={
+        10,
+        &node2
+    };
+    QUEUE q1={
+            3,
+            &node1,
+            &node3
+    };
+    NODE node4={
+            5,
+            NULL
+    };
+    NODE node5={
+            6,
+            &node4
+    };
+    NODE node6={
+            7,
+            &node5
+    };
+    QUEUE q2={
+            3,
+            &node6,
+            &node4
+    };
+    QUEUE q3={
+            0,
+            NULL,
+            NULL
+    };
+    NODE *curr=q1.Head;
+    while (curr != NULL){
+        enqueue(&q3,curr);
+        curr=curr->pnext;
+    }
+    dequeue(&q1);
+    curr=q2.Head;
+    while (curr != NULL){
+        enqueue(&q3,curr);
+        curr=curr->pnext;
+    }
+    dequeue(&q2);
+    curr=q3.Head;
+    while (curr != NULL){
+        printf("X: %d\n",curr->x);
+        curr = curr->pnext;
+    }
+    return 0;
+}
+
+void enqueue(QUEUE *q,NODE *x){
+    if(isEmpty(q) == 1){
+        q->Head=x;
+        q->Tail=q->Head;
+    }else{
+        q->Tail->pnext=x;
+        q->Tail=x;
+    }
+}
+
+int isEmpty(QUEUE *q){
+    return q->Head==NULL;
+}
+
+void dequeue(QUEUE *q){
+    if(isEmpty(q) == 1){
+        return;
+    }
+    NODE *curr=q->Head;
+    NODE *prev;
+    while (curr != NULL){
+        prev=curr;
+        curr=curr->pnext;
+        prev=NULL;
+        free(prev);
+    }
+    q=NULL;
+    free(q);
+}
+
+
+typedef struct node{
+    int x;
+    struct node *pnext;
+}NODE;
+
+typedef struct queue{
+    int N;
+    NODE *Head;
+    NODE *Tail;
+}QUEUE;
+int teste2019(int argc, const char *argv[]);
+int teste2018_aed(int argc, const char *argv[]);
+void inserir_pt_poligono(LSTPOLIG *lst,int id,PT p1);
+void enqueue(QUEUE *q,NODE *x);
+void dequeue(QUEUE *q);
+int isEmpty(QUEUE *q);

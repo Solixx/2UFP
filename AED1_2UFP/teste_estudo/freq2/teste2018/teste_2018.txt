@@ -1,0 +1,19 @@
+Teste2 AED - 2018
+
+1.V o selection sort faz o processamento do array in-place, ou seja  nao precisa de memoria extra para usar outro array para fazer o sorting usa o proprio array the input, isto implica ser O(1). O(1) significa que demora um tempo constante para fazer uma dada instruçao independetemente do tamanho do array, tenha N=10 ou N=10000000 é sempre O(1).
+2.V a primeira metade do array fica ordenada e a segunda metada é maior ou igual à primeira. O primeiro ciclo é de 0 até N o segundo é de i até 0
+3.V mas tanto pode usar espaço extra como não usar.Quick sort  não é estavel mas é in-place. 
+4.F, Mergesort é estavel mas não é in-place.
+5.V,o mergesort é estavel
+6.F, para manter o array ordenado é preciso percorrê-lo até encontrar o indice onde o novo elemento vai ser inserido, isto é O(N) não é constante.
+7.V, o elemento maior de uma arvore binario do tipo max para remover o maior elemento vamos trocar com um dos ramos ou seja é log(N) porque eliminamos a outra metade.
+8.V porque o selection sort tem que percorrer o array todo até encontrar o numero mais pequeno e comparalo com os outros, depois pega no segundo mais pequeno e faz o mesmo processo até o fim do array, independentemente da disposiçao do array ele demora tanto tempo quanto o tamanho do array é do tipo O(n^2).
+9.V
+10.V Se você tentar implementar uma pilha com capacidade fixa em um array estático, poderá ter dificuldade para gerenciar a capacidade da pilha. Se o array ficar cheio, não será possível adicionar mais elementos à pilha. Se o array estiver vazio, não será possível remover mais elementos.
+
+GRUPO 2
+2.
+No método de ordenação por partição quicksort o pior caso é quando o array de input utilizado já está ordem, tanto em ordem ascendente como descendete, uma vez que o quicksort escolhe o primeiro elemento do array como pivô e vai comparâ-lo com todos os outros até tem o primeiro sub array com elementos menores ou iguais ao pivô e um segundo sub array com elementos maiores ou iguais ao pivô. Neste pior caso o tempo de execução será do tipo O(n^2).
+
+3.a.
+1 troca porque o maximo está encima.
