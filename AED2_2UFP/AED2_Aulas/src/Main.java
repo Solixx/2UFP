@@ -17,10 +17,10 @@ public class Main {
         System.out.println("Nome: "+user.getName() + "\nData: "+user.getData()+"\nIdade: "+user.age(user.getData()));
 
         Teacher t = new Teacher();
-        t.p.setName("Jose");
-        t.p.setData(1999);
+        t.setName("Jose");
+        t.setData(1999);
         t.category = 2;
-        System.out.println("Nome: "+t.p.getName() + "\nData: "+t.p.getData()+"\nIdade: "+t.p.age(t.p.getData())+"\nCategoria: "+t.getCategory());
+        System.out.println("Nome: "+t.getName() + "\nData: "+t.getData()+"\nIdade: "+t.age(t.getData())+"\nCategoria: "+t.getCategory());
     }
 }
 
