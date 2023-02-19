@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38d207d0-f0f0-4d03-8080-5fe90cd77c48" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../LP2_2UFP/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LP2_2UFP/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LP2_2UFP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LP2_2UFP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LP2_2UFP/LP2_2UFP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../LP2_2UFP/LP2_2UFP.iml" afterDir="false" />
-    </list>
+    <list default="true" id="38d207d0-f0f0-4d03-8080-5fe90cd77c48" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +20,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/manue/Desktop/GitHub/2UFP/AED2_2UFP/AED2_Aulas",
+    "last_opened_file_path": "E:/GitHub/2UFP/AED2_2UFP/AED2_Aulas",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -37,6 +33,7 @@
       <option name="presentableId" value="Default" />
       <updated>1676478481043</updated>
       <workItem from="1676478482185" duration="52000" />
+      <workItem from="1676777823669" duration="44000" />
     </task>
     <servers />
   </component>
