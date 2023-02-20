@@ -1,14 +1,21 @@
 import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.Knuth;
 import edu.princeton.cs.algs4.Out;
 import edu.princeton.cs.algs4.Quick;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class Ficha0 {
 
     public static void main(String[] args){
-        Ex1 ex1 = new Ex1();
-        ex1.ex1_6();
+        //Ex1 ex1 = new Ex1();
+        Ex2 ex2 = new Ex2();
+
+        //ex1.ex1_6();
+        ex2.ex3();
     }
 }
 
@@ -115,5 +122,84 @@ class Ex1 {
         media = soma/15000;
         System.out.println("Final: "+media);
 
+    }
+}
+
+class Ex2 {
+
+    public void ex1(){
+        In in = new In("./data/250ints.txt");
+        Integer[] array = new Integer[250];
+        int soma = 0, max = 0;
+        for(int i = 0; i < 250; i++){
+            array[i] = in.readInt();
+        }
+        List<Integer> inList = Arrays.asList(array);
+        Collections.shuffle(inList);
+        //inList.toArray(array);
+
+        for (int i = 0; i < 250; i++){
+            soma += inList.get(i);
+            if(soma > max) max = soma;
+        }
+
+        System.out.println("Max: "+max+"\n");
+    }
+
+    public void ex2(){
+        In in = new In("./data/250ints.txt");
+        Integer[] array = new Integer[250];
+        int soma = 0, min = 0, minIndex = 0;
+        for(int i = 0; i < 250; i++){
+            array[i] = in.readInt();
+        }
+        List<Integer> inList = Arrays.asList(array);
+        Collections.shuffle(inList);
+        //inList.toArray(array);
+
+        min = inList.get(0);
+        for (int i = 1; i < 250; i++){
+            soma += inList.get(i);
+            if(soma < min){
+                min = soma;
+                minIndex = i;
+            }
+        }
+
+        for (int i = 0; i < minIndex; i++){
+            System.out.println("i: "+i+" N: "+inList.get(i));
+        }
+        System.out.println("\nMin: "+min+"\n");
+    }
+
+    public void ex3(){
+        In in = new In("./data/250ints.txt");
+        Out out = new Out("./data/250ints_max_out.txt");
+        Integer[] array = new Integer[250];
+        int soma = 0, min = 0, minIndex = 0;
+        for(int i = 0; i < 250; i++){
+            array[i] = in.readInt();
+        }
+        List<Integer> inList = Arrays.asList(array);
+        Collections.shuffle(inList);
+        //inList.toArray(array);
+
+        min = inList.get(0);
+        for (int i = 1; i < 250; i++){
+            soma += inList.get(i);
+            if(soma < min){
+                min = soma;
+                minIndex = i;
+            }
+        }
+        for (int i = 0; i < minIndex; i++){
+            out.println(inList.get(i));
+        }
+
+        In in2 = new In("./data/250ints_max_out.txt");
+        while (in2.hasNextLine()){
+            int val = Integer.parseInt(in2.readLine());
+            System.out.println(val);
+        }
     }
 }

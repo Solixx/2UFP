@@ -1,0 +1,59 @@
+Sistemas Operativos
+1- man man é um código para explicar o man que é o manual de utilização da cmd
+2- mkdir HOME: para criar a diretoria "pai",
+cd HOME: para entrar dentro da pasta HOME
+mkdir exerc1: para criar uma diretoria "filho"
+
+3- cd exerc1
+4- mkdir teste1; mkdir teste2; : para criar 2 novas diretorias dentro do exerc1
+5-cd teste1: para entrar dentro da pasta teste1
+echo exemplo1>exemplo2.txt: sendo o exemplo1 o texto que irá estar dentro do 
+ficheiro e o exemplo2.txt o nome do ficheiro.
+
+6-cd ../ :para voltar a pasta HOME/exerc1
+cp teste1/* teste2: para copiar todo o conteudo da pasta teste1 para a teste2
+7-cp -r teste1 teste2: copia a pasta do teste 1 recursivamente para a pasta teste2
+8-cd teste2: para ir para a diretoria teste2
+cd teste1: para ir para a diretoria teste1 dentro da diretoria teste2
+
+9-chmod 711 aa: para mudar as permissoes para apenas o dono poder ler e escrever no
+ficheiro
+
+10-echo ls -l > myls: cria um ficheiro chamado myls com o texto ls-l
+11-sh myls: para executar comandos em ficheiros
+12-ps: visualizar processos
+13-ps > processos: cria o ficheiro processos e coloca as informações dentro do ficheiro.
+14-ls: 25 diretorios
+ls -1 | wc -l:10 ficheiros, ls -1 é usado para exibir ficheiros por linhas o caracter
+'|' é para conjugar comandos wc -l conta o numero de linhas, contando assim o numero de 
+ficheiros.
+15-sleep 10; echo 'passaram 10 segundos': espera 10 segundos depois imprime a mensagem na consola
+16-sleep 130;echo 'passarem 130 segundos' & : espera 130 segundos e depois imprime a mensagem na consola, o '&' faz com que
+o processo seja feito em background.
+
+17-ps: mostra os processos e o sleep em background.
+18-kill 6942: kill e o id do processo para o matar
+19-sleep 250;echo 'passarem 250 segundos' & : espera 250 segundos e depois imprime a mensagem na consola, o '&' faz com que
+o processo seja feito em background.
+20-sleep 240: espera 240 segundos.
+21-CTRL+Z: pausa o processo
+bg: retorna o processo mas em background
+22-bg: continua o processo mas em background
+23-jobs: mostra os estados de todos os processos em background
+24-fg: coloca o processo de volta em primeiro plano
+25-CTRL+C:termina com o processo
+26-nano metacaracter: cria um ficheiro vazio
+Após isso digitar o conteudo pretendido, no fim usar CNTRL+O para guardar
+as alterações e por fim CNTRL+X para sair do ficheiro e voltar para o terminal.
+
+27-grep * metacaracter: nao vai fazer nada porque o grep precisa de um caracter
+para o encontrar e como nao tem pelicas, o * não é o caracter
+grep '*' metacaracter: ao contrario do outro, este sim é um caracter ou seja, 
+é válido e mostra assim dentro do ficheiro as frases com o simbolo '*'.
+
+28-grep 'caracter$' metacaracter: grep para procurar por algo, entre plicas esta
+o que queremos encontrar e o $ para apenas procurar no fim da frase, o metacaracter
+é o nome do ficheiro.
+
+29-echo aa > -menos: cria um ficheiro '-menos' com o conteudo aa
+rm ./-menos: remove o ficheiro
