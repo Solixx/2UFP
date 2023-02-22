@@ -2,7 +2,6 @@ package Person;
 
 public class MyMath {
 
-
   public double fact_recursive(int n) {
   return 0.0;
   }
