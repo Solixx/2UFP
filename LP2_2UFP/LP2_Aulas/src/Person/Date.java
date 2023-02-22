@@ -2,11 +2,11 @@ package Person;
 
 public class Date {
 
-  public short day;
+  private short day;
 
-  public short month;
+  private short month;
 
-  public int year;
+  private int year;
 
   public short getDay() {
     return day;
@@ -107,7 +107,7 @@ public class Date {
   return 0;
   }
 
-  public void main(String[] args) {
+  public static void main(String[] args) {
   }
 
 }

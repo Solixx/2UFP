@@ -2,11 +2,13 @@ package Person;
 
 public class Person {
 
-  public String idNumber;
+  private String idNumber;
 
-  public String name;
+  private String name;
 
-  public String address;
+  private String address;
+
+  private Date birth;
 
   public String getIdNumber() {
     return idNumber;
@@ -24,7 +26,7 @@ public class Person {
     this.address = address;
   }
 
-  public void setBirth(Person.Date birth) {
+  public void setBirth(Date birth) {
     this.birth = birth;
   }
 
@@ -36,13 +38,11 @@ public class Person {
     return address;
   }
 
-  public Person.Date getBirth() {
+  public Date getBirth() {
     return birth;
   }
 
-  public Date birth;
-
-  public Person(String idNumber, String name, String address, Person.Date birth) {
+  public Person(String idNumber, String name, String address, Date birth) {
     this.idNumber = idNumber;
     this.name = name;
     this.address = address;
@@ -57,8 +57,14 @@ public class Person {
   return false;
   }
 
+  @Override
   public String toString() {
-  return null;
+    return "Person{" +
+            "idNumber='" + idNumber + '\'' +
+            ", name='" + name + '\'' +
+            ", address='" + address + '\'' +
+            ", birth=" + birth +
+            '}';
   }
 
   public boolean equals(Object o) {
@@ -69,4 +75,7 @@ public class Person {
   return 0;
   }
 
+  public static void main(String[] args) {
+
+  }
 }
