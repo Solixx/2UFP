@@ -50,7 +50,7 @@ public class Person {
   }
 
   public int age() {
-  return 0;
+    return 2023 - this.birth.getYear();
   }
 
   public boolean olderThan(Person p) {
