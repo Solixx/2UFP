@@ -54,7 +54,8 @@ public class Person {
   }
 
   public boolean olderThan(Person p) {
-  return false;
+
+    return this.birth.beforeDate(p.birth);
   }
 
   @Override

@@ -3,22 +3,48 @@ package Person;
 public class MyMath {
 
   public double fact_recursive(int n) {
-  return 0.0;
+
+    if(n == 0) return 1.0;
+    fact_recursive(n--);
+    n *= n;
+    return n;
   }
 
   public double fact_for(int n) {
-  return 0.0;
+
+    double fact = 1.0;
+    for (int i = n; i > 0; i--){
+      fact *= i;
+    }
+
+    return fact;
   }
 
   public float fact_while(int n) {
-  return 0.0f;
+
+    float fact = 1.0f;
+    while (n != 0){
+      fact *= n;
+      n--;
+    }
+
+    return fact;
   }
 
   public float fact_do_while(int n) {
-  return 0.0f;
+
+    float fact = 1.0f;
+    do{
+      fact *= n;
+      n--;
+    } while (n != 0);
+
+    return fact;
   }
 
   public static void main(String[] args) {
+    MyMath m = new MyMath();
+    System.out.println("Fact: "+ m.fact_recursive(5));
   }
 
   public void newOperation() {
