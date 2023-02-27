@@ -64,7 +64,7 @@ public class Person {
             "idNumber='" + idNumber + '\'' +
             ", name='" + name + '\'' +
             ", address='" + address + '\'' +
-            ", birth=" + birth +
+            ", birth=" + this.getBirth() +
             '}';
   }
 
