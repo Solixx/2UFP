@@ -1,0 +1,71 @@
+1.
+a) getpid() retorna o ID do processo (PID) do processo de chamada. (Isso é frequentemente usado por rotinas que geram nomes de arquivos temporários exclusivos.)
+   getppid() retorna o ID do processo do pai do processo de chamada. Este será o ID do processo que criou este processo ou ing fork(), ou, se esse processo já terminou, o ID do
+processo ao qual este processo foi reatribuído (seja init(1) ou um processo "subreaper" definido por meio da opção prctl(2) PR_SET_CHILD_SUBREAPEReração).
+
+Nenhuma das funcoes pussuem parametros.
+b)o getpid() retorna o ID do processo atual, ou seja muda sempre, e o getppid() que é a funcão pai vai retornar sempre o mesmo ID do processo até ao processo do filho acabar 
+retornando assim 1.
+c) 
+5232 so
+2152 so
+2541 so
+48 root
+253 root
+d)
+5232 so
+1010 root
+888 root
+1228 root
+2152 so
+
+e) %CPU-A participação da tarefa no tempo de CPU decorrido desde a última tela atualização, expressa como uma porcentagem do tempo total da CPU.
+
+%MEM- O compartilhamento atualmente residente da memória física disponível de uma tarefa.
+
+NI-O bom valor da tarefa. Um valor bom negativo significa maior prioridade, enquanto um valor nice positivo significa prioridade mais baixa. Zero neste campo significa simplesmente que a prioridade não será ajustada em determinar a capacidade de despacho de uma tarefa.
+
+PR-A prioridade de agendamento da tarefa. Caso o `rt'  esteja neste campo, significa que a tarefa está sendo executada em agendamento em tempo real prioridade.
+
+USER-O nome de usuário efetivo do proprietário da tarefa.
+
+VIRT-A quantidade total de memória virtual usada pela tarefa. Inclui todo o código, dados e bibliotecas compartilhadas, além de páginas que foram trocadas e páginas que foram mapeadas, mas não usadas.
+
+TIME+-O mesmo que TIME, mas refletindo mais granularidade através centésimos de segundo.
+
+RES-Um subconjunto do espaço de endereço virtual (VIRT) que representa o não-memória física trocada que uma tarefa está usando no momento. É também o soma dos campos RSan, RSfd e RSsh.
+
+S-O status da tarefa, que pode ser um dos seguintes:
+               D = sono ininterrupto
+               eu = ocioso
+               R = correndo
+               S = dormindo
+               T = parado por sinal de controle de trabalho
+               t = parado pelo depurador durante o rastreamento
+               Z = zumbi
+
+           As tarefas mostradas como em execução devem ser consideradas mais adequadamente como prontas
+           para executar -- sua task_struct é simplesmente representada no Linux
+           run-queue. Mesmo sem uma verdadeira máquina SMP, você pode ver inúmeras
+           tarefas neste estado dependendo do intervalo de atraso do top e bom
+           valor.
+COMMAND-Exiba a linha de comando usada para iniciar uma tarefa ou o nome do programa associado. Você alterna entre linha de comando e nome com `c', que é uma opção de linha de comando e um recurso interativo comando.
+
+PID-  O ID de processo exclusivo da tarefa, que envolve periodicamente, embora nunca reiniciando do zero. Em termos de kernel, é um despachável entidade definida por uma task_struct.
+
+SHR-Um subconjunto de memória residente (RES) que pode ser usado por outros processos. Incluirá páginas anônimas compartilhadas e arquivos compartilhados páginas de backup. Também inclui páginas privadas mapeadas para arquivos representando imagens de programas e bibliotecas compartilhadas.
+
+2.
+a)
+  getuid() returns the real user ID of the calling process.
+  geteuid() returns the effective user ID of the calling process.
+Ambos não pussuem parametros.
+b)A função getuid() retorna o ID do usuário real que está executando o processo, enquanto a função getgid() retorna o ID do grupo real do processo.
+O fato de o ID do processo retornado por getuid() e getgid() ser sempre o mesmo é porque o processo é executado no contexto do usuário e grupo que o iniciou. Portanto, o ID do usuário real e do grupo real do processo são sempre iguais aos do usuário que iniciou o processo.
+3.
+a)
+A função getenv() pesquisa a lista de ambientes para encontrar o ambiente nome da variável de configuração e retorna um apontador para o valor correspondente string.
+getwd: essas funções retornam uma string terminada em nulo contendo um absoluto pathname que é o diretório de trabalho atual do processo de chamada.
+O nome do caminho é retornado como resultado da função e por meio do argumento buf, se presente.
+b)
+Feito em código.

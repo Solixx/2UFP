@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+int main() {
+    char t[200];
+    printf("The process ID is %d\n",(int)getpid());
+    printf("The parant process ID is %d\n",(int)getppid());
+    printf("The process ID is %d\n",(int)getuid());
+    printf("The parant process ID is %d\n",(int)getgid());
+    printf("The process ID is %s\n",getenv("HOME"));
+    getcwd(t,sizeof t);
+    printf("The parant process ID is %s\n",t); //vai buscar o caminho onde o ficheiro esta a correr
+
+    return 0;
+}
