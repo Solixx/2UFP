@@ -1,7 +1,4 @@
-import edu.princeton.cs.algs4.BinarySearchST;
-import edu.princeton.cs.algs4.SequentialSearchST;
-import edu.princeton.cs.algs4.In;
-import edu.princeton.cs.algs4.Out;
+import edu.princeton.cs.algs4.*;
 
 import javax.management.openmbean.ArrayType;
 import java.lang.reflect.Array;
@@ -10,8 +7,10 @@ import java.util.Arrays;
 public class Fichas {
 
     public static void main(String[] args) {
-        Ficha1 f1 = new Ficha1();
-        f1.ex10(5, 4, 6);
+        //Ficha1 f1 = new Ficha1();
+        //f1.ex10(5, 4, 6);
+
+        Ficha2.ex2();
     }
 }
 
@@ -81,5 +80,57 @@ class Ficha1 {
         }
         System.out.println("\nCeiling de "+c+": "+st.ceiling(c));
         System.out.println("Floor de "+f+": "+st.floor(f));
+    }
+}
+
+class  Ficha2 {
+
+    public static void ex1(){
+        int mykeys[] = new int[]{65,34,76,21,44,90,8,81};
+        BST_AED2_UFP<Integer, Integer> st = new BST_AED2_UFP<Integer, Integer>();
+        for (int i = 0; i<mykeys.length; i++) {
+            st.put(mykeys[i], i);
+        }
+
+        StdOut.println("Numero de folhas da arvore: "+st.contaFolhas());
+    }
+
+    public static void ex2(){
+        int mykeys[] = new int[]{65,34,76,21,44,90,8,81};
+        BST_AED2_UFP<Integer, Integer> st = new BST_AED2_UFP<Integer, Integer>();
+        for (int i = 0; i<mykeys.length; i++) {
+            st.put(mykeys[i], i);
+        }
+
+        StdOut.println("Numero de nos da arvore: "+st.contaNos());
+    }
+
+    public static void ex6(){
+        int mykeys[] = new int[]{65,34,76,21,44,90,8,81};
+        BST_AED2_UFP<Integer, Integer> st = new BST_AED2_UFP<Integer, Integer>();
+        for (int i = 0; i<mykeys.length; i++) {
+            st.put(mykeys[i], i);
+        }
+        System.out.println("BST por niveis:");
+        for (Integer s : st.levelOrder())
+            StdOut.println("Key=" + s + ", Value = " + st.get(s));
+
+        StdOut.println();
+        System.out.println("BST inorder keys:");
+
+        for (Integer s : st.inorder())
+            StdOut.println("Key=" + s + ", Value = " + st.get(s));
+
+        StdOut.println();
+        System.out.println("BST preorder keys:");
+
+        for (Integer s : st.preorder())
+            StdOut.println("Key=" + s + ", Value = " + st.get(s));
+
+        StdOut.println();
+        System.out.println("BST posorder keys:");
+
+        for (Integer s : st.posorder())
+            StdOut.println("Key=" + s + ", Value = " + st.get(s));
     }
 }
