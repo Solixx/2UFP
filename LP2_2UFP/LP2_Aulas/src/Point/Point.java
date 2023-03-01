@@ -1,4 +1,6 @@
 package Point;
+import Person.MyMath;
+
 import java.util.*;
 
 public class Point {

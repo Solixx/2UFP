@@ -5,9 +5,7 @@ public class MyMath {
   public double fact_recursive(int n) {
 
     if(n == 0) return 1.0;
-    fact_recursive(n--);
-    n *= n;
-    return n;
+    return n * fact_recursive(n-1);
   }
 
   public double fact_for(int n) {
@@ -45,9 +43,6 @@ public class MyMath {
   public static void main(String[] args) {
     MyMath m = new MyMath();
     System.out.println("Fact: "+ m.fact_recursive(5));
-  }
-
-  public void newOperation() {
   }
 
 }
