@@ -4,6 +4,7 @@ import Person.MyMath;
 import Point.Point;
 import edu.princeton.cs.algs4.StdOut;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Arrays {
@@ -49,12 +50,27 @@ public class Arrays {
         arrList.add(3, "ola mundo");
         arrList.set(2, "test");
 
+        String s1 = (String) arrList.get(1);
+        StdOut.println(s1);
+
         for (int i = 0; i < arrList.size(); i++){
             StdOut.println(arrList.get(i));
         }
 
+        arrList.remove(0);
+
         for (Object o: arrList){
             StdOut.println(o);
         }
+    }
+
+    public static void testGenerifiedArrayList(){
+        ArrayList<Point> arrList = new ArrayList<Point>();
+
+        arrList.add(new Point(1.0f, 1.0f));
+
+        Point p = arrList.get(0);
+
+        String s1 = arrList.get(0).toString();
     }
 }
