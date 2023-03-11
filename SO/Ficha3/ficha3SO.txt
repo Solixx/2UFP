@@ -1,0 +1,101 @@
+1.
+a)fork() cria um novo processo duplicando o processo de chamada. O novo processo é chamado de processo filho. O processo de chamada é chamado de processo pai.
+A função exit() causa o encerramento normal do processo e o mínimo byte significativo de status (isto é, status & 0xFF) é retornado ao pai (veja wait(2)).
+b) Neste caso ao executar o código, o primeiro processo a ser executado foi o processo pai sabendo que este primeiro processo pode mudar dependendo da situação, porque depende do código executado, pois os códigos correm ao mesmo tempo.
+2.
+a)
+Todas essas chamadas de sistema são usadas para aguardar mudanças de estado em um filho do processo de convocação e obter informações sobre a criança cujo estado mudou. 
+Uma mudança de estado é considerada: a criança minado; a criança foi parada por um sinal; ou a criança foi retomada por um sinal. No caso de uma criança terminada, 
+realizar uma espera permite o sistema para liberar os recursos associados à criança; se uma espera não é executada, então a criança terminada permanece em um "zumbi" estado. 
+
+Todas essas chamadas de sistema são usadas para aguardar mudanças de estado em um filho do processo de chamada, e obter informações sobre o filho cujo estado mudou. Uma mudança de estado é considerada como sendo: o criança terminada; a criança foi parada por um sinal; ou a criança era retomado por um sinal. No caso de uma criança terminada, realizar um A espera permite que o sistema libere os recursos associados ao criança; se uma espera não for realizada, o filho encerrado permanece em um estado "zumbi" .
+b)
+int ficha3_b() {
+    pid_t pid;
+    int i, status, value;
+    srand(time(NULL)); // inicializa o gerador de números aleatórios
+
+    for (i = 0; i < 5; i++) {
+        if ((pid = fork()) == -1) {
+            perror("fork");
+            exit(1);
+        }
+        if (pid == 0) { /* Processo filho /
+            value = rand() % 101; // gera um valor aleatório entre 0 e 100
+            printf("Filho %d: PID = %d, valor = %d\n", i, getpid(), value);
+            exit(value);
+        }
+    }
+
+    / Processo pai */
+    for (i = 0; i < 5; i++) {
+        pid = wait(&status);
+        if (WIFEXITED(status)) {
+            value = WEXITSTATUS(status);
+            printf("Pai: filho %d (PID = %d) retornou o valor %d\n", i, pid, value);
+        }
+    }
+
+    return 0;
+}
+3.
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <time.h>
+int main(int argc, char *argv[]) {
+        pid_t pid;
+        int i, soma = 0, status, value, primos[] = {2,3,5,7,11,13,17,19,23,29};
+
+        for (i = 0; i < 2; i++) {
+            if ((pid = fork()) == -1) {
+                perror("fork");
+                exit(1);
+            }
+            if (pid == 0) {
+                if(i == 0){
+                    for(int j = 0; j < 10; j+=2){
+                        soma += primos[j];
+                        primos[j] = 0;
+                    }
+                    printf("Pid: %d, Soma: %d\n", pid, soma);
+                    for(int j = 0; j < 10; j++){
+                        printf(" %d", primos[j]);
+                    }
+                } else{
+                    for(int j = 1; j < 10; j+=2){
+                        soma += primos[j];
+                        primos[j] = 0;
+                    }
+                    printf("Pid: %d, Soma: %d\n", pid, soma);
+                    for(int j = 0; j < 10; j++){
+                        printf(" %d", primos[j]);
+                    }
+                }
+
+                exit(soma);
+            }
+    }
+
+                for (i = 0; i < 2; i++) {
+                    pid = wait(&status);
+                    if (WIFEXITED(status)) {
+                        value = WEXITSTATUS(status);
+                        printf("\nPai: filho %d (PID = %d) retornou o valor %d\n", i, pid, value);
+                    }
+                }
+                for(int i = 0; i < 10; i++){
+                    printf("%d ",primos[i]);
+                }
+
+                return 0;
+}
+3.b.
+Os valores apresentados no vetor "primos" pelos filhos e pelo pai são diferentes, pois cada processo filho 
+modifica o vetor de acordo com a operação realizada nele. O primeiro filho soma os valores dos elementos com índice 
+par e atribui zero a eles, enquanto o segundo filho soma os valores dos elementos com índice ímpar e atribui zero a eles. 
+Portanto, o vetor "primos" é modificado pelos filhos antes que o pai imprima seus valores finais.
+Neste programa, como os filhos modificam apenas seus próprios elementos no vetor, não há conflito de acesso.
