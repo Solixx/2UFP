@@ -9,5 +9,5 @@ public class LottoBagArray {
     private final int[] bagInts = new int[MAX_NUM];
     private int numberRemainingBalls;
     private Random rand = new Random();
-    
+
 }
