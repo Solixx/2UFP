@@ -1,14 +1,18 @@
 package Point;
 
 import Person.MyMath;
+import _05_figgeo.FigGeo;
 import edu.princeton.cs.algs4.StdOut;
 
-public class Circle {
+import java.awt.*;
+
+public class Circle extends FigGeo {
 
     private Point center;
     private Point periferic;
 
     public Circle(Point center, Point periferic) {
+        super();
         this.center = center;
         this.periferic = periferic;
     }
@@ -33,11 +37,11 @@ public class Circle {
         periferic.move(dx, dy);
     }
 
-    public float area(){
+    public double area(){
         return 3.14f * ( (float)Math.pow(Math.abs(periferic.dist(center)), 2));
     }
 
-    public float perimeter(){
+    public double perimeter(){
         return 2 * 3.14f * ( (float)Math.abs(periferic.dist(center)));
     }
 
@@ -68,5 +72,20 @@ public class Circle {
         Circle c = new Circle(p1,p2);
 
         StdOut.println(c.isOutside(p3));
+    }
+
+    @Override
+    public void draw(Graphics g) {
+
+    }
+
+    @Override
+    public boolean isInside(FigGeo f) {
+        return false;
+    }
+
+    @Override
+    public boolean isInterceptedBy(FigGeo f) {
+        return false;
     }
 }

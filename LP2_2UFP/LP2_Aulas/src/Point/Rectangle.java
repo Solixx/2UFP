@@ -1,8 +1,11 @@
 package Point;
 
+import _05_figgeo.FigGeo;
 import edu.princeton.cs.algs4.StdOut;
 
-public class Rectangle {
+import java.awt.*;
+
+public class Rectangle extends FigGeo {
 
     private Point ulc;
     private Point lrc;
@@ -29,15 +32,16 @@ public class Rectangle {
     }
 
     public Rectangle(Point ulc, Point lrc) {
+        super();
         this.ulc = ulc;
         this.lrc = lrc;
     }
 
-    public float area(){
+    public double area(){
         return (Math.abs(ulc.getX() - lrc.getX())) * (Math.abs(ulc.getY() - lrc.getY()));
     }
 
-    public float perimeter(){
+    public double perimeter(){
         return (Math.abs(ulc.getX() - lrc.getX()) * 2) + (Math.abs(ulc.getY() - lrc.getY()) * 2);
     }
 
@@ -68,5 +72,20 @@ public class Rectangle {
         Rectangle r = new Rectangle(p1, p2);
 
         StdOut.println(r.isInside(p3));
+    }
+
+    @Override
+    public void draw(Graphics g) {
+
+    }
+
+    @Override
+    public boolean isInside(FigGeo f) {
+        return false;
+    }
+
+    @Override
+    public boolean isInterceptedBy(FigGeo f) {
+        return false;
     }
 }

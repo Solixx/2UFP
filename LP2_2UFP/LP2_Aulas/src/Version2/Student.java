@@ -87,7 +87,16 @@ public class Student extends Person{
   }
 
   public Grade removeGrade(float g, String nd, Date d) {
-  return null;
+
+    int i = 0;
+    for (Object grades:
+         this.grades) {
+          Grade grade = (Grade) grades;
+          if(grade.getGrade() == g && grade.getDiscipline().getName().equals(nd) && grade.getDate().equals(d)) this.grades.remove(i);
+          i++;
+    }
+
+    return null;
   }
 
   public Grade changeGrade(float ng, float g, String nd, Date d) {

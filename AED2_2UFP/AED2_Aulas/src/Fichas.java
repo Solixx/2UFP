@@ -3,6 +3,7 @@ import edu.princeton.cs.algs4.*;
 import javax.management.openmbean.ArrayType;
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Hashtable;
 
 public class Fichas {
 
@@ -10,7 +11,7 @@ public class Fichas {
         //Ficha1 f1 = new Ficha1();
         //f1.ex10(5, 4, 6);
 
-        Ficha2.ex2();
+        //Ficha2.ex2();
     }
 }
 
@@ -132,5 +133,15 @@ class  Ficha2 {
 
         for (Integer s : st.posorder())
             StdOut.println("Key=" + s + ", Value = " + st.get(s));
+    }
+}
+
+class Ficha4(){
+
+    public static void main(String[] args) {
+
+    }
+    public static void ex5(){
+
     }
 }

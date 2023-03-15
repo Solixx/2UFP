@@ -1,5 +1,6 @@
 package Point;
 import Person.MyMath;
+import _05_figgeo.FigGeo;
 
 import java.util.*;
 
