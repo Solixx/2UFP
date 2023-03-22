@@ -136,12 +136,58 @@ class  Ficha2 {
     }
 }
 
-class Ficha4(){
+class Ficha4 {
 
     public static void main(String[] args) {
 
     }
     public static void ex5(){
 
+    }
+}
+
+class Ficha6 {
+
+    public static void main(String[] args) {
+        //ex1_grafo3();
+        ex10_2();
+    }
+
+    public static void ex1_grafo3(){
+        In in_file = new In("./data/grafo3Ex1.txt");
+        Graph g = new Graph(in_file);
+        System.out.println("Opção 1 de construção de grafos");
+        System.out.println(g);
+
+        int v = 5;
+        Graph g2 = new Graph(v);
+        System.out.println("Opção 2 de construção de grafos");
+        g2.addEdge(0,2);
+        g2.addEdge(0,3);
+        g2.addEdge(0,4);
+        g2.addEdge(1,2);
+        g2.addEdge(1,4);
+        g2.addEdge(4,3);
+        g2.addEdge(1,3);
+        System.out.println(g2);
+    }
+
+    public static void ex10_1(){
+        In in_file = new In("./data/grafo3Ex1.txt");
+        Graph_AED2_UFP g = new Graph_AED2_UFP(in_file);
+        System.out.println(g);
+
+        Graph_AED2_UFP g2 = new Graph_AED2_UFP(g);
+        System.out.println(g2);
+    }
+
+    public static void ex10_2(){
+        In in_file = new In("./data/grafo3Ex1.txt");
+        Graph_AED2_UFP g = new Graph_AED2_UFP(in_file);
+        System.out.println(g);
+
+        int v = 2;
+        Graph_AED2_UFP g2 = new Graph_AED2_UFP(g, v);
+        System.out.println(g2);
     }
 }
