@@ -13,9 +13,9 @@ public class Discipline {
 
   private short courseYear;
 
-  private ArrayList grade;
+  private ArrayList<Grade> grade;
 
-  public Discipline(String name, int ects, short courseSemester, short courseYear, ArrayList grade) {
+  public Discipline(String name, int ects, short courseSemester, short courseYear, ArrayList<Grade> grade) {
     this.name = name;
     this.ects = ects;
     this.courseSemester = courseSemester;
@@ -73,6 +73,7 @@ public class Discipline {
   public void setGrade(ArrayList grade) {
     this.grade = grade;
   }
+
 
   public void associateGrade(Grade g) {
   }

@@ -1,0 +1,202 @@
+1-
+a)-A função das familias é exec, e a diferença entre os comandos é na chamada da função(parametros).
+b)-executado
+c)A mensagem nao aparece porque o comando execlp() troca o codigo para o programa executado pelo comando execlp(), a mensagem só apareceria se o o comando nao conseguisse exdecutar o programa .
+d)Nao tinhamos o ficheiro disponibilizado
+2-
+a) CODIGO:
+ char buffer[100];
+    pid_t pid;
+    int status;
+
+    while (1) {
+        printf("$ ");
+        fgets(buffer, 100, stdin);
+
+        // Remove o caractere '\n' do final do buffer
+        buffer[strcspn(buffer, "\n")] = 0;
+
+        // Cria um processo filho
+        pid = fork();
+
+        if (pid == 0) {
+            // Processo filho
+            execlp(buffer, buffer, NULL);
+            // Se exec retornar, houve um erro
+            perror("Erro ao executar o comando");
+            exit(1);
+        } else if (pid > 0) {
+            // Processo pai
+            waitpid(pid, &status, 0);
+        } else {
+            // Erro ao criar processo filho
+            perror("Erro ao criar processo filho");
+        }
+    }
+
+//FIM DO CODIGO
+
+ls:
+build.ninja	CMakeFiles	     ficha2B	  Makefile
+CMakeCache.txt	cmake_install.cmake  ficha2B.cbp  Testing
+
+pwd:
+/home/so/CLionProjects/ficha2B/cmake-build-debug
+
+ps:
+    PID TTY          TIME CMD
+   1978 ?        00:00:01 systemd
+   1979 ?        00:00:00 (sd-pam)
+   1985 ?        00:00:00 pipewire
+   1986 ?        00:00:00 pipewire-media-
+			...
+b)
+char buffer[100];
+    pid_t pid;
+    int status;
+
+    while (1) {
+        printf("$ ");
+        fgets(buffer, 100, stdin);
+
+        // Remove o caractere '\n' do final do buffer
+        buffer[strcspn(buffer, "\n")] = 0;
+
+        // Cria um processo filho
+        pid = fork();
+
+        if (pid == 0) {
+            // Processo filho
+            char *args[20];
+            int i = 0;
+            char *token = strtok(buffer, " ");
+            while (token != NULL) {
+                args[i++] = token;
+                token = strtok(NULL, " ");
+            }
+            args[i] = NULL;
+
+            execvp(args[0], args);
+            // Se execvp retornar, houve um erro
+            perror("Erro ao executar o comando");
+            exit(1);
+        } else if (pid > 0) {
+            // Processo pai
+            waitpid(pid, &status, 0);
+        } else {
+            // Erro ao criar processo filho
+            perror("Erro ao criar processo filho");
+        }
+    }
+
+    return 0;
+ls -al /:
+drwxrwxr-x 5 so so  4096 mar 11 20:17 .
+drwxrwxr-x 4 so so  4096 mar 11 20:17 ..
+-rw-rw-r-- 1 so so 18245 fev 22 14:19 build.ninja
+drwxrwxr-x 3 so so  4096 fev 22 14:19 .cmake
+-rw-rw-r-- 1 so so 24119 fev 22 14:32 CMakeCache.txt
+drwxrwxr-x 6 so so  4096 mar 11 20:17 CMakeFiles
+
+ps -ef:
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 19:49 ?        00:00:08 /lib/systemd/systemd splash 
+root           2       0  0 19:49 ?        00:00:00 [kthreadd]
+root           3       2  0 19:49 ?        00:00:00 [rcu_gp]
+root           4       2  0 19:49 ?        00:00:00 [rcu_par_gp]
+
+3-
+a)Quando o pai envia o sinal para o filho mata o processso do mesmo após o filho o receber.
+b)a função kill() é usada para enviar sinais para processos específicos e a função signal() é usada para definir o manipulador de sinal para os sinais recebidos por um processo. O código usa essas funções para enviar sinais para um processo filho e definir o comportamento do processo filho quando ele recebe esses sinais.
+c)
+void handle_sigint(int sig) {
+    printf("Sinal SIGINT (^C) recebido.\n");
+}
+
+int ficha4_3b() {
+    // Define o tratador de sinal para o SIGINT
+    signal(SIGINT, handle_sigint);
+
+    // Loop infinito
+    while(1) {
+        printf("Executando programa...\n");
+        sleep(1);
+    }
+
+    return 0;
+}
+d)Não é possível instalar rotinas de tratamento de sinais para os sinais SIGSTOP e SIGKILL. Esses sinais são processados pelo sistema operacional de forma especial e não podem ser manipulados ou ignorados pelos programas de usuário.
+
+O sinal SIGSTOP é usado para interromper temporariamente a execução de um processo, enquanto o SIGKILL é usado para terminar imediatamente um processo. Esses sinais são usados pelo sistema operacional para gerenciar e controlar os processos em execução e, portanto, não são permitidos aos programas de usuário manipulá-los. Quando um processo recebe um sinal SIGSTOP ou SIGKILL, ele é imediatamente interrompido ou terminado, sem dar a oportunidade para o programa de usuário executar uma rotina de tratamento.
+e)void sigtstp()
+{
+    printf("Received SIGTSTP signal\n");
+}
+
+int ficha4_3e()
+{
+    signal(SIGTSTP, sigtstp);
+}
+4.
+void handler (int signal_number)
+{
+    char ch;
+    switch(signal_number){
+        case SIGCHLD:
+            printf ("SIGCHLD received!\n");
+            break;
+        case SIGUSR1:
+            printf ("SIGUSR1 received!\n");
+            break;
+        case SIGUSR2:
+            printf ("SIGUSR2 received!\n");
+        default:
+            printf ("Received a %d signal...\n",signal_number);
+            break;
+    }
+}
+int ficha4_e4 (){
+    int i, pid;
+    struct sigaction sa;
+    struct timeval tv1,tv2;
+    gettimeofday(&tv1,NULL);
+    for(i=0;i<2;i++){
+        pid=fork();
+        sleep(1);
+        if(pid<0){
+            perror("fork");
+            exit(1);
+        }
+        if(i==0){
+            if(pid==0){
+                sleep(i+2);
+                kill(getppid(),SIGUSR1);
+                exit(0);
+            }
+        }
+        if(i==1){
+            if(pid==0){
+                kill(getppid(),SIGUSR2);
+                exit(0);
+            }
+        }
+
+    }
+    if(pid!=0){
+
+        memset (&sa, 0, sizeof (sa));
+        sa.sa_handler = &handler;
+        sigaction (SIGCHLD, &sa, NULL);
+        sigaction (SIGUSR1, &sa, NULL);
+        sigaction (SIGUSR2, &sa, NULL);
+        for(i=0;i<100000000;i++);
+
+        wait(NULL);
+        gettimeofday(&tv2,NULL);
+        printf("Total time = %f seconds \n",(double) (tv2.tv_usec - tv1.tv_usec) / 1000000 + (tv2.tv_sec - tv1.tv_sec));
+        pause();
+    }
+
+}
+
+

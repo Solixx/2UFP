@@ -15,11 +15,10 @@ public class Student extends Person{
 
     private CourseClass courseClass;
 
-  private ArrayList grades;
-    private ArrayList  has;
+  private ArrayList<Grade> grades;
 
 
-  public Student(String idNumber, String name, String address, Date birth, long number, Date registration, String email, String password, CourseClass courseClass, ArrayList grades, ArrayList has) {
+  public Student(String idNumber, String name, String address, Date birth, long number, Date registration, String email, String password, CourseClass courseClass, ArrayList<Grade> grades) {
     super(idNumber, name, address, birth);
     this.number = number;
     this.registration = registration;
@@ -27,7 +26,6 @@ public class Student extends Person{
     this.password = password;
     this.courseClass = courseClass;
     this.grades = grades;
-    this.has = has;
   }
 
   @Override
@@ -39,7 +37,6 @@ public class Student extends Person{
             ", password='" + password + '\'' +
             ", courseClass=" + courseClass +
             ", grades=" + grades +
-            ", has=" + has +
             '}';
   }
 
@@ -75,13 +72,9 @@ public class Student extends Person{
     this.grades = grades;
   }
 
-  public ArrayList getHas() {
-    return has;
-  }
 
-  public void setHas(ArrayList has) {
-    this.has = has;
-  }
+
+
 
   public void addGrade(Grade g) {
   }
