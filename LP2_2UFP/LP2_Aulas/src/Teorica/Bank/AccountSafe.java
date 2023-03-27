@@ -2,28 +2,32 @@ package Teorica.Bank;
 
 public class AccountSafe extends Account{
 
-    protected AccountSafe(String accountNumber, double balance, Client owner) {
+    public AccountSafe(String accountNumber, double balance, Client owner) {
         super(accountNumber, balance, owner);
     }
 
-    @Override
-    public double withdraw(double amount) {
-        return 0;
+    public double withdraw(double amount){
+        if(super.getBalance()>=amount){
+            super.setBalance(super.getBalance()-amount);
+        }
+        return super.getBalance();
     }
-
-    @Override
-    public double deposit(double amount) {
-        return 0;
+    public double deposit(double amount){
+        if(amount>0){
+            super.setBalance(super.getBalance()+amount);
+        }
+        return super.getBalance();
     }
-
-    @Override
-    public double transfer(AccountMoneyI destination, double amount) {
-        return 0;
+    public double balance(){
+        return getBalance();
     }
-
-    @Override
-    public double balance() {
-        return 0;
+    public double transfer(AccountMoneyI destination,double amount){
+        double prevBalance= getBalance();
+        double b= withdraw(amount);
+        if(prevBalance > b){
+            destination.deposit(amount);
+        }
+        return this.balance();
     }
 
     @Override

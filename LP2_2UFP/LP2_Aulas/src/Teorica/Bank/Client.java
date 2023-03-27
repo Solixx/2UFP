@@ -7,12 +7,14 @@ import java.util.Objects;
 
 public class Client extends Person implements ClientRelationshipsI {
     private String varNumber;
-    private ArrayList accounts = new ArrayList();
+    private ArrayList<Account> accounts = new ArrayList();
     public void addAccount(Account newAccount){
-
+        this.accounts.add(newAccount);
     }
     public void listAccounts(){
-
+        for (Account a : this.accounts) {
+            System.out.println(a);
+        }
     }
 
     public Account getAccount(int index){return (Account) this.accounts.get(index);}
