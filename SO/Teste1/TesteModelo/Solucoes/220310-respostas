@@ -1,0 +1,95 @@
+
+Introdução: Organização do SO; Modo Núcleo / Modo Utilizador; transições para o núcleo: Interrupções de software, hardware e excepções.
+
+Processos: Estados dos processos, implementação de processos no núcleo, syscalls para gestão de processos.
+
+Comunicação entre processos: Comunicação em modo utilizador e com objetos do núcleo (pipes, fifos, sockets, memória partilhada)
+
+
+1a.
+
+New --> Um novo processo foi admitido no SO. Foram alocados os recursos necessários (zonas de memória, objeto processo) e inicializados de acordo com o programa a executar.
+
+Ready --> Conjunto de processos presentes no SO que possuem todas as condições para avançar na sua computação, aguardando apenas que o escalonador do sistema os seleccione para usar o CPU.
+
+Running --> O processo encontra-se a executar neste momento no CPU
+
+Waiting --> Conjunto de processos bloqueados aguardando a ocorrência de um evento externo. Podem aguardar a chegada de um sinal, de dados de um periférico lento, possibilidade de ler ou escrever num canal de comunicação, etc.
+
+Terminated --> O processo terminou executando (explicita ou implicitamente) a chamada ao sistema exit(). Todos os recursos do sistema atribuídos ao processo foram libertados e ao processo pai foi enviado um sinal SIGCHLD anunciando a finalização do seu filho. O código de finalização do processo filho é preservado para posterior recolha por parte do processo pai recorrendo à chamada ao sistema wait().
+
+Transições:
+
+New -> Ready: Após as estruturas de dados associadas ao processo serem inicializadas e o programa a executar carregado em memória (loader...) o processo fica no estado Ready.
+
+Ready -> Running: O processo foi escolhido pelo escalonador para usar o CPU.
+
+Running -> Ready: O tempo de CPU atribuído ao processo (Quantum) esgotou-se. Ao expirar o temporizador programado pelo SO, acontece uma interrupção de hardware que o SO é chamado a atender. O SO inicia uma mudança de contexto, preservando o estado do processo em execução no objeto processo e colocando-o no estado Ready.
+
+Running -> Waiting: O Processo em causa efetuou uma chamada ao sistema (interrupção de software) solicitando acesso a eventos ou dados indisponíveis. O núcleo do SO, preserva o estado do processo e coloca-o em espera, retirando-o do CPU. Outro processo no estado Ready será escolhido para usar o CPU pelo escalonador.
+
+Waiting -> Ready: O evento ou dados aguardados pelo processo ficaram disponíveis. O SO retira o processo do estado Waiting e coloca-o no estado Ready, ficando este elegível novamente para usar o CPU quando for escolhido pelo escalonador.
+
+Running -> terminated: O processo efetua a chamada exit() e todos os seus recursos são recolhidos pelo SO mantendo apenas o seu código de finalização para ser recolhido pelo processo pai.
+
+1b.
+
+fork() -> O processo que executa a chamada ao sistema fork() encontra-se no estado Running. Assumindo que a chamada é bem sucedida, o processo poderá manter-se neste estado (se o escalonador decidir continuar com este processo) ou transitar para o estado Ready (se o escalonador atribuir o CPU a outro processo, designadamente, o processo filho).
+
+
+read() -> O processo que executa a chamada ao sistema read() encontra-se no estado Running. Assumindo que a chamada é bem sucedida, o processo poderá manter-se neste estado (se o descritor a ler tiver dados disponíveis) ou transitar para o estado Waiting (se não estiverem disponíveis dados).
+
+
+exit() -> O processo que executa a chamada ao sistema exit() encontra-se no estado Running. O processo transita para o estado Terminated e os seus recursos são recolhidos pelo SO.
+
+waitpid () -> O processo que executa a chamada ao sistema waitpid() encontra-se no estado Running. Assumindo que a chamada é bem sucedida, o processo poderá manter-se neste estado (se o processo filho com o PID indicado já tiver terminado) ou transitar para o estado Waiting (se o processo filho com o PID indicado ainda não tiver terminado).
+
+
+2a. 
+
+PAI
+
+Cria um pipe
+Cria um filho
+STDIN -> (Lê) e (Escreve) -> PIPE (fds[1])
+Espera o FILHO terminar e recolhe o seu estado.
+Imprime o número de digitos presente nos dados.
+
+FILHO
+
+PIPE (fds[0]) -> (Lê) conta o número digitos e retorna a contagem ao PAI via Exit
+
+
+2b.
+
+pipe(fds) -> O processo coloca o apontador para o vetor com dois inteiros na pilha e o código da syscall pipe e invoca o SO (syscall). O processador passa executar em MODO NÚCLEO. Assumindo que o processo ainda não esgotou o número máximo de descritores, o SO vai alocar os 2 descritores livres com índice menor no vetor de descritores, coloca-os no vetor passado como argumento e reserva memória (PIPE_SIZE) para o canal de comunicação. O SO retorna da interrupção de software, o processador regressa a MODO UTILIZADOR e o controlo é devolvido ao processo.
+
+fork() -> O processo coloca na pilha o código da syscall fork e invoca o SO (syscall). O processador passa executar em modo núcleo. Assumindo que o processo ainda não esgotou o número máximo processos filho, o SO, cria um novo objeto processo, copia a informação do processo pai (com a execepção do PID, PPID e dados estatísticos), coloca na pilha do processo pai o PID do filho e na pilha do processo filho coloca 0.  O SO retorna da interrupção de software, o processador regressa a MODO UTILIZADOR e o controlo é devolvido ao processo (Pai ou Filho dependente do escalonador).
+
+waitpid(pid, &result,0) -> O processo coloca o PID do processo do qual pretende aguardar a finalização, o apontador para a variável que vai receber o código de finalização (&result), opções (0) e o código da syscall waitpid na pilha e invoca o SO (syscall). O processador passa executar em MODO NÚCLEO. 
+
+Se o processo PID já terminou o seu código de finalização é escrito na variável (&result), o SO retorna da interrupção de software, o processador regressa a MODO UTILIZADOR e o controlo é devolvido ao processo.
+
+Se o processo PID ainda não terminou, o estado do processo chamador é preservado e colocado na lista de processos em espera (estado Waiting). Outro processo é escalonado para usar o CPU. Quando o processo PID terminar, o SO notifica o processo chamador (SIGCHLD) e transfere-o para a lista Ready. Quando o processo for escolhido para usar o CPU (Running) o código de finalização de PID é escrito na variável (&result), o SO retorna da interrupção de software, o processador regressa a MODO UTILIZADOR e o controlo é devolvido ao processo chamador.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

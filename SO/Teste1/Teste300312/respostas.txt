@@ -1,0 +1,62 @@
+SO - Teste1 300312
+
+1) a) 	(Kernel Mode) Em um sistema operacional moderno, o kernel é a camada de software que gerencia todos os recursos do sistema, incluindo processos, memória, arquivos e dispositivos de entrada e saída.
+	(User Mode) Neste modo, os processos têm acesso limitado ao sistema e não podem acessar diretamente o hardware ou a memória física. Em vez disso, eles precisam solicitar recursos do sistema operacional, que age como intermediário.
+
+b)	Esta transição é feita quando um processo necessita de permissões do sistema para executar a sua operação, este envia uma solicitação para o sistema operativo por meio de uma chamada de sistema.
+
+c)	A razão para a transição entre estes dois modos é para a segurança do sistema, esta forma do sistema funcionar existe para a sua proteção pois ao bloquear o utilizador de ter acesso completo ao sistema protege o mesmo de o utilizador o estragar.
+
+
+2) a)	- Cria 2 Pipes
+(Processo Pai){
+	- Fecha o descritore de leitura de fds1 "close(fds1[0])" & fecha o descritor de escrita de fds2 "close(fds2[1])"
+	- Abre um ficheiro "open(file, mode)" argv[1] apenas para leitura e guarda o estado em fd (negativo significa erro)
+	(Se fd de ERRO){
+		- Escreve uma mensagemna consola e fecha o processo "exit(1)"
+	}
+	(Se fd NÃO de ERRO){
+		- Lê o conteudo de fd carater a carater até o fim do seu conteudo 
+		"while((i=read(fd,&c,1))!=0)" e guarda em c
+		- Dentro do while escreve para o descritor 1 (stdout) o conteudo guardado em c
+		- Em seguida empera pelo filho terminar "waitpid(pid,&status,0);"
+		- Se o status do filho não tiver nenhum problema entra no IF "if 
+		(WIFEXITED(status))"
+		(Se os status do filho NÃO tiverem PROBLEMAS){
+			- Escreve para a consola o seu retorno "printf("Filho retornou: %d.\n", WEXITSTATUS(status));"
+		}
+	- Termnina o processo pai "exit(0)"
+	}
+}
+(Processo Filho){
+	- Fecha o descritor de escrita de fds1 "close(fds1[1])"
+	- Duplica o descritor de leitura de fds1 para o descritor padão de leitura stdin "dup2(fds1[0],0)"
+	- Fecha o descritor de leitura de fds2 "close(fds2[0])"
+	- Duplica o descritor de escrita de fds2 para o descritor padão de escrita stdout "dup2(fds2[1],1)"
+	- executa o comando wc -l "execlp(file, comand, args, NULL)"
+	- Termina o processo "exit(1)"
+}
+
+b)	pipe(fds2)	- Esta função vai criar um par de descritores no sistema chamado pipe esta vai ser usada para partilhar informações entre processos pai e filho
+	pid = fork()	- Esta função é usada para duplicar um processo e returnar para o processo pai um pid com um certo valor inteiro enquanto o processo filho recebe o inteiro 0
+	dup2(fds1[0],0)	- Esta função duplica um descritor para outro neste caso o descritor de leitura de fds1[0] vai ser duplicado para o descritor de leitura padrão 0 (stdin) assim quando se usar o descritor padrão estamos a usar fds1[0]
+	execlp("wc","wc","-l",NULL)	- Executa um novo programa e substitui o código do processo atual pelo novo neste caso sendo "wc -l" esta função necessita de um caminho para um ficheiro, o comando e os seus argumentos.
+	exit(1)		- Esta função termina o processo
+	waitpid(pid,&status,0)		- Esta função espera que um processo filho termine, esta precisa de um pid do filho (0 sendo qualquer filho), um apontador que guarda o estado do filho e um conjunto de flags para controlar o comportamento da chamada ao sistema
+
+c)	PAINT (2 c diagrama)
+
+
+3)	(Código C) ! ERRADO !
+
+4) a)	(Código C)
+
+b)	A coordenação é feita pelo sistema operativo quando um processo escreve no pipe os dados são armazenados num buffer de saída e o mesmo para o procesos que vai ler da pipe mas lê de um buffer de entrada. Quando o pipe de saida está cheio o processo de escrita fica bloqueado (waiting) até que haja espaço vazio já no processo de leitura o processo fica bloqueado (waiting) quando não existe conteudo no buffer de entrada.
+
+
+
+
+
+
+
+

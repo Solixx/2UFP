@@ -1,0 +1,102 @@
+1.
+a)
+new- quando o processo é criado apartir de um fork 
+ready- quando o processo esta pronto a ser usado, e apenas está a espera do CPU
+running- quando o processo esta a ser executado no CPU
+waiting- quando um processo esta à espera da execução do outro
+terminated- quando o processo chega a um fim envia um sinal para o pai para informar o termino.O código do filho vai ser preservado para posterior utilização do pai
+
+New -> Ready: Após as estruturas de dados associadas ao processo serem inicializadas e o programa a executar carregado em memória (loader...) o processo fica no estado Ready.
+
+Ready -> Running: O processo foi escolhido pelo escalonador para usar o CPU.
+
+Running -> Ready: O tempo de CPU atribuído ao processo (Quantum) esgotou-se. Ao expirar o temporizador programado pelo SO, acontece uma interrupção de hardware que o SO é chamado a atender. O SO inicia uma mudança de contexto, preservando o estado do processo em execução no objeto processo e colocando-o no estado Ready.
+
+Running -> Waiting: O Processo em causa efetuou uma chamada ao sistema (interrupção de software) solicitando acesso a eventos ou dados indisponíveis. O núcleo do SO, preserva o estado do processo e coloca-o em espera, retirando-o do CPU. Outro processo no estado Ready será escolhido para usar o CPU pelo escalonador.
+
+Waiting -> Ready: O evento ou dados aguardados pelo processo ficaram disponíveis. O SO retira o processo do estado Waiting e coloca-o no estado Ready, ficando este elegível novamente para usar o CPU quando for escolhido pelo escalonador.
+
+Running -> terminated: O processo efetua a chamada exit() e todos os seus recursos são recolhidos pelo SO mantendo apenas o seu código de finalização para ser recolhido pelo processo pai.
+
+b)
+fork()- é a duplicação de um processo transição: running caso a chamada seja bem efetuada,continua no estado running, se o escalonamento atribuir outro processo ao CPU então passa para o estado ready.
+
+read()- caso ainda tenha dados disponiveis mantem-se no estado running, se não tiver dados disponiveis então passa para o estado waiting()
+
+exit()-o processo que executa a chamada ao sistema exit() está no estado running.O processo passa para o estado terminated e os recursos sao recolhidos pelo SO.
+
+waitpid()-o waitpid() encontra-se no estado Running, cao o processo filho com o PID indicado já tiver terminado o processo vai se manter no mesmo estado. E transita para o waiting se o filho com o PID indicado não tiver terminado.
+
+2.
+a) feito no paint
+
+b)pipe(fds)-Vai pedir ao CPU para criar o pipe para puder comunicar entre o pai e o filho,o pipe fica no kernel mode.O fds é um array que utiliza as 2 primeiras posições dos descritores, 0 STDIN, 1 STDOUT, 2 STDERR, as restantes irão ser usadas para comunicações de processos.
+fork()-O processador passa a executar em modo núcleo, duplica um processo e coloca-o na pilha no USERLAND.O processador volta a modo utilizador e o controlo e voltado ao processo. 
+waipid(pid, &result,0)-O processo coloca o PID do processo do qual pretende aguardar a finalização.Se o processo PID já terminou o seu código de finalização é escrito na variável (&result).Se o processo PID ainda não terminou, o estado do processo chamador é preservado e colocado na lista de processos em espera
+c) feito no clion
+
+3.Inicialmente é usado o pipe() pois é preciso criar meios de comunicação entre processos, depois o fork() para duplicar um processo e assim criar um processo filho, após isso o dup2() duplica os discritores, após isso é o open() que abre o ficheiro, depois o execlp() executa o programa e por fim o waitpid() é o último pois tem de esperar o termino da execução do processo.
+4. 
+a.
+No programa da esquerda retorna 0 porque o filho nao retorna o valor do i.
+FALTA FAZER O PROGRAMA DA DIREITA...
+b.
+NAO SABEMOS
+
+300312 SO
+
+1.
+
+a)
+User mode-Em resumo, o modo de usuário é uma camada de proteção importante em um sistema operacional, que impede que os programas acessem diretamente os recursos críticos do sistema, mantendo assim a integridade e a segurança do sistema operacional.
+Kernel mode-Em resumo, o modo kernel é um modo de operação em que o sistema operacional tem acesso total aos recursos do sistema, permitindo que execute tarefas críticas para o funcionamento do sistema operacional.
+b)
+A transição entre modos de execução acontece devido a system calls ao kernel que interrompem a ação do processo. Após isso o kernel responde ao pedido e envia de volta para o User Mode o processo em execução.
+
+c) Esta transição ocorre pois o User Mode nao pode acessar todas as funcionalidades do SO, então quando encontra alguma operação critica, envia system calls para o Kernel Mode para tentar averiguar a situação, para dar permissão ao User Mode ou detetar algum tipo de erro.
+
+2.
+
+a) e b)
+O código cria dois pipes , após isso faz o fork para duplicar um processo, no código do filho vamos duplicar o descritor do pipe1 de leitura e o descritor do pipe 2 de escrita, e fechamos o descritor de leitura do pipe2 e o de escrita do pipe 1, depois executa o ficheiro wc com os argumentos wc -l, caso haja algum tipo de erro no execlp então o exit retorna 1 que é erro.No codigo do pai fecha os descritores, abre o ficheiro passado no argv[1] em read only, se retornar -1 é erro se não entra no else onde vai ler valores diferentes de 0 e guarda os caracters 1 em 1 no &c, depois escreve apartir do &c para o descritor de escrita fds[1], após a escrita fechamos esse mesmo descritor pois nao vai ser mais preciso tal como o fd. depois lemos do desritor do pipe 2 caracter a carcater diferente de 0, depois vai escrever para o pipe 2 apartir do &c.
+Por fim o pai espera pela execução do processo filho no waitpid o pai espera do filho com o pid passado no argumento, e o estado do processo do filho vai ficar gravado na variavel status, no WIFEXITED se a variavel status for 0 assinala erro e diferente de 0 se tiver corrido tudo bem, e então escreve no fim a mensagem com os status do filho,por fim dando exit.
+
+c) feito no paint
+
+3. MUITO FODA
+
+4.
+a)
+void ficha300312(){
+    char buffer[100];
+    pid_t pid;
+    int status;
+    while(1){
+        printf("$ ");
+        fgets(buffer,sizeof buffer,stdin);
+        buffer[strcspn(buffer,"\n")==0];
+        pid=fork();
+        if(pid==-1){
+            perror("erro");
+        }
+        if(pid==0){
+            int i=0;
+            char token= strtok(buffer," ");
+            charargs[20];
+            while(token!=NULL){
+                args[i++]=token;
+                token= strtok(NULL," ");
+            }
+            args[i]=NULL;
+            execvp(args[0],args);
+            perror("erro no exec");
+            exit(-1);
+        }
+        else{
+            waitpid(pid,&status,0);
+        }
+    }
+}
+
+b)
+O processo que pretende ler se não tiver dados disponiveis tem de esperar pela escrita, e apenas quando o de escrita encher o buffer faz com que o processo de ler passe de waiting para running, quando ler todos os dados do buffer passa para terminated.

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public abstract class FigGeo implements FigGeoDrawl, FigGeoDiml, FigGeoRelsl {
 
   public Color color;
+
   public ArrayList<Point> pontos;
 
     /**

@@ -1,5 +1,7 @@
 package VideoClub.VideClub;
 
+import edu.princeton.cs.algs4.StdOut;
+
 import java.util.Vector;
 
 public class Atores {
@@ -21,5 +23,4 @@ public class Atores {
 
   public void removeFilme() {
   }
-
 }

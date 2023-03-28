@@ -67,15 +67,15 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/libs_src"
+					"path" : "E:/GitHub/2UFP/AED1_2UFP/libs_src"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/lp"
+					"path" : "E:/GitHub/2UFP/AED1_2UFP/lp"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "C:/Users/manue/Desktop/GitHub/2UFP/AED1_2UFP/tp"
+					"path" : "E:/GitHub/2UFP/AED1_2UFP/tp"
 				}
 			],
 			"language" : "C",

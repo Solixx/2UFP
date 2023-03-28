@@ -1,5 +1,6 @@
 package Version2;
 import Person.*;
+import VideoClub.VideClub.Atores;
 
 import java.util.ArrayList;
 
