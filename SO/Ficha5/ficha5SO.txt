@@ -1,0 +1,142 @@
+1-
+int ficha5_e1(){
+    char msg[] = "mensagem de teste";
+    char aux[100];
+    char tmp[100],nova[100];
+
+    int fds[2], pid_filho,fds2[2];
+    if (pipe (fds) < 0) exit(-1);
+    if(pipe(fds2)<0) exit(-1);
+    if (fork () == 0) { /* lê do pipe */
+        read (fds[ 0], tmp, sizeof (msg));
+        for (int i = 0; i < strlen(msg); ++i) {
+            aux[i]=toupper(msg[i]);
+        }
+        close(fds[0]);
+        close(fds[1]);
+        write(fds2[1],aux,sizeof(aux));
+        printf ( "%s\n", tmp);
+        exit ( 0);
+    }
+    else {
+        write (fds[ 1], msg, sizeof (msg));
+        wait( NULL);
+        read(fds2[0],nova,sizeof(nova));
+        printf("%s\n",nova);
+        close(fds2[0]);
+        close(fds2[1]);
+    }
+
+}
+2.
+a)codigos executados
+b)pipe:O código cria um pipe para a comunicação entre os processos filhos e o processo pai. O primeiro filho escreve uma mensagem no pipe e o segundo filho lê essa mensagem e a imprime na tela. O processo pai espera pelos filhos e depois encerra o programa.
+
+dup2:Esse código em C abre o arquivo "teste.txt" ou cria um novo se ele não existir. Em seguida, redireciona a saída padrão para esse arquivo usando a função dup2(). Por fim, imprime "Olá Mundo!" no arquivo redirecionado.
+
+c)
+ int fd[2];
+  pid_t ls_pid, sort_pid;
+
+
+  if (pipe(fd) == -1) {
+    perror("pipe");
+    exit(EXIT_FAILURE);
+  }
+
+  ls_pid = fork();
+  if (ls_pid == -1) {
+    perror("fork");
+    exit(EXIT_FAILURE);
+  } else if (ls_pid == 0) {
+    close(fd[0]);
+    dup2(fd[1], STDOUT_FILENO);
+    close(fd[1]);
+
+    execl("/bin/ls", "ls", "/etc", NULL);
+
+    perror("execl");
+    exit(EXIT_FAILURE);
+  }
+
+  sort_pid = fork();
+  if (sort_pid == -1) {
+    perror("fork");
+    exit(EXIT_FAILURE);
+  } else if (sort_pid == 0) {
+    close(fd[1]);
+    dup2(fd[0], STDIN_FILENO);
+    close(fd[0]);
+
+    freopen("testfile", "w", stdout);
+
+    execl("/usr/bin/sort", "sort", NULL);
+
+    perror("execl");
+    exit(EXIT_FAILURE);
+  }
+
+  close(fd[0]);
+  close(fd[1]);
+
+  waitpid(ls_pid, NULL, 0);
+  waitpid(sort_pid, NULL, 0);
+
+  printf("DONE!\n");
+
+  return 0;
+
+
+3.
+void ficha5_e3(int argc, char *argv[]) {
+    int pipefd[2], pid1, pid2;
+    char buffer[MAXLINE];
+
+    if(pipe(pipefd) < 0) {
+        perror("Erro ao criar o pipe.");
+        exit(1);
+    }
+
+    if((pid1 = fork()) == 0) {  // primeiro filho
+        close(pipefd[0]);  // fecha o lado do pipe que não é usado pelo filho
+        FILE* file = fopen("arquivo.txt", "r");
+        if(file == NULL) {
+            perror("Erro ao abrir o arquivo.");
+            exit(1);
+        }
+        int pid = getpid();
+        while(fgets(buffer, MAXLINE, file) != NULL) {
+            sprintf(buffer, "%d: %s", pid, buffer);  // adiciona o PID antes da linha lida
+            write(pipefd[1], buffer, strlen(buffer)+1);
+        }
+        fclose(file);
+        close(pipefd[1]);
+        exit(0);
+    }
+    else if((pid2 = fork()) == 0) {  // segundo filho
+        close(pipefd[0]);  // fecha o lado do pipe que não é usado pelo filho
+        FILE* file = fopen("arquivo.txt", "r");
+        if(file == NULL) {
+            perror("Erro ao abrir o arquivo.");
+            exit(1);
+        }
+        int pid = getpid();
+        while(fgets(buffer, MAXLINE, file) != NULL) {
+            sprintf(buffer, "%d: %s", pid, buffer);  // adiciona o PID antes da linha lida
+            write(pipefd[1], buffer, strlen(buffer)+1);
+        }
+        fclose(file);
+        close(pipefd[1]);
+        exit(0);
+    }
+    else {  // processo pai
+        close(pipefd[1]);  // fecha o lado do pipe que não é usado pelo pai
+        while(read(pipefd[0], buffer, MAXLINE) > 0) {
+            printf("%s", buffer);
+        }
+        close(pipefd[0]);
+        waitpid(pid1, NULL, 0);
+        waitpid(pid2, NULL, 0);
+        exit(0);
+    }
+}
