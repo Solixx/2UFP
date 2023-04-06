@@ -86,6 +86,10 @@ class Ficha1 {
 
 class  Ficha2 {
 
+    public static void main(String[] args) {
+        ex6();
+    }
+
     public static void ex1(){
         int mykeys[] = new int[]{65,34,76,21,44,90,8,81};
         BST_AED2_UFP<Integer, Integer> st = new BST_AED2_UFP<Integer, Integer>();
