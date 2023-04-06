@@ -136,16 +136,6 @@ class  Ficha2 {
     }
 }
 
-class Ficha4 {
-
-    public static void main(String[] args) {
-
-    }
-    public static void ex5(){
-
-    }
-}
-
 class Ficha6 {
 
     public static void main(String[] args) {
@@ -189,5 +179,24 @@ class Ficha6 {
         int v = 2;
         Graph_AED2_UFP g2 = new Graph_AED2_UFP(g, v);
         System.out.println(g2);
+    }
+}
+
+class Ficha4 {
+    public static void main(String[] args) {
+        ficha4_ex4();
+    }
+    public static void ficha4_ex4() {
+        int mykeys[] = new int[]{1, 8, 27, 64, 125, 216, 343};
+        int M=7;
+        boolean test_resize = false;
+        LinearProbingHashST_AED2_UFP<Integer, Integer> st = new
+                LinearProbingHashST_AED2_UFP<>(M);
+        for (int i = 0; i < mykeys.length; i++) {
+            st.put(mykeys[i], i, test_resize);
+        }
+        for (int k: st.keys()) {
+            System.out.println(k);
+        }
     }
 }
