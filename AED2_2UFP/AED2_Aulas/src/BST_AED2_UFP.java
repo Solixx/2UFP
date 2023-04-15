@@ -68,13 +68,13 @@ import java.util.NoSuchElementException;
  *  @author Kevin Wayne
  */
 public class BST_AED2_UFP<Key extends Comparable<Key>, Value> {
-    private Node root;             // root of BST
+    public Node root;             // root of BST
 
-    private class Node {
-        private Key key;           // sorted by key
-        private Value val;         // associated data
-        private Node left, right;  // left and right subtrees
-        private int size;          // number of nodes in subtree
+    public class Node {
+        public Key key;           // sorted by key
+        public Value val;         // associated data
+        public Node left, right;  // left and right subtrees
+        public int size;          // number of nodes in subtree
 
         public Node(Key key, Value val, int size) {
             this.key = key;
@@ -487,6 +487,28 @@ public class BST_AED2_UFP<Key extends Comparable<Key>, Value> {
         return keys;
     }
 
+    public Iterable<Key> levelOrderSetLevel(int L) {    // Tem problema quando a linha não tem o mesmo numero de valores que o numero da linha
+        int countL = 1, lvl = 1;
+        Queue<Key> keys = new Queue<Key>();
+        Queue<Node> queue = new Queue<Node>();
+        queue.enqueue(root);
+        while (!queue.isEmpty()) {
+            Node x = queue.dequeue();
+            if (x == null) continue;
+            if(countL == L){
+                keys.enqueue(x.key);
+            }
+            queue.enqueue(x.left);
+            queue.enqueue(x.right);
+            if(lvl == countL){
+                countL++;
+                lvl = 0;
+            }
+            lvl++;
+        }
+        return keys;
+    }
+
   /*************************************************************************
     *  Check integrity of BST data structure.
     ***************************************************************************/
@@ -530,6 +552,13 @@ public class BST_AED2_UFP<Key extends Comparable<Key>, Value> {
         return true;
     }
 
+    public Node parente(Node n, Key k1, Key k2){
+        if(n == null)   return null;
+        if(n.key.compareTo(k1) > 0 && n.key.compareTo(k2) > 0)    return parente(n.left, k1, k2);
+        if(n.key.compareTo(k1) < 0 && n.key.compareTo(k2) < 0)    return parente(n.right, k1, k2);
+        return n;
+    }
+
 
     /**
      * Unit tests the {@code BST} data type.
@@ -551,6 +580,8 @@ public class BST_AED2_UFP<Key extends Comparable<Key>, Value> {
 
         for (Integer s : st.keys())
             StdOut.println("Key=" + s + ", Value = " + st.get(s));
+
+        StdOut.print(st.parente(st.root, 1, 5).key);
     }
 
     public Iterable<Key> inorder() {
@@ -613,6 +644,7 @@ public class BST_AED2_UFP<Key extends Comparable<Key>, Value> {
         return 1 + contaNos(x.left) + contaNos(x.right);
     }
 }
+
 
 /******************************************************************************
  *  Copyright 2002-2022, Robert Sedgewick and Kevin Wayne.

@@ -1,0 +1,24 @@
+AED2 - Teste1 - 170321
+
+1- V
+2- F
+3- F
+4- V
+5- V
+6- F
+7- F
+8- F
+9- F
+10- V
+
+Grupo 2
+
+1) Array ordenado O(logN) pois usamos uma pesquisa binária para saber o nº de keys menores que a a ser procurada
+	Array desordenado O(n) pois temos de percorrer o array todo e contar quantas keys são menores que o a ser procurado
+
+4)a)	O balanciamento negro perfeito é quando todos os caminhos desde a raíz até ás folhas possuem o mesmo numero de nos pretos.
+	O pior cenario de inserção é quando a árvore já está balanciada e queremos adicionar +1 valor e isto pode quebrar o balanciamento da árvore e isso pode fazer com que seja necessário fazr várias rotações ou troca de cores.
+
+5)b) Damos resiz ao tamanho da hashtable para 16 (2M) pois N >= M/2 e depois fazemos 26%16 para saber em que posição inserir o 26 que fica na pos = 10. Nº colisões é 2 pois o nº 57 seria inserido na pos1 mas já tem o valor 41 e depois ia tentar ficar na pos 2 mas já tem o valor 10 e por fim fica na pos 3.
+
+5)c) Retiramos a chave 41 e fica com vazio no seu lugar em seguida damos resize pois N <= M/8 e assim ficamos com uma HashTable com 8 de tamanho ao inves de 16, 10 fica na pos = 2 e 57 fica na pos = 1.
