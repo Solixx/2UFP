@@ -144,7 +144,7 @@ class Ficha6 {
 
     public static void main(String[] args) {
         //ex1_grafo3();
-        ex10_2();
+        //ex10_2();
     }
 
     public static void ex1_grafo3(){
@@ -184,6 +184,7 @@ class Ficha6 {
         Graph_AED2_UFP g2 = new Graph_AED2_UFP(g, v);
         System.out.println(g2);
     }
+
 }
 
 class Ficha4 {

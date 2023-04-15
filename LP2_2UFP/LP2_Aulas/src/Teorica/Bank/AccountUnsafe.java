@@ -1,5 +1,8 @@
 package Teorica.Bank;
 
+import Teorica.Exceptions.IllicitDespositExecption;
+import Teorica.Exceptions.OverWithdrawExecption;
+
 public class AccountUnsafe extends Account {
 
     protected AccountUnsafe(String accountNumber, double balance, Client owner) {
@@ -19,7 +22,7 @@ public class AccountUnsafe extends Account {
     }
 
     @Override
-    public double transfer(AccountMoneyI destination, double amount) {
+    public double transfer(AccountMoneyI destination, double amount) throws OverWithdrawExecption, IllicitDespositExecption {
         double b = this.withdraw(amount);
         destination.deposit(amount);
         return b;
