@@ -1,0 +1,118 @@
+// C++ code
+//
+
+unsigned long myTime = 0;
+int i = 0;
+char *str;
+
+static const struct {const char letter, *code;} MorseMap[] =
+{
+{ 'A', ".-" },
+{ 'B', "-..." },
+{ 'C', "-.-." },
+{ 'D', "-.." },
+{ 'E', "." },
+{ 'F', "..-." },
+{ 'G', "--." },
+{ 'H', "...." },
+{ 'I', ".." },
+{ 'J', ".---" },
+{ 'K', ".-.-" },
+{ 'L', ".-.." },
+{ 'M', "--" },
+{ 'N', "-." },
+{ 'O', "---" },
+{ 'P', ".--." },
+{ 'Q', "--.-" },
+{ 'R', ".-." },
+{ 'S', "..." },
+{ 'T', "-" },
+{ 'U', "..-" },
+{ 'V', "...-" },
+{ 'W', ".--" },
+{ 'X', "-..-" },
+{ 'Y', "-.--" },
+{ 'Z', "--.." },
+{ ' ', " " },
+};
+
+void setup()
+{
+  Serial.begin(9600);
+  
+  pinMode(A0, INPUT);
+  pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+  unsigned long novo;
+  unsigned long antigo;
+  int valLDR = analogRead(A0);
+  if(valLDR >= 800){
+    digitalWrite(13, HIGH);
+    antigo = millis();
+    novo = milLigado(valLDR);
+    myTime = novo - antigo;
+    if(myTime >= 500 && myTime < 1000){
+      str[i] = '.';
+      Serial.println(str[i]);
+    } else if(myTime >= 1000 && myTime < 2000){
+      str[i] = '-';
+      Serial.println(str[i]);
+    }
+    i++;
+  } else{
+    digitalWrite(13, LOW);
+    antigo = millis();
+    novo = milDesliigado(valLDR);
+    myTime = novo - antigo;
+    if(myTime >= 1000 && myTime < 2000){
+      verificarletra(str);
+      zerar(str);
+    } else if(myTime >= 2000 && myTime < 4000){
+      str[i] = ' ';
+      Serial.println(str[i]);
+    } else{
+      verificarletra(str);
+      zerar(str);
+    }
+    i++;
+  }
+
+}
+
+void verificarletra(char* str) {
+  for(int j = 0; j < 27; j++){
+    if(str == MorseMap[j].code){
+      Serial.println(MorseMap[j].letter);
+      break;
+    }
+  }
+    
+}
+
+void zerar(char *str){
+  for(int j = 0; j < strlen(str); j++){
+    str[i] = '\0' ;
+  }
+  i=-1;
+}
+
+unsigned long milLigado(int valLDR){
+  unsigned long novo;
+  while(valLDR >= 800){
+      novo = millis();
+      valLDR = analogRead(A0);
+    }
+  return novo;
+}
+
+unsigned long milDesliigado(int valLDR){
+  unsigned long novo;
+  while(valLDR < 800){
+      novo = millis();
+      valLDR = analogRead(A0);
+    }
+    return novo;
+}
