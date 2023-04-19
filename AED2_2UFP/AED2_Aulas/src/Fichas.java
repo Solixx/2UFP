@@ -2,6 +2,7 @@ import edu.princeton.cs.algs4.*;
 
 import javax.management.openmbean.ArrayType;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Hashtable;
 
@@ -202,6 +203,31 @@ class Ficha4 {
         }
         for (int k: st.keys()) {
             System.out.println(k);
+        }
+    }
+}
+
+class Ficha7{
+    public static void main(String[] args) {
+        ex2();
+    }
+
+    public static void ex2(){
+        In in = new In("./data/tinyDG.txt");
+        Digraph d = new Digraph(in);
+        ArrayList source = new ArrayList();
+        source.add(2);
+        source.add(6);
+        source.add(10);
+        BreadthFirstDirectedPaths bfsG = new BreadthFirstDirectedPaths(d, source);
+
+        for (int v = 0; v < d.V(); v++){
+            StdOut.print("\n"+v+": ");
+            if(bfsG.hasPathTo(v)){
+                for (int x: bfsG.pathTo(v)) {
+                    StdOut.print(x+" ");
+                }
+            }
         }
     }
 }
