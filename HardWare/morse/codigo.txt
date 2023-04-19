@@ -1,5 +1,6 @@
 // C++ code
 //
+#include <string.h>
 
 unsigned long myTime = 0;
 int i = 0;
@@ -83,13 +84,20 @@ void loop()
 }
 
 void verificarletra(char* str) {
+  /*
   for(int j = 0; j < 27; j++){
     if(str == MorseMap[j].code){
       Serial.println(MorseMap[j].letter);
       break;
     }
   }
-    
+   */
+  for(int j = 0; j < 27; j++){
+    if(strcmp(str, MorseMap[j].code) == 0){
+      Serial.println(MorseMap[j].letter);
+      break;
+    }
+  }
 }
 
 void zerar(char *str){
