@@ -231,3 +231,33 @@ class Ficha7{
         }
     }
 }
+
+class Ficha8{
+    public static void main(String[] args) {
+        StdOut.println("Ficha8, 26abr2023");
+        ex1();
+    }
+
+    public static void ex1(){
+        In in = new In("./data/aed2_aulas/ficha8_ex1_g2.txt");
+        EdgeWeightedGraph g1 = new EdgeWeightedGraph(in);
+        StdOut.println("Grafo Original:\n"+g1);
+        KruskalMST kmst = new KruskalMST(g1);
+        StdOut.println("MST (peso total ="+kmst.weight()+"):");
+        for (Edge e: kmst.edges()){
+            StdOut.println(e);
+        }
+
+        PrimMST pmst = new PrimMST(g1);
+        StdOut.println("MST (peso total ="+pmst.weight()+"):");
+        for (Edge e: pmst.edges()){
+            StdOut.println(e);
+        }
+
+        LazyPrimMST lpmst = new LazyPrimMST(g1);
+        StdOut.println("MST (peso total ="+lpmst.weight()+"):");
+        for (Edge e: lpmst.edges()){
+            StdOut.println(e);
+        }
+    }
+}
