@@ -235,7 +235,11 @@ class Ficha7{
 class Ficha8{
     public static void main(String[] args) {
         StdOut.println("Ficha8, 26abr2023");
-        ex1();
+        //ex1();
+        test1_graph_wight();
+        test1_graph_wight2();
+        test1_graph_wight_file();
+        teste_eulerian();
     }
 
     public static void ex1(){
@@ -259,5 +263,83 @@ class Ficha8{
         for (Edge e: lpmst.edges()){
             StdOut.println(e);
         }
+    }
+
+    public static double exe7(EdgeWeightedGraph g){
+        double pesoTotal = 0;
+        for (Edge e : g.edges()){
+            pesoTotal += e.weight();
+        }
+        return pesoTotal;
+    }
+    public static void test1_graph_wight(){
+        double pesoTotal=0;
+        EdgeWeightedGraph g = new EdgeWeightedGraph(5);
+        Edge e1 = new Edge(0,1,2);
+        Edge e2 = new Edge(1,2,4);
+        Edge e3 = new Edge(2,3,6);
+        Edge e4 = new Edge(3,4,8);
+        g.addEdge(e1);
+        g.addEdge(e2);
+        g.addEdge(e3);
+        g.addEdge(e4);
+        pesoTotal=exe7(g);
+        double pesoV1 = exe9(g, 1);
+        StdOut.println("Soma do grafo : " + pesoTotal);
+        StdOut.println("Soma do grafo no vertice 1 : " + pesoV1);
+    }
+
+    public static void test1_graph_wight2(){
+        double pesoTotal=0;
+        EdgeWeightedGraph g = new EdgeWeightedGraph(4);
+        Edge e1 = new Edge(0,1,5);
+        Edge e2 = new Edge(0,2,10);
+        Edge e3 = new Edge(1,2,15);
+        Edge e4 = new Edge(2,3,10);
+        g.addEdge(e1);
+        g.addEdge(e2);
+        g.addEdge(e3);
+        g.addEdge(e4);
+        pesoTotal=exe7(g);
+        StdOut.println("Soma do grafo : " + pesoTotal);
+        double pesoV1 = exe9(g, 1);
+        StdOut.println("Soma do grafo no vertice 1 : " + pesoV1);
+    }
+
+    public static void test1_graph_wight_file(){
+        In in = new In("./data/aed2_aulas/wightGrafh.txt");
+        EdgeWeightedGraph g = new EdgeWeightedGraph(in);
+        double pesoTotal = exe7(g);
+        StdOut.println("Soma do grafo: "+pesoTotal);
+    }
+
+    public static void teste_eulerian(){
+        Graph g = new Graph(8);
+        g.addEdge(0, 1);
+        g.addEdge(0, 2);
+        g.addEdge(0, 3);
+        g.addEdge(0, 4);
+        g.addEdge(1, 2);
+        g.addEdge(1, 3);
+        g.addEdge(1, 4);
+        g.addEdge(2, 3);
+        EulerianPath eulerPath = new EulerianPath(g);
+        if(eulerPath.hasEulerianPath()){
+            for (Integer v : eulerPath.path()) {
+                StdOut.println(v);
+            }
+        }
+    }
+
+    public static double ex8(EdgeWeightedGraph g, int pesoTotal){
+        return pesoTotal/g.V();
+    }
+
+    public static double exe9(EdgeWeightedGraph g, int v){
+        double pesoTotal = 0;
+        for (Edge e : g.adj(v)){
+            pesoTotal += e.weight();
+        }
+        return pesoTotal;
     }
 }
