@@ -332,7 +332,7 @@ class Ficha8{
     }
 
     public static double ex8(EdgeWeightedGraph g, int pesoTotal){
-        return pesoTotal/g.V();
+        return (double) pesoTotal/g.V();
     }
 
     public static double exe9(EdgeWeightedGraph g, int v){
