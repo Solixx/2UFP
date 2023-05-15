@@ -5,8 +5,9 @@ import _05_figgeo.FigGeo;
 import edu.princeton.cs.algs4.StdOut;
 
 import java.awt.*;
+import java.io.Serializable;
 
-public class Circle extends FigGeo {
+public class Circle extends FigGeo implements Serializable {
 
     private Point center;
     private Point periferic;

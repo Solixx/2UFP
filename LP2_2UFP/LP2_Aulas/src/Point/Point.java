@@ -2,9 +2,10 @@ package Point;
 import Person.MyMath;
 import _05_figgeo.FigGeo;
 
+import java.io.Serializable;
 import java.util.*;
 
-public class Point {
+public class Point implements Serializable {
     private float x;
     private float y;
 

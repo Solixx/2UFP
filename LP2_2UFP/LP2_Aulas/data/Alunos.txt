@@ -1,0 +1,3 @@
+Joao Valentia,13,14.5
+Maria Joana,14,12.7
+Pedro Lucas,17,15.4

@@ -1,6 +1,8 @@
 package Person;
 
-public class Date {
+import java.io.Serializable;
+
+public class Date implements Serializable {
 
   private short day;
 
