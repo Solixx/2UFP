@@ -1,0 +1,120 @@
+#include <stdio.h>
+#include <bits/pthreadtypes.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <pthread.h>
+#include <semaphore.h>
+#include <unistd.h>
+
+int nleitores = 0;
+int em_escrita = 0;
+int leitores_espera = 0, escritores_espera = 0;
+pthread_mutex_t motex;
+sem_t leitores, escritores;
+
+void inicia_leitura();
+void* leitura();
+void* escrita();
+void acaba_leitura();
+void print_state();
+void inicia_escrita();
+void acaba_escrita();
+
+void print_state(){
+    printf("em_escrita: %d\t nleitores: %d\t leitores_espera: %d\t escritores_espera: %d\n", em_escrita, nleitores, leitores_espera, escritores_espera);
+}
+
+void* escrita(){
+    while (1){
+        inicia_escrita();
+        acaba_escrita();
+    }
+}
+
+void inicia_escrita(){
+    pthread_mutex_lock(&motex);
+    if(em_escrita == 1 || nleitores > 0){
+        escritores_espera++;
+        pthread_mutex_unlock(&motex);
+        sem_wait(&escritores);
+        pthread_mutex_lock(&motex);
+    } else{
+        em_escrita = 1;
+    }
+    pthread_mutex_unlock(&motex);
+}
+
+void acaba_escrita(){
+    pthread_mutex_lock(&motex);
+    em_escrita = 0;
+    if(leitores_espera > 0){
+        for(int i = 0; i < leitores_espera; i++){
+            sem_post(&leitores);
+            nleitores++;
+            leitores_espera--;
+        }
+    } else if(escritores_espera > 0){
+        sem_post(&escritores);
+        em_escrita = 1;
+        escritores_espera--;
+    }
+    pthread_mutex_unlock(&motex);
+}
+
+void* leitura(){
+    while (1){
+        inicia_leitura();
+        acaba_leitura();
+    }
+}
+
+void inicia_leitura(){
+    pthread_mutex_lock(&motex);
+    if(em_escrita == 1 || escritores_espera > 0){
+        leitores_espera++;
+        pthread_mutex_unlock(&motex);
+        sem_wait(&leitores);
+        pthread_mutex_lock(&motex);
+    } else{
+        nleitores++;
+    }
+    pthread_mutex_unlock(&motex);
+}
+
+void acaba_leitura(){
+    pthread_mutex_lock(&motex);
+    nleitores--;
+    if(nleitores == 0 && escritores_espera > 0){
+        sem_post(&escritores);
+        em_escrita = 1;
+        escritores_espera--;
+    }
+    pthread_mutex_unlock(&motex);
+}
+
+
+int main(int  argc, char* argv[]) {
+
+    pthread_t p1[atoi(argv[1])];
+    pthread_t p2[atoi(argv[2])];
+
+    pthread_mutex_init(&motex, NULL);
+
+    sem_init(&leitores, 0, 0);
+    sem_init(&escritores, 0, 0);
+
+    for(int i = 0; i < atoi(argv[1]); i++){
+        pthread_create(&p1[i], NULL, &leitura, NULL);
+    }
+
+    for(int i = 0; i < atoi(argv[2]); i++){
+        pthread_create(&p2[i], NULL, &escrita, NULL);
+    }
+
+    while (1){
+        print_state();
+        sleep(1);
+    }
+
+    return 0;
+}
