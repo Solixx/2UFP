@@ -159,26 +159,32 @@ public class CalculatorFX extends Application {
     //define the action after clicking the Numeric[0-9] button
     private void setNumericButtonListener(String s, Button btn) {
         btn.setOnAction(actionEvent -> {
-
+            this.displayValue.set((this.displayValue.get()*10) + Double.parseDouble(s));
         });
     }
     //define the action after clicking the equals(=) button
     private void setEqualsButtonListener(Button btn) {
         btn.setStyle("-fx-base: lightgray;");
         btn.setOnAction(actionEvent -> {
+            double temp = this.displayValue.get();
+            this.displayValue.set(this.calc.makeOperation(this.currOp, temp));
+            this.valueInMemory = 0.0;
         });
     }
     //define the action after clicking the clear(C) button
     private void setClearButtonListener(Button btn) {
         btn.setOnAction(actionEvent -> {
-
+            this.displayValue.set(0.0);
+            this.calc.resetCalc();
         });
     }
 
     //define the action after clicking the dot(.) button
     private void setDotButtonListener(Button btn) {
         btn.setOnAction(actionEvent -> {
-
+            double val = this.displayValue.get();
+            val = val/10;
+            this.displayValue.set(val);
         });
     }
 

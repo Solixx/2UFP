@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a04b2f63-1d71-4590-a445-87318acd5911" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/LP2_Aulas_JavaFX/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LP2_Aulas_JavaFX/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LP2_Aulas_JavaFX/src/main/java/edu/ufp/inf/lp2/_06_gui_javafx/helloworld/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LP2_Aulas_JavaFX/src/main/java/edu/ufp/inf/lp2/_06_gui_javafx/helloworld/HelloWorld.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LP2_Aulas_JavaFX/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/LP2_Aulas_JavaFX/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LP2_Aulas_JavaFX/src/main/resources/edu/ufp/inf/lp2/_06_gui_javafx/helloworld/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/LP2_Aulas_JavaFX/src/main/resources/edu.ufp.inf.lp2._06_gui_javafx/helloapp/hello-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="a04b2f63-1d71-4590-a445-87318acd5911" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,18 +15,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/manue/Desktop/GitHub/2UFP/AED2_2UFP/AED2_Aulas&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/GitHub/2UFP/LP2_2UFP/LP2_JavaFX",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,6 +39,7 @@
       <workItem from="1676478384857" duration="96000" />
       <workItem from="1676478549910" duration="663000" />
       <workItem from="1682347625586" duration="65000" />
+      <workItem from="1684600538031" duration="16000" />
     </task>
     <servers />
   </component>
