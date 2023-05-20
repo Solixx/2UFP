@@ -1,0 +1,54 @@
+Teste Modelo - ChatGPT
+
+1)
+Programa1: Retorna
+i=0
+Programa2: Retorna
+i=1
+
+2)
+#include <stdio.h>
+#include <pthread.h>
+
+double fat = 0;
+
+void* fatorial(void* arg){
+	int n = *(int *) arg;
+	fat = n;
+	for(int i = n-1; i > 0; i--){
+		fat *= i;
+	}
+	pthread_exit(NULL);
+}
+
+int main(){
+	pthread tarefa;
+	int n;
+
+	scanf("%d", &n);
+	pthread_create(&tarefa, NULL, fatorial, (void *) &n);
+	pthread_join(tarefa, NULL);
+	printf("Fatorial=%ld\n", fat);
+	return 0;
+}
+
+
+3)
+a) nao existem problemas na implementacao de threads.
+b) Código1: mutex acaba com o valor 1 (unlock)
+codigo2: o mutex acaba com valor 5 (porque é um semaforo)
+
+4)
+a)
+RR
+P1,P1,P1,P1,P2,P2,P2,P3,P3,P4,P4,P4,P5,P5
+RR Lista Prioritaria
+P1,P3,P3,P1,P1,P1,P5,P5,P2,P2,P2,P4,P4,P4
+
+b)
+RR
+Tempo de execucao = (4+2+2+3+3)
+Tempo media de espera = (0+4+7+9+11)/5
+RR-Lista Prioritaria
+Tempo de execucao = (4+2+2+3+3)
+Tempo media de espera = (0+4+6+8+11)/5

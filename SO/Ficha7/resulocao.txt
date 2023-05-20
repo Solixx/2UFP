@@ -1,0 +1,29 @@
+1)
+a) CLion
+
+b)	pthread_create() -> cria uma nova thread e qual função vao executar (&thread, &atributo, &funcao, &argumento_funcao)
+	pthread_self() -> esta função retorna o id da thread
+	pthread_equal() -> compara 2 threads retorna 0 se forem diferentes e diferentes de 0 se forem iguais
+	pthread_exit() -> termina uma tarefa com o valor de retorno pthread_exit((void *)retorno);
+	pthread_join() -> espera o termino de uma thread e recebe o seu valor de retorno pthread_join(thread, (void *)&retorno);
+
+c) CLion - Valores Obtidos
+PID: 5167, ThreadID: 140040697013824
+Ola Mundo
+PID: 5167, ThreadID: 140040705406528
+Ola Mundo
+
+d) CLion - Valores Obtidos
+ThreadID: 140116970436160       Soma: 58
+Vetor
+[0 3 0 7 0 13 0 19 0 29 ]
+ThreadID: 140116962043456       Soma: 71
+Vetor
+[0 0 0 0 0 0 0 0 0 0 ]
+Thread1 ID: 140116970436160
+SomaPar: 58
+Thread2 ID: 140116962043456
+SomaImpar: 71
+Vetor Final
+[0 0 0 0 0 0 0 0 0 0 ]
+

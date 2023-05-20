@@ -1,0 +1,195 @@
+
+#include <pthread.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+
+int primos[] = {2,3,5,7,11,13,17,19,23,29};
+
+void* print (void* unused)
+{
+    int i;
+    for(i=0;i<100000;i++) write(1,"#",1);
+    return NULL;
+}
+
+/* The main program.  */
+
+void thread_create1(){
+    pthread_t thread_id;
+    int i;
+
+    /* Create a new thread.  The new thread will run the print_# function.  */
+    pthread_create (&thread_id, NULL, &print, NULL);
+
+    for(i=0;i<100000;i++) write(1,"_",1);
+
+    pthread_join(thread_id,NULL);
+}
+
+/* Parameters to print_function.  */
+
+struct char_print_parms
+{
+    /* The character to print.  */
+    char character;
+    /* The number of times to print it.  */
+    int count;
+};
+
+/* Prints a number of characters to stderr, as given by PARAMETERS,
+   which is a pointer to a struct char_print_parms.  */
+
+void* char_print (void* parameters)
+{
+    /* Cast the cookie pointer to the right type.  */
+    struct char_print_parms* p = (struct char_print_parms*) parameters;
+    int i;
+
+    char msg[]="thread is done";
+    char *ptr_msg = malloc(strlen(msg));
+
+    strcpy(ptr_msg, msg);
+
+    for (i = 0; i < p->count; ++i)
+        fputc (p->character, stderr);
+
+    printf("\nthread (%c) - %lu\n", p->character, (unsigned long) pthread_self());
+
+    pthread_exit((void *)ptr_msg);
+}
+
+/* The main program.  */
+
+int thread_create2 ()
+{
+    pthread_t thread1_id;
+    pthread_t thread2_id;
+    struct char_print_parms thread1_args;
+    struct char_print_parms thread2_args;
+    char * return_thread;
+
+
+
+    /* Create a new thread to print 5 x's.  */
+    thread1_args.character = 'x';
+    thread1_args.count = 5000;
+    pthread_create (&thread1_id, NULL, &char_print, &thread1_args);
+
+    /* Create a new thread to print 5 o's.  */
+    thread2_args.character = 'o';
+    thread2_args.count = 5000;
+    pthread_create (&thread2_id, NULL, &char_print, &thread2_args);
+
+    /* Make sure the first thread has finished.  */
+    //pthread_join (thread1_id, (void *)&return_thread);
+
+    //printf("\nthread1_id (%c) - %lu - %s\n", thread1_args.character, (unsigned long) thread1_id, return_thread);
+
+    /* Make sure the second thread has finished.  */
+    //pthread_join (thread2_id, (void *)&return_thread);
+
+
+    //printf("\nthread2_id (%c) - %lu - %s\n", thread2_args.character, (unsigned long) thread2_id, return_thread);
+
+    //printf("\nmain thread - %lu\n", (unsigned long) pthread_self());
+
+    if(pthread_equal(thread1_id, thread1_id)){
+        printf("\nThis is the same thread");
+    }
+
+    if(!pthread_equal(thread1_id, thread2_id)){
+        printf("\nThis is the not same thread\n");
+    }
+
+    /* Now we can safely return.  */
+    pthread_exit(NULL);
+}
+
+void* tarefasEx1c(){
+    printf("PID: %d, ThreadID: %lu\nOla Mundo\n", getpid(), pthread_self());
+    pthread_exit(0);
+}
+
+void ex1c(){
+    pthread_t tarefa1, tarefa2;
+
+    pthread_create(&tarefa1, NULL, &tarefasEx1c, NULL);
+    pthread_create(&tarefa2, NULL, &tarefasEx1c, NULL);
+
+    pthread_join(tarefa1, NULL);
+    pthread_join(tarefa2, NULL);
+    pthread_exit(0);
+}
+
+void* tarefasEx1d(void* arg){
+    int val = primos[(long) arg];
+    int fat = val;
+    for (int i = val-1; i > 0; i--) {
+        fat *= i;
+    }
+    primos[(long) arg] = fat;
+    pthread_exit(NULL);
+}
+
+void ex1d(){
+    pthread_t tarefas[5];
+
+    for (long i = 0; i < 5; ++i) {
+        pthread_create(&tarefas[i], NULL, &tarefasEx1d, (void *) i);
+    }
+
+    for (int i = 0; i < 5; ++i) {
+        pthread_join(tarefas[i], NULL);
+    }
+
+    for (int i = 0; i < 5; ++i) {
+        printf("%d\t", primos[i]);
+    }
+
+    pthread_exit(NULL);
+}
+
+void* tarefaEx2(void* arg){
+    long opc = (long) arg;
+    long soma = 0;
+    for (long i = opc; i < 10; i+=2) {
+        soma += primos[i];
+        primos[i] = 0;
+    }
+    printf("ThreadID: %lu\tSoma: %ld\nVetor\n[", pthread_self(), soma);
+    for (int i = 0; i < 10; ++i) {
+        printf("%d ", primos[i]);
+    }
+    printf("]\n");
+    pthread_exit((void *) soma);
+}
+
+void ex2(){
+    pthread_t tarefaPar, tarefaImpar;
+    long somaPar = 0, somaImpar = 0;
+
+    pthread_create(&tarefaPar, NULL, &tarefaEx2, (void *) 0);
+    pthread_create(&tarefaImpar, NULL, &tarefaEx2, (void *) 1);
+
+    pthread_join(tarefaPar, (void *) &somaPar);
+    pthread_join(tarefaImpar, (void *) &somaImpar);
+
+    printf("Thread1 ID: %lu\nSomaPar: %ld\nThread2 ID: %lu\nSomaImpar: %ld\nVetor Final\n[", tarefaPar, somaPar, tarefaImpar, somaImpar);
+    for (int i = 0; i < 10; ++i) {
+        printf("%d ", primos[i]);
+    }
+    printf("]\n");
+}
+
+int main ()
+{
+    //thread_create1();
+    //thread_create2();
+    //ex1c();
+    //ex1d();
+    ex2();
+
+    return 0;
+}

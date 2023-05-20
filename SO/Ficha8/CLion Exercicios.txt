@@ -1,0 +1,250 @@
+#include <pthread.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include <semaphore.h>
+
+#define N 5
+#define M 15
+
+void *thread1(void *vargp) {
+    pthread_exit((void *) 42);
+}
+
+void programa1(){
+    int i;
+    pthread_t tid;
+    pthread_create(&tid, NULL, thread1, NULL);
+    pthread_join(tid, (void **) &i);
+
+    printf("%d\n", i);
+}
+
+void *thread2(void *vargp) {
+    exit(42);
+}
+
+void programa2(){
+    int i;
+    pthread_t tid;
+    pthread_create(&tid, NULL, thread2, NULL);
+    pthread_join(tid, (void **) &i);
+
+    printf("%d\n", i);
+}
+
+void *thread3(void *vargp) {
+    int *ptr = (int*)vargp;
+    pthread_exit((void*) *ptr);
+}
+
+void *thread3_2(void *vargp) {
+    int *ptr = (int*)vargp;
+    *ptr = 0;
+    pthread_exit((void*) 31);
+}
+
+void programa3(){
+    int i;
+    pthread_t tid, tid2;
+    pthread_create(&tid, NULL, thread3, (void*) i);
+    pthread_create(&tid2, NULL, thread3_2, (void*) i);
+    pthread_join(tid, (void **) &i);
+    pthread_join(tid2, NULL);
+
+    printf("%d\n", i);
+}
+
+void *thread4(void *vargp) {
+    pthread_detach(pthread_self());
+    pthread_exit((void*) 42);
+}
+
+void programa4(){
+    int i;
+    pthread_t tid;
+    pthread_create(&tid, NULL, thread4, (void*) &i);
+    pthread_join(tid, (void **) &i);
+
+    printf("%d\n", i);
+}
+
+int i = 42;
+
+void *thread5(void *vargp) {
+    printf("%d\n", i);
+}
+
+void *thread5_2(void *vargp) {
+    i = 32;
+}
+
+void programa5(){
+    pthread_t tid, tid2;
+    pthread_create(&tid2, NULL, thread5_2, (void*) &i);
+    pthread_create(&tid, NULL, thread5, (void*) &i);
+    pthread_join(tid, (void **) &i);
+    pthread_join(tid2, NULL);
+}
+
+pthread_mutex_t trincoPing, trincoPong;
+
+void* pingThread(void* arg){
+    while (1){
+        pthread_mutex_lock(&trincoPing);
+        printf("Ping\n");
+        pthread_mutex_unlock(&trincoPong);
+    }
+}
+
+void* pongThread(void* arg){
+    while (1){
+        pthread_mutex_lock(&trincoPong);
+        printf("Pong\n");
+        pthread_mutex_unlock(&trincoPing);
+    }
+}
+
+void ex2_trinco(){
+    pthread_t ping, pong;
+    pthread_mutex_init(&trincoPing, NULL);
+    pthread_mutex_init(&trincoPong, NULL);
+
+    pthread_create(&ping, NULL, &pingThread, NULL);
+    pthread_create(&pong, NULL, &pongThread, NULL);
+
+    pthread_join(ping, NULL);
+    pthread_join(pong, NULL);
+
+    pthread_mutex_destroy(&trincoPing);
+    pthread_mutex_destroy(&trincoPong);
+    pthread_exit(NULL);
+}
+
+
+sem_t semPing, semPong;
+
+void* pingSemThread(void* arg){
+    while (1){
+        sem_wait(&semPing);
+        printf("Ping\n");
+        sem_post(&semPong);
+    }
+}
+
+void* pongSemThread(void* arg){
+    while (1){
+        sem_wait(&semPong);
+        printf("Pong\n");
+        sem_post(&semPing);
+    }
+}
+
+void ex2_semaforo(){
+    pthread_t ping, pong;
+    sem_init(&semPing, 0, 1);
+    sem_init(&semPong, 0, 0);
+
+    pthread_create(&ping, NULL, &pingSemThread, NULL);
+    pthread_create(&pong, NULL, &pongSemThread, NULL);
+
+    pthread_join(ping, NULL);
+    pthread_join(pong, NULL);
+
+    sem_destroy(&semPing);
+    sem_destroy(&semPong);
+    pthread_exit(NULL);
+}
+
+long tarefasIds[N];
+sem_t semEstacionamento;
+sem_t semEstado;
+
+void enter_park(){
+    sem_wait(&semEstacionamento);
+    sem_wait(&semEstado);
+
+    for (int j = 0; j < N; j++){
+        if(tarefasIds[j] == 0){
+            tarefasIds[j] = (long) pthread_self();
+            break;
+        }
+    }
+
+    sem_post(&semEstado);
+}
+
+void leave_park(){
+    sem_wait(&semEstado);
+
+    for (int j = 0; j < N; j++){
+        if(tarefasIds[j] != 0){
+            tarefasIds[j] = 0;
+            break;
+        }
+    }
+
+    sem_post(&semEstado);
+    sem_post(&semEstacionamento);
+}
+
+void* cliente(void* arg){
+    while (1){
+        enter_park();
+        sleep(3);
+        leave_park();
+        sleep(1);
+    }
+}
+
+void* print_state(){
+    while (1){
+        printf("[");
+        for (int j = 0; j < N; ++j) {
+            printf("%ld ", tarefasIds[j]);
+        }
+        printf("]\n");
+        sleep(1);
+    }
+}
+
+void ex3(){
+    pthread_t tarefas[M], printer;
+    sem_init(&semEstacionamento, 0, N);
+    sem_init(&semEstado, 0, 1);
+
+    for (int j = 0; j < N; ++j) {
+        tarefasIds[j] = 0;
+    }
+
+    for (long j = 0; j < M; ++j) {
+        pthread_create(&tarefas[j], NULL, cliente, NULL);
+    }
+
+    pthread_create(&printer, NULL, print_state, NULL);
+
+    for (int j = 0; j < M; ++j) {
+        pthread_join(tarefas[j], NULL);
+    }
+
+    pthread_join(printer, NULL);
+
+    sem_destroy(&semEstacionamento);
+    sem_destroy(&semEstado);
+    pthread_exit(NULL);
+}
+
+int main() {
+
+    //programa1();
+    //programa2();
+    //programa3();
+    //programa4();
+    //programa5();
+    //ex2_trinco();
+    //ex2_semaforo();
+    ex3();
+
+    return 0;
+}

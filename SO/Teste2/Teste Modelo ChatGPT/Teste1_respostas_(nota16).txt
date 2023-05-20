@@ -1,0 +1,53 @@
+Teste Modelo - ChatGPT
+
+1)
+Imprime:
+Número: 5
+Número: 10
+
+2)
+#include <stdio.h>
+#include <pthread.h>
+
+#define size 10;
+
+int valores[size] = {1,2,3,4,5,6,7,8,9,10}
+int div = 2;
+pthread_mutex_t trinco;
+
+void* tar(void* arg){
+	long pos = (long) arg;
+	double soma = 0;
+	pthread_mutex_lock(&trinco);
+	for(int j = pos; j < div; j++){
+		soma += valores[j];
+	}
+	double media = soma/div;
+	pthread_mutex_unlock(&trinco);
+	pthread_exit(media);
+}
+
+int main(){
+	pthread_t tarefas[size/div];
+	void* valRetorna;
+	double soma = 0;
+
+	pthread_mutex_init(&trinco, NULL);
+	
+	for(long i = 0; i < size/div; i++){
+		pthread_create(&tarefas[i], NULL, (void *) i);
+	}
+	for(long i = 0; i < size/div; i++){
+		pthread_join(&tarefas[i], valRetorna);
+		soma += (double *) valRetorna; 
+	}
+	double mediaFinal = soma/(size/div);
+	return mediaFinal;
+}
+
+3)
+O conceito de semafor em threads é um sistema que serve como um contador onde se o valor for menor ou igual a 0 a thread fica à espera de espaço no semaforo para fazer a sua operação e enquanto o semaforo for maior que 0 as threads podem fazer as suas operações.
+Podem ser usados com mutex para manipular zonas criticas de código.
+
+4)
+Tempo de CPU real é o tempo do processo em espera, o tempo em que outros processos estão em execução mais o seu tempo de execução, enquanto o tempo de CPU de usuario é apenas o tempo em que o processo está a ser utilizado.

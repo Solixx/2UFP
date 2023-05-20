@@ -1,0 +1,10 @@
+1) 	Programa1 -> 42
+	Programa2 -> vazio (pois o exit(42) termina o processo)
+	Programa3 -> SIGSEGV
+	Programa4 -> 42
+	Programa5 -> 42 ou 32
+R: Os que são garantidos de escrever 42 são (Program1 e Programa4).
+
+2)	CLion
+
+3)	CLion

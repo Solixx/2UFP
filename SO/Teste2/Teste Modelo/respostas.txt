@@ -1,0 +1,82 @@
+Teste Modelo - 010612
+
+1)
+a)
+Programa1: 0 // Multi Processos não partilha memória
+Programa2: 1 // Multi tarfa partilha memória
+
+b)
+A maior vantagem de programação multi tarefa é a memória partilhada.
+Criacao de tarefas mais eficientes.
+Comutacao de tarefas é mais eficiente
+Poupança de recurdsos de memoria
+
+Estrutura
+Um apontador pilha
+Copia dos valores dos registos
+Propriedades de escalonamento
+
+
+2)
+a) Erro no pthread_create pois a variavel i não está com cast para (void *)
+
+b) Porgrama1: mutex tem valor 1 por causa do unlock é bollean então não altera se já estiver aberto (1)
+ Programa2: mutex tem valor 5 por causa de ser semaforo sem_post();
+
+c) Código
+int buffer[5] = {0,0,0,0,0};
+pthread_mutex_t trinco;
+sem_t semCadeiras;
+sem_t semClientes;
+int acordado = 0;
+int count = 0;
+
+dormir(){
+    	acordado = 0;
+}
+
+atenderCliente(){
+    	acordado = 1;
+}
+
+acordar(){
+	acordado = 1;
+	sem_post(&semClientes);
+}
+
+sentarCadeira(){
+	for(int i = 0; i < 5; i++){
+		if(buffer[i] == 0)	buffer[i] = pthread_self();
+	}
+	sem_post(&semCadeiras);
+}
+
+barbeiro(){
+	while(1){
+		dormir();
+		sem_wait(&semClientes);
+		pthread_mutex_lock(&trinco);
+		atenderCliente();
+		buffer[count] = 0;
+		count = (count+1)%5;
+		pthread_mutex_unlock(&trinco);
+		sem_post(&semCadeiras);
+	}
+}
+
+cliente(){
+	while(1){
+		sem_wait(&semCadeiras);
+		pthread_mutex_lock(&trinco);
+		if(acordado == 0){
+			acordar();
+		} else{
+			sentarCadeira();
+		}
+		pthread_mutex_unlock(&trinco);
+		sem_post(&semClientes);
+	}
+}
+
+
+3)
