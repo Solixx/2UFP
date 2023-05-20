@@ -10,6 +10,9 @@ module com.example._06_gui_javafx {
     opens com.example._06_gui_javafx.login to javafx.graphics;
     exports com.example._06_gui_javafx.login;
 
+    opens com.example._06_gui_javafx.loginfxml to javafx.fxml;
+    exports com.example._06_gui_javafx.loginfxml;
+
     exports com.example._06_gui_javafx.calc;
     opens com.example._06_gui_javafx.calc to javafx.fxml;
 
