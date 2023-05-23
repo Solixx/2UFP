@@ -18,4 +18,7 @@ module com.example._06_gui_javafx {
 
     exports com.example._06_gui_javafx.helloapp;
     opens com.example._06_gui_javafx.helloapp to javafx.fxml;
+
+    exports com.example._06_gui_javafx.bt;
+    opens com.example._06_gui_javafx.bt to javafx.fxml;
 }
